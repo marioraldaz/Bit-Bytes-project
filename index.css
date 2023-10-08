@@ -1,4 +1,53 @@
 body,
 html {
-  background-color: rgb(254, 40, 246, 1);
+  background: linear-gradient(60deg, rgb(176, 32, 229) 25%, rgb(94, 176, 208));
+  height: 100%;
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.header {
+  position: fixed;
+  height: 82px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 2px solid black;
+  animation: headerHeight;
+  animation-duration: 4s;
+  animation-timing-function: ease-out;
+}
+.header__logo img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  height: 100%;
+  animation: introLogo;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes headerHeight {
+  0% {
+    min-height: 100vh;
+  }
+
+  100% {
+    min-height: 0;
+  }
+}
+
+@keyframes introLogo {
+  0% {
+    opacity: 0;
+    height: 50%;
+  }
+  100% {
+    opacity: 1;
+  }
 }
