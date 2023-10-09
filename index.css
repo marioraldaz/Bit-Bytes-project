@@ -1,4 +1,135 @@
 body,
 html {
-  background-color: rgb(254, 40, 246, 1);
+  /*   background-color: rgb(254, 40, 246, 1);
+ */
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row [class^="col-"] {
+  float: left;
+}
+.row [class^="col-"]:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - 2 * 6rem) / 3);
+}
+.row .col-2-of-3 {
+  width: calc(2 * ((100% - 2 * 6rem) / 3) + 6rem);
+}
+.row .col-1-of-4 {
+  width: calc((100% - 3 * 6rem) / 4);
+}
+
+.row .col-2-of-4 {
+  width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
+}
+
+.img_encabezado {
+  width: 70%;
+}
+
+.gradiente_img_cabecera {
+  background: linear-gradient(to bottom, #333333, #007acc);
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  border-radius: 15px;
+  margin-bottom: 3rem;
+}
+
+.componente {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  margin: 0 auto;
+}
+.row .col-1-of-2 .componente__tamano {
+  width: 300px;
+  height: 200px;
+}
+
+.row .col-1-of-4 .componente__tamano {
+  width: 250px;
+  height: 150px;
+}
+
+.col-1-of-2 .componente img {
+  width: 10rem;
+}
+
+.col-1-of-4 .componente img {
+  width: 7rem;
+}
+
+.componente__side {
+  color: #fff;
+  font-size: 2rem;
+  height: 100%;
+  transition: all 0.8s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  margin: 0 auto;
+}
+.componente__side--front {
+  border-radius: 20px;
+  background: linear-gradient(135deg, #00ffec, #0081ff);
+}
+.componente__side--back {
+  transform: rotateY(180deg);
+}
+
+.componente__side--back-1 {
+  background: linear-gradient(135deg, #00ffec, #0081ff);
+  border-radius: 20px;
+}
+.componente:hover .componente__side--front {
+  transform: rotateY(180deg);
+}
+.componente:hover .componente__side--back {
+  transform: rotateY(0);
+}
+
+.componente__titulo {
+  text-align: center;
+  background: linear-gradient(135deg, #00ffec, #0081ff, #ff007f);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+.componente__precio {
+  text-align: center;
+  background: linear-gradient(135deg, #ff8800, #fbd24d, #c99710);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#ddr {
+  width: 70%;
+}
+
+#fuente_alimentacion {
+  width: 60%;
+}
+
+#ventilador {
+  width: 60%;
 }
