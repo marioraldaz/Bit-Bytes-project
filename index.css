@@ -22,6 +22,7 @@ html {
   animation: headerHeight;
   animation-duration: 4s;
   animation-timing-function: ease-out;
+  z-index: 9999;
 }
 .header__logo img {
   position: absolute;
@@ -99,6 +100,7 @@ html {
   clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
   border-radius: 15px;
   margin-bottom: 3rem;
+  margin-top: 100px;
 }
 
 .componente {
