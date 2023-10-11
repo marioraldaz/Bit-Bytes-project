@@ -168,19 +168,19 @@ html {
 }
 
 #ddr {
-  width: 70%;
+  width: 50%;
 }
 
 #fuente_alimentacion {
-  width: 60%;
+  width: 40%;
 }
 
 #ventilador {
-  width: 60%;
+  width: 40%;
 }
 
 #torre {
-  width: 50%;
+  width: 30%;
 }
 
 .componente__titulo h1,
