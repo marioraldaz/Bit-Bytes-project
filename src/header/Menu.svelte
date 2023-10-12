@@ -1,28 +1,21 @@
 <script>
-  window.onload=function() {
-    const menu_btn = document.querySelector('.hamburguer-menu');
-    const menu_nav = document.querySelector('.menu-nav');
+  import Nav from "./Nav.svelte";
 
-    menu_btn.addEventListener('click',function() {
-      menu_btn.classList.toggle('is-active');
-      menu_nav.classList.toggle('is-active');
-    });
-  }
+  let navVisibility = false;
 
 </script>
 
 
 <div class="header_menu">
-    <button class="hamburguer-menu">
+    <button class="hamburguer-menu" on:click={() => navVisibility==true}>
       <div class="bar"></div>
         <h1 class="menu-text">Menu</h1>
     </button>
+    {#if navVisibility}
+      <Nav/>
+    {/if}
 </div>
-
-    <nav class="menu-nav">
-      <div class="nav-elem"><a href="#"> RAM </a></div>
-      <div class="nav-elem"><a href="#"> PLACAS </a></div>
-    </nav>
+ 
 
 
 <style lang="scss">
@@ -69,31 +62,5 @@
       }
     }
   }
-  .menu-nav{
-    display: block;
-    position:fixed;
 
-    top: 0;
-    left:100%;
-    width:100%;
-    min-height: 100vh;
-    z-index:98;
-    background-color: purple;
-    transition:0.4s;
-
-   
-    .nav-elem{
-      width: 100%;
-      height: 50px;
-      font-size:30px;
-      a{
-        color:white;
-        text-decoration:none;  
-      }
-    }
-  }
-
-  .menu-nav.is-active{
-      left:0;
-    }
 </style>
