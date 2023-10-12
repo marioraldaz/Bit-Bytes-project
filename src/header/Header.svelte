@@ -2,7 +2,13 @@
     import Menu from "./Menu.svelte";
 </script>
 
-<Menu/>
+<div class="header">
+    <Menu/>
+    <div class="header__logo">
+        <span><img src="logo.png" alt="logo.png"/></span>
+    </div>
+    <div class="header__carrito"></div>
+</div>
 
 <style>
     
