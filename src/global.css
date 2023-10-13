@@ -11,8 +11,6 @@ html {
   box-sizing: inherit;
 }
 
-
-
 @keyframes headerHeight {
   0% {
     min-height: 100vh;

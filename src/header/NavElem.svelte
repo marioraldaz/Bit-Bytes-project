@@ -15,7 +15,7 @@
   .elem-container{
     width:100%;
     height:120px;
-    margin-top:10px;
+    margin-top:40px;
     a{
       text-decoration: none;
     }
@@ -28,7 +28,6 @@
     .elem-name{
       opacity: 0;
       display: inline-block;
-      float:right;
       margin-right:150px;
       margin-top:35px;
       font-size: 35px;
