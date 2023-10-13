@@ -1,28 +1,28 @@
 {
-  "Elementos": [
+  "Elements": [
     {
-      "nombre": "Placas Base",
-      "logo": ""
+      "name": "MotherBoards",
+      "logo": "src/header/jsons/images/MotherBoard.jpg"
     },
 
     {
-      "nombre": "Procesadores",
-      "logo": ""
+      "name": "Proccessors",
+      "logo": "src/header/jsons/images/CPU.jpg"
     },
 
     {
-      "nombre": "Discos duros",
-      "logo": ""
+      "name": "Hard Disks",
+      "logo": "src/header/jsons/images/SSD.jpg"
     },
 
     {
-      "nombre": "Tarjetas Gráficas",
-      "logo": ""
+      "name": "Graphic Cards",
+      "logo": "src/header/jsons/images/GPU.jpg"
     },
 
     {
-      "nombre": "Memoria Ram",
-      "logo": ""
+      "name": "RAM Memory",
+      "logo": "src/header/jsons/images/RAM.jpg"
     }
   ]
 }

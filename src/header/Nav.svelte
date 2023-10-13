@@ -1,11 +1,15 @@
 <script>
   import NavElem from "./NavElem.svelte"
   import navElements from "./jsons/navElements.json"
+
+  let arrayElements = navElements.Elements;
+
 </script>
 
 <nav class="menu-nav">
-    <div class="nav-elem"><a href="#"> RAM </a></div>
-    <div class="nav-elem"><a href="#"> PLACAS </a></div>
+    {#each arrayElements as navEl}
+      <NavElem name={navEl.name} logo={navEl.logo}/>
+    {/each}
 </nav>
 
 
@@ -15,7 +19,7 @@
     display: block;
     position:fixed;
 
-    width:50%;
+    width:30%;
     min-height: 100vh;
     float:right;
     z-index:98;
