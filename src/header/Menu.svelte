@@ -1,62 +1,65 @@
 <script>
   import Nav from "./Nav.svelte";
 
-  let navVisibility = false;
+  export let navVisibility = false;
+  export let onClick = () => {  navVisibility = navVisibility ? navVisibility=false : navVisibility=true
+    console.log(navVisibility);
+  }
+
 </script>
 
-<div class="header_menu">
-  <button class="hamburguer-menu" on:click={() => navVisibility == true}>
-    <div class="bar" />
-    <h1 class="menu-text">Menu</h1>
-  </button>
+  <div class="header_menu">
+    <button class="hamburguer-menu" on:click={onClick}>
+      <div class="bar1"/>
+      <div class="bar2"/>
+      <div class="bar3"/>
+    </button>
+    <h2 class="menu-text">Componentes</h2>
+  </div>
+
   {#if navVisibility}
     <Nav />
   {/if}
-</div>
 
 <style lang="scss">
+  @use "sass:math";
+
   .header_menu {
     position: relative;
     display: inline-block;
-    width: 130px;
+    width:240px;
+    height: 100%;
     margin-left: 10px;
     .hamburguer-menu {
+      display:inline-block;
+      position:absolute;
+      top:0;
       height: 100%;
+      border:none;
       width: 100%;
-      border: none;
       background: none;
       cursor: pointer;
-      &:hover {
-        .menu-text {
-          display: inline-block;
-        }
-      }
-
-      & .bar,
-      &:after,
-      &:before {
-        content: "";
-        display: block;
+      .bar1, .bar2, .bar3{
         width: 45px;
         height: 8px;
-        background-color: red;
-        transition: 0.4s;
+        margin-bottom: 6px;
         border-radius: 20px;
-        margin-top: 6px;
-      }
-
-      &.is-active:before {
-        transform: rotate(-45deg) translate(-9px, 6px);
-      }
-      &.is-active:after {
-        transform: rotate(45deg) translate(-8px, -8px);
-      }
-
-      .menu-text {
-        display: none;
-        float: right;
-        margin-bottom: 20px;
+        background-color: red;
+        display: block;
       }
     }
+    &:hover {
+        .menu-text {
+          opacity:100;
+        }
+      }
+      .menu-text{
+        position: absolute;
+        margin:0;
+        padding: 0;;
+        opacity: 0;
+        top:20%;
+        left:25%;
+      }
   }
 </style>

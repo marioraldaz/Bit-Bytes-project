@@ -1,0 +1,28 @@
+{
+  "Elementos": [
+    {
+      "nombre": "Placas Base",
+      "logo": ""
+    },
+
+    {
+      "nombre": "Procesadores",
+      "logo": ""
+    },
+
+    {
+      "nombre": "Discos duros",
+      "logo": ""
+    },
+
+    {
+      "nombre": "Tarjetas Gráficas",
+      "logo": ""
+    },
+
+    {
+      "nombre": "Memoria Ram",
+      "logo": ""
+    }
+  ]
+}
