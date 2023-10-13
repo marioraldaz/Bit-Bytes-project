@@ -11,28 +11,7 @@ html {
   box-sizing: inherit;
 }
 
-.header {
-  position: fixed;
-  height: 82px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgb(255, 255, 255);
-  border-bottom: 2px solid black;
-  animation: headerHeight;
-  animation-duration: 4s;
-  animation-timing-function: ease-out;
-  z-index: 9999;
-}
-.header__logo img {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  height: 100%;
-  animation: introLogo;
-  animation-duration: 2.5s;
-  animation-timing-function: linear;
-}
+
 
 @keyframes headerHeight {
   0% {
