@@ -8,8 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
-
+    "format": "prettier --plugin-search-dir . --write .",
+    "compile": "node-sass --watch src/global.scss style.css"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.4.2",

@@ -19,7 +19,7 @@
     display: block;
     position:fixed;
 
-    width:30%;
+    width:20%;
     min-height: 100vh;
     float:right;
     z-index:98;

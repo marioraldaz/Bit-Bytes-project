@@ -28,7 +28,7 @@
     .elem-name{
       opacity: 0;
       display: inline-block;
-      margin-right:150px;
+      margin-left:10px;      
       margin-top:35px;
       font-size: 35px;
       color:white;
