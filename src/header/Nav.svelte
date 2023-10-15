@@ -1,7 +1,6 @@
 <script>
   import NavElem from "./NavElem.svelte"
   import navElements from "./jsons/navElements.json"
-
   let arrayElements = navElements.Elements;
 
 </script>
@@ -18,15 +17,13 @@
   .menu-nav{
     display: block;
     position:fixed;
-
+    border: 5px solid  rgb(94, 176, 208);
     width:20%;
     min-height: 100vh;
     float:right;
     z-index:98;
-    background-color: purple;
+    background: linear-gradient(60deg,rgb(176, 32, 229) 25%,rgb(94, 176, 208));       
     transition:0.4s;
-
-   
     .nav-elem{
       width: 100%;
       height: 50px;
