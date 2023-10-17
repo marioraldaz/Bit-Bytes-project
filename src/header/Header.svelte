@@ -2,6 +2,8 @@
   import Menu from "./Menu.svelte";
   import Carrito from "./Carrito.svelte";
   import Usuario from "./Usuario.svelte";
+  import SearchBar from "./SearchBar.svelte";
+
 </script>
 
 <div class="header">
@@ -9,6 +11,7 @@
   <div class="header__logo">
     <a href="/"><img src="./imagenes/logo.png" alt="logo.png" /></a>
   </div>
+  <SearchBar />
   <Carrito />
   <Usuario />
 </div>
