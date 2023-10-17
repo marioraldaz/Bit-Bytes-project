@@ -1,6 +1,7 @@
 <script>
-  let footerData = [];
-  // import {footerData} from './footerData.json';
+   import Datos from './footerData.json';
+
+   let footerData=Datos.Elements;
 </script>
 
 <footer class="footer">

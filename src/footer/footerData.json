@@ -1,38 +1,40 @@
-[
-  {
-    "title": "Company",
-    "links": [
-      {"text": "About us", "url": "#"},
-      {"text": "Our services", "url": "#"},
-      {"text": "Privacy policy", "url": "#"},
-      {"text": "Affiliate program", "url": "#"}
-    ]
-  },
-  {
-    "title": "Get help",
-    "links": [
-      {"text": "FAQ", "url": "#"},
-      {"text": "Shipping", "url": "#"},
-      {"text": "Returns", "url": "#"},
-      {"text": "Order status", "url": "#"},
-      {"text": "Payment options", "url": "#"}
-    ]
-  },
-  {
-    "title": "Online shop",
-    "links": [
-      {"text": "Watch", "url": "#"},
-      {"text": "Bag", "url": "#"},
-      {"text": "Components", "url": "#"}
-    ]
-  },
-  {
-    "title": "Follow us",
-    "socialMedia": [
-      {"icon": "fab fa-facebook-f", "url": "#"},
-      {"icon": "fab fa-twitter", "url": "#"},
-      {"icon": "fab fa-instagram", "url": "#"},
-      {"icon": "fab fa-linkedin-in", "url": "#"}
-    ]
-  }
-]
+{
+  "Elements": [
+    {
+      "title": "Company",
+      "links": [
+        { "text": "About us", "url": "#" },
+        { "text": "Our services", "url": "#" },
+        { "text": "Privacy policy", "url": "#" },
+        { "text": "Affiliate program", "url": "#" }
+      ]
+    },
+    {
+      "title": "Get help",
+      "links": [
+        { "text": "FAQ", "url": "#" },
+        { "text": "Shipping", "url": "#" },
+        { "text": "Returns", "url": "#" },
+        { "text": "Order status", "url": "#" },
+        { "text": "Payment options", "url": "#" }
+      ]
+    },
+    {
+      "title": "Online shop",
+      "links": [
+        { "text": "Watch", "url": "#" },
+        { "text": "Bag", "url": "#" },
+        { "text": "Components", "url": "#" }
+      ]
+    },
+    {
+      "title": "Follow us",
+      "socialMedia": [
+        { "icon": "fab fa-facebook-f", "url": "#" },
+        { "icon": "fab fa-twitter", "url": "#" },
+        { "icon": "fab fa-instagram", "url": "#" },
+        { "icon": "fab fa-linkedin-in", "url": "#" }
+      ]
+    }
+  ]
+}
