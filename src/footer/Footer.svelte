@@ -9,11 +9,13 @@
     {#each footerData as section (section.title)}
       <div class="col-1-of-4">
         <h4>{section.title}</h4>
+        {#if section.links}
         <ul>
           {#each section.links as link (link.text)}
             <li><a href="{link.url}">{link.text}</a></li>
           {/each}
         </ul>
+        {/if}
         {#if section.socialMedia}
           <div class="social-media">
             {#each section.socialMedia as social (social.icon)}

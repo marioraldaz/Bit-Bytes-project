@@ -5,12 +5,13 @@
   export let id;
   export let specifications;
   export let description;
-  let clicked = false;
+  export let clicked = false;
   function click(event) {
     if (event.target.tagName !== 'A') {
       clicked = !clicked;
     }
   }
+
 </script>
   
   <div class="component {clicked ? 'clicked' : ''}" on:click={click} >
@@ -60,6 +61,7 @@
     .component__side{
       height: 10rem;
     }
+
   }
 
     .component__side--front {
@@ -137,19 +139,21 @@
     }
   
     #ddr {
-      width: 62%;
+      width: 42%;
+      margin-top: 5px;
     }
   
     #fuente_alimentacion {
-      width: 60%;
+      width: 48%;
+
     }
   
     #ventilador {
-      width: 60%;
+      width: 42%;
     }
   
     #torre {
-      width: 50%;
+      width: 35%;
     }
   
     .component__titulo h1,
