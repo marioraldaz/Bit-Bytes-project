@@ -3,7 +3,6 @@
   import Carrito from "./Carrito.svelte";
   import Usuario from "./Usuario.svelte";
   import SearchBar from "./SearchBar.svelte";
-
 </script>
 
 <div class="header">
@@ -11,9 +10,10 @@
   <div class="header__logo">
     <a href="/"><img src="./imagenes/logo.png" alt="logo.png" /></a>
   </div>
-  <SearchBar />
+
   <Carrito />
   <Usuario />
+  <SearchBar />
 </div>
 
 <style lang="scss">
@@ -41,6 +41,26 @@
       animation: introLogo;
       animation-duration: 2.5s;
       animation-timing-function: ease-in;
+    }
+
+    @keyframes headerHeight {
+      0% {
+        min-height: 100vh;
+      }
+
+      100% {
+        min-height: 0;
+      }
+    }
+
+    @keyframes introLogo {
+      0% {
+        opacity: 0;
+        height: 50%;
+      }
+      100% {
+        opacity: 1;
+      }
     }
   }
 </style>
