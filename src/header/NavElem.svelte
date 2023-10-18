@@ -6,7 +6,7 @@
 <div class="elem-container">
   <a href="#">
     <img src={logo} id={name} class="image" alt="logo-nav-elem"/>
-    <h2 class="elem-name">{name}</h2>
+    <span class="elem-name">{name}</span>
   </a>
 </div>
 
@@ -14,7 +14,7 @@
 
   .elem-container{
     width:100%;
-    height:120px;
+    height:100px;
     margin-top:40px;
     a{
       text-decoration: none;
@@ -25,13 +25,14 @@
       width:120px;
       height: 100%;
     }
+
     .elem-name{
       opacity: 0;
-      display: inline-block;
-      margin-left:10px;      
-      margin-top:35px;
-      font-size: 35px;
+      display: block;
       color:white;
+      float:right;
+      font-size:25px;
+      padding-right:20%;
     }
     &:hover{
       .elem-name{
