@@ -4,7 +4,9 @@
   export let onClick = () => {  navVisibility = navVisibility ? navVisibility=false : navVisibility=true
     console.log(navVisibility);
   }
- 
+  import RAMs from "../components/RAMs/RAMs.svelte";
+  let seeRAMs=false;
+
 </script>
 
   <div class="header_menu">
@@ -21,6 +23,9 @@
     <Nav />
   {/if}
 
+  {#if seeRAMs}
+    <RAMs />
+  {/if}
 <style lang="scss">
   @use "sass:math";
 

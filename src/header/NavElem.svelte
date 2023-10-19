@@ -1,10 +1,14 @@
 <script>
   export let name = "name";
   export let logo = "logo_src";
+  export let seeRAMs = true;
+  function onClick(){ //Preguntar como hacerlo sin if?
+      
+  }
 </script>
 
 <div class="elem-container">
-  <a href="#">
+  <a href="#" on:click={onClick}>
     <img src={logo} id={name} class="image" alt="logo-nav-elem"/>
     <span class="elem-name">{name}</span>
   </a>
