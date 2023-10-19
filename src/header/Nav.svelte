@@ -17,7 +17,7 @@
   .menu-nav{
     display: block;
     position:fixed;
-    border: 5px solid  rgb(94, 176, 208);
+    border: 1px solid  rgb(94, 176, 208);
     width:20%;
     min-height: 100vh;
     float:right;

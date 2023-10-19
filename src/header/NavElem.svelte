@@ -15,15 +15,21 @@
   .elem-container{
     width:100%;
     height:100px;
-    margin-top:40px;
+    border:3px solid rgb(176, 32, 229);
+    margin:0;
+    padding:0;
     a{
       text-decoration: none;
     }
 
     .image{
       display: inline-block;
-      width:120px;
+      width:100px;
       height: 100%;
+
+      &:hover{
+        transform: scale(120%);
+      }
     }
 
     .elem-name{
@@ -31,13 +37,16 @@
       display: block;
       color:white;
       float:right;
-      font-size:25px;
+      margin:0;
+      padding:0;
+      font-size:30px;
       padding-right:20%;
     }
     &:hover{
       .elem-name{
         opacity: 100;
       }
+      background-color: rgb(176, 32, 229 / 0.2);
     }
   }
 </style>
