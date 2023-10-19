@@ -4,7 +4,7 @@
     let arrayRams = RAMs.RAMs;
 </script>
 
-
+<h1>RAMS</h1>
 <div class="container">
     {#each arrayRams as RAM}
         <Product componentName={RAM.name} id={RAM.name} price={RAM.price}
@@ -15,6 +15,5 @@
 
 
 <style lang="scss">
-
 
 </style>

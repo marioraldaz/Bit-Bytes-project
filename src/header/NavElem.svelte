@@ -2,13 +2,17 @@
   export let name = "name";
   export let logo = "logo_src";
   export let seeRAMs = true;
+  import RAMs from "../components/RAMs/index.svelte";
+  let routes = {
+    "RAMs": RAMs
+  }
   function onClick(){ //Preguntar como hacerlo sin if?
       
   }
 </script>
 
 <div class="elem-container">
-  <a href="#" on:click={onClick}>
+  <a href="/RAMs" on:click={onClick}>
     <img src={logo} id={name} class="image" alt="logo-nav-elem"/>
     <span class="elem-name">{name}</span>
   </a>

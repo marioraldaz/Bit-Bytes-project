@@ -4,7 +4,7 @@
   export let onClick = () => {  navVisibility = navVisibility ? navVisibility=false : navVisibility=true
     console.log(navVisibility);
   }
-  import RAMs from "../components/RAMs/RAMs.svelte";
+  import RAMs from "../components/RAMs/index.svelte";
   let seeRAMs=false;
 
 </script>
