@@ -1,37 +1,40 @@
 <script>
-  import NavElem from "./NavElem.svelte"
-  import navElements from "./jsons/navElements.json"
+  import NavElem from "./NavElem.svelte";
+  import navElements from "./jsons/navElements.json";
   let arrayElements = navElements.Elements;
-
 </script>
 
 <nav class="menu-nav">
-    {#each arrayElements as navEl}
-      <NavElem name={navEl.name} logo={navEl.logo}/>
-    {/each}
+  {#each arrayElements as navEl}
+    <NavElem name={navEl.name} logo={navEl.logo} />
+  {/each}
 </nav>
 
-
-
 <style lang="scss">
-  .menu-nav{
+  .menu-nav {
     display: block;
-    position:fixed;
-    border: 1px solid  rgb(94, 176, 208);
-    width:20%;
+    position: fixed;
+    border: 1px solid rgb(94, 176, 208);
+    width: 20%;
     min-height: 100vh;
-    float:right;
-    z-index:98;
-    background: linear-gradient(60deg,rgb(176, 32, 229) 25%,rgb(94, 176, 208));       
-    transition:0.4s;
-    .nav-elem{
+    float: right;
+    z-index: 98;
+    background: linear-gradient(
+      60deg,
+      rgb(176, 32, 229) 25%,
+      rgb(94, 176, 208)
+    );
+    transition: 0.4s;
+    .nav-elem {
       width: 100%;
       height: 50px;
-      font-size:30px;
-      a{
-        color:white;
-        text-decoration:none;  
+      font-size: 30px;
+      a {
+        color: white;
+        text-decoration: none;
       }
     }
   }
+
+
 </style>

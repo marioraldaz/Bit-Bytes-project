@@ -10,7 +10,7 @@
     float: right;
     transform: translate(0%, 50%);
     .searchBar {
-      width: 350px;
+      width: 100%;
       height: 40px;
       border: 2px solid violet;
       border-radius: 20px;
@@ -25,4 +25,5 @@
       }
     }
   }
+
 </style>

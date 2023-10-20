@@ -6,14 +6,17 @@
 </script>
 
 <div class="header">
-  <Menu />
-  <div class="header__logo">
-    <a href="/"><img src="./imagenes/logo.png" alt="logo.png" /></a>
+  <div class="header__right">
+    <Menu />
+    <div class="header__logo">
+      <a href="/"><img src="./imagenes/logo.png" alt="logo.png" /></a>
+    </div>
   </div>
-
-  <Carrito />
-  <Usuario />
-  <SearchBar />
+  <div class="header__left">
+    <Carrito />
+    <Usuario />
+    <SearchBar />
+  </div>
 </div>
 
 <style lang="scss">
@@ -29,6 +32,14 @@
     animation-duration: 4s;
     animation-timing-function: ease-out;
     z-index: 9999;
+
+    &__right {
+      height: inherit;
+      display: inline-block;
+    }
+    &__left {
+      display: inline;
+    }
     &__logo {
       display: inline-block;
       height: 82px;
