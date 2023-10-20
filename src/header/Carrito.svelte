@@ -1,4 +1,5 @@
 <script>
+export let productos = []
 </script>
 
 <div class="header__carrito">
