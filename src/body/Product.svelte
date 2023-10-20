@@ -6,15 +6,16 @@
   export let specifications;
   export let description;
   export let clicked = false;
-  function click(event) {
-    if (event.target.tagName !== 'A') {
+  function click() {
+
       clicked = !clicked;
-    }
+    
   }
+
 
 </script>
   
-  <div class="component {clicked ? 'clicked' : ''}" on:click={click} >
+  <div class="component {clicked ? 'clicked' : ''}" >
     <div class="component__side component__side--front">
         <div class="component__img"><img id={id} src={image} alt="Producto" /></div>
         <div class="component__box--description">
@@ -23,15 +24,72 @@
             <p>{description}</p>
           </div>
         </div>
-      <div class="component__footer"><a class="buy" href="#">Buy Now</a></div>
+      <div class="component__footer">
+        <div class="component__button--specs"on:click={click}>Specs</div>
+        <div class="component__button--buy" ><a href="#">Buy Now</a></div>
+      </div>
     </div>
     <div class="component__side component__side--back component__side--back-1">
-      <p>{specifications}</p>
-    </div>
+      <div class="close" on:click={click}>X</div>
+      <div class="specifications">
+      <h4>Specifications</h4>
+      {#each specifications as specification}
+        <div>{specification}</div>
+      {/each}
+      </div>
+    </div> 
   </div>
 
 <style>
-  
+
+    .specifications{
+      height: 100%;
+    }
+
+    .specifications div{
+      height: 15%;
+    }
+
+    .specifications div:not(:last-child){
+      margin-bottom: 10%;
+    }
+
+    .specifications h4{
+      height: 10%;
+      margin-bottom: 5%;
+    }
+
+    .close{
+      font-size: 1.5rem;
+      border-radius: 0 10px 0 10px;
+      background-color: rgb(185, 10, 185);
+      position: absolute;
+      padding: 5px;
+      right: 5px;
+      top:5px;
+    }
+
+    .component__button--specs{
+      width: 40%;
+      float: left;
+      margin-right: 10%;
+      margin-left: 5%;
+      border-radius: 20px;
+      background-color: purple;
+    }
+
+    .component__button--buy{
+      width: 40%;
+      float: left;
+      border-radius: 20px;
+      background-color: purple;
+    }
+
+    .component__button--buy a{
+      text-decoration: none;
+      color: white;
+    }
+
     .component {
       perspective: 150rem;
       -moz-perspective: 150rem;
@@ -121,7 +179,10 @@
 
     .component__footer{
       height:10%;
-      background-color: purple;
+      background-color: white;
+      position: relative;
+      padding: 5px;
+      color: white;
     }
 
     .component__footer .buy{

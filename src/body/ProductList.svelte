@@ -2,10 +2,10 @@
 <script>
     import Product from './Product.svelte';
     export let products;
-    let clicked;
 
-  function addComponent(){
 
+  function addComponent(producto){
+      
   }
 
   </script>
@@ -20,12 +20,8 @@
                 price={product.price}
                 specifications={product.specifications}
                 description={product.description}
-                bind:clicked={product.clicked}
                 />
             </div>
-            {#if product.clicked}
-              HOLA
-            {/if}
             {/each}
     </div>
 
