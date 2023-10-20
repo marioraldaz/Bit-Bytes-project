@@ -2,19 +2,21 @@
   import Header from "./header/Header.svelte"
   import Body from "./body/Body.svelte"
   import Footer from "./footer/Footer.svelte"
-  let productos = [];
+  import Menus from "./stores/menus"
+  let active="Body"
 </script>
 
 <div class="container">
 
-  <Header/>
-
-  <Body/>
-
+  <Header />
+  
+  {#if active="Body"}
+    <Body/>
+  {/if}
   <Footer/>
 
-
 </div>
+
 
 <style>
 
