@@ -80,6 +80,7 @@
 }
 
 .footer {
+  clear: both;
   background-color: #fff;
   padding: 100px 0;
   line-height: 1.5;

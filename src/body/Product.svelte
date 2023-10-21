@@ -188,20 +188,6 @@
       padding: 5px;
       color: white;
     }
-
-    .component__footer .buy{
-      text-align: center;
-      background: linear-gradient(135deg, #ff8800, #fbd24d, #c99710);
-      -webkit-background-clip: text;
-      color: transparent;
-      padding: 0;
-      text-decoration: none;
-      font-size: 1.5rem;
-    }
-
-    .component__footer .buy:hover {
-      font-size: 1.7rem;
-    }
   
     #ddr {
       width: 42%;
@@ -220,28 +206,14 @@
     #torre {
       width: 35%;
     }
-  
-    .component__titulo h1,
-    .component__precio h1 {
-      font-size: 1.5rem;
-      transition: font-size 0.3s;
+
+  @media screen and (max-width: 1800px) {
+    .component{
+      height: 30rem;
     }
-  
-    @media screen and (max-width: 768px) {
-      .component__titulo h1,
-      .component__precio h1 {
-        font-size: 0.8rem;
-      }
+    .component__side{
+      height: 30rem;
     }
-  
-    .component__side--back p {
-      font-size: 1.3rem;
-      transition: font-size 0.3s;
-    }
-  
-    @media screen and (max-width: 768px) {
-      .component__side--back p {
-        font-size: 0.6rem;
-      }
-    }
+  }
+
   </style>
