@@ -20,7 +20,7 @@
 </script>
 
 <div class="elem-container">
-  <a href="#" on:click={onClick}>
+  <a href="/#" on:click={onClick}>
     <img src={logo} id={name} class="image" alt="logo-nav-elem"/>
     <span class="elem-name">{name}</span>
   </a>

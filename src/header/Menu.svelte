@@ -2,8 +2,8 @@
   import Nav from "./Nav.svelte";
   export let navVisibility = false;
   export let onClick = () => {  navVisibility = navVisibility ? navVisibility=false : navVisibility=true
+
   }
-  let seeRAMs=false;
 
 </script>
 
@@ -26,7 +26,6 @@
   .header_menu {
     position: relative;
     display: inline-block;
-    width:300px;
     height: 100%;
     margin-left: 10px;
     .hamburguer-menu {
@@ -46,25 +45,13 @@
         display: block;
         background: linear-gradient(60deg,rgb(176, 32, 229) 25%,rgb(94, 176, 208));       
       }
-
     }
+
     &:hover {
-        .menu-text {
-          opacity:100;
-        }
+      .bar1,.bar2,.bar3{
+        transform: scale(120%);
+        margin-bottom: 10px;
       }
-      .menu-text{
-        position: absolute;
-        margin:0;
-        padding: 0;;
-        opacity: 0;
-        top:20%;
-        left:35%;
-        font-size:30px;
-        
-        a{
-          text-decoration: none;
-        }
-      }
+    }
   }
 </style>

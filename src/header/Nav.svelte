@@ -1,5 +1,4 @@
 <script>
-  import { get } from 'svelte/store'
   import NavElem from "./NavElem.svelte";
   import Menus from "../stores/menus.js";
   import { onMount } from 'svelte';
@@ -39,15 +38,6 @@
       rgb(94, 176, 208)
     );
     transition: 0.4s;
-    .nav-elem {
-      width: 100%;
-      height: 50px;
-      font-size: 30px;
-      a {
-        color: white;
-        text-decoration: none;
-      }
-    }
   }
 
 

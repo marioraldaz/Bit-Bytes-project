@@ -146,7 +146,7 @@
 
     
     .component__img{
-      background-color: PINK;
+      background-color: rgb(94, 176, 208);
       height:35%;
     }
 
@@ -157,7 +157,7 @@
 
     .component__name{
       text-align: center;
-      background: linear-gradient(135deg, #00ffec, #0081ff, #ff007f);
+      background: black;
       -webkit-background-clip: text;
       color: transparent;
       font-weight: bold;

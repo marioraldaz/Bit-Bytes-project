@@ -5,7 +5,12 @@
       "GB": 16,
       "logo": "src/components/RAMs/images/1441-corsair-vengeance-lpx-ddr4-3200mhz-pc4-25600-32gb-2x16gb-cl16.jpg",
       "price": 75.99,
-      "specifications": [],
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
       "description": ""
     },
     {
@@ -13,7 +18,12 @@
       "GB": "8",
       "logo": "src/components/RAMs/images/1441-corsair-vengeance-lpx-ddr4-3200mhz-pc4-25600-32gb-2x16gb-cl16.jpg",
       "price": 42.99,
-      "specifications": [],
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
       "description": ""
     },
     {
@@ -21,7 +31,12 @@
       "GB": "8",
       "logo": "src/components/RAMs/images/Team-Group-Delta.jpg",
       "price": 45.99,
-      "specifications": [],
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
       "description": ""
     },
     {
@@ -29,7 +44,12 @@
       "GB": "16",
       "logo": "src/components/RAMs/images/2394-corsair-vengeance-ddr5-6000mhz-32-gb-2x16gb-cl36.jpg",
       "price": 120,
-      "specifications": [],
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
       "descripton": ""
     }
   ]

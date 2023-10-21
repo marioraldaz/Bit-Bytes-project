@@ -3,6 +3,23 @@
   import Carrito from "./Carrito.svelte";
   import Usuario from "./Usuario.svelte";
   import SearchBar from "./SearchBar.svelte";
+  import Menus from "../stores/menus.js"
+  import { onMount } from "svelte";
+  let active=""
+
+  onMount(()=>{
+    return Menus.subscribe((data)=>{
+      active = data.active;
+    });
+  });
+
+  function onClick(){
+    return Menus.update((data)=>{
+      data.active = "Body";
+      return data;
+    });
+  }
+
 </script>
 
 <div class="header">
@@ -12,6 +29,9 @@
       <a href="/"><img src="./imagenes/logo.png" alt="logo.png" /></a>
     </div>
   </div>
+  {#if active != "Body"}
+    <div class="header__home"><a href="/#" on:click={onClick}>Go back to home page</a></div>
+  {/if}
   <div class="header__left">
     <Carrito />
     <Usuario />
@@ -20,6 +40,7 @@
 </div>
 
 <style lang="scss">
+
   .header {
     position: fixed;
     height: 82px;
@@ -52,6 +73,25 @@
       animation: introLogo;
       animation-duration: 2.5s;
       animation-timing-function: ease-in;
+    }
+
+    &__home{
+      position: absolute;
+      font-size: 25px;
+      top:20%;
+      left:5%;
+      border:2px solid  rgb(176, 32, 229);
+      padding: 10px;
+      border-radius: 20px;
+      a{
+        color:black;
+        text-decoration: none;
+      }
+
+      &:hover{
+        transform:scale(120%);
+        background-color:rgb(226, 167, 226);
+      }
     }
 
     @keyframes headerHeight {
