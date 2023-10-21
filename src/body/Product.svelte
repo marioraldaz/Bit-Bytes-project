@@ -1,8 +1,8 @@
 <script>
-  export let componentName;
-  export let image;
-  export let price;
   export let id;
+  export let name;
+  export let logo;
+  export let price;
   export let specifications;
   export let description;
   export let clicked = false;
@@ -17,16 +17,16 @@
   
   <div class="component {clicked ? 'clicked' : ''}" >
     <div class="component__side component__side--front">
-        <div class="component__img"><img id={id} src={image} alt="Producto" /></div>
+        <div class="component__img"><img id={id} src={logo} alt="Producto" /></div>
         <div class="component__box--description">
-          <div class="component__name">{componentName}</div>
+          <div class="component__name">{name}</div>
           <div class="component__description">
             <p>{description}</p>
           </div>
         </div>
       <div class="component__footer">
         <div class="component__button--specs"on:click={click}>Specs</div>
-        <div class="component__button--buy" ><a href="#">Buy Now</a></div>
+        <div class="component__button--buy" ><a href="#">Buy</a></div>
       </div>
     </div>
     <div class="component__side component__side--back component__side--back-1">
@@ -41,6 +41,10 @@
   </div>
 
 <style>
+
+  img{
+    width: 60%;
+  }
 
     .specifications{
       height: 100%;

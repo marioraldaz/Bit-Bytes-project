@@ -11,14 +11,13 @@ html {
   box-sizing: inherit;
 }
 
-
 .row {
   max-width: 114rem;
   margin: 0 10px;
   text-align: center;
 }
 .row:not(:last-child) {
-  margin-bottom: 8rem;
+  margin-bottom: 4rem;
 }
 .row:after {
   content: "";

@@ -1,21 +1,28 @@
 <script>
     import Product from "../../body/Product.svelte";
-    import RAMs from "./RAMs.json";
-    let arrayRams = RAMs.RAMs;
-    console.log("Product")
+/*   import ProductList from "../../body/ProductList.svelte";
+ */    /* import RAMs from "./RAMs.json";
+    let arrayRams = RAMs.RAMs; */
+    import ProductList from "../../body/ProductList.svelte";
+    console.log("Product");
+    import {RAMs} from './RAMs.json';
 
 </script>
-
-<h1>RAMS</h1>
-<div class="container" >
-    {#each arrayRams as RAM}
-        <Product componentName={RAM.name} id={RAM.name} price={RAM.price}
-        image={RAM.logo} specifications={RAM.specifications} description={RAM.description}/>
-    {/each}
-</div>
-
-
+    <div class="cuerpo">
+        <div class="gradiente_img_cabecera row">
+          <img
+            class="img_encabezado"
+            src="imagenes/componentes_cabecera.png"
+            alt="componentes"
+          />
+        </div>
+        <h1>RAMS</h1>
+        <ProductList products={RAMs}  />
+    </div>
 
 <style lang="scss">
-
+h1{
+    text-align: center;
+    margin-bottom: 2rem;
+}
 </style>
