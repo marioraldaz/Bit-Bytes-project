@@ -3,6 +3,7 @@
   import Body from "./body/Body.svelte"
   import Footer from "./footer/Footer.svelte"
   import Menus from "./stores/menus"
+  import RAMs from "./components/RAMs/RAMs.svelte"
   let active="Body"
 </script>
 
@@ -12,6 +13,8 @@
   
   {#if active="Body"}
     <Body/>
+    {:else if active="RAMs"}
+      <RAMs/>
   {/if}
   <Footer/>
 
