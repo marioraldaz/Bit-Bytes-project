@@ -3,13 +3,24 @@
   export let name = "name";
   export let logo = "logo_default";
   import Menus from "../stores/menus.js";
+  let menus=[];
 
-  function onClick(){ 
-  }
+  function onClick(){
+    return Menus.update((data) =>{
+      data.active = name;
+      return data;
+    });
+  };
+  
+  onMount(()=>{
+    return Menus.subscribe((data)=>{
+    menus=data.menus;
+    });
+  });
 </script>
 
 <div class="elem-container">
-  <a href="/#" on:click={onClick}>
+  <a href="#" on:click={onClick}>
     <img src={logo} id={name} class="image" alt="logo-nav-elem"/>
     <span class="elem-name">{name}</span>
   </a>

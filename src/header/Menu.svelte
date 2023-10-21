@@ -2,7 +2,6 @@
   import Nav from "./Nav.svelte";
   export let navVisibility = false;
   export let onClick = () => {  navVisibility = navVisibility ? navVisibility=false : navVisibility=true
-    console.log(navVisibility);
   }
   let seeRAMs=false;
 

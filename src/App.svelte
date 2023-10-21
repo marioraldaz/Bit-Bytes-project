@@ -4,19 +4,32 @@
   import Footer from "./footer/Footer.svelte"
   import Menus from "./stores/menus"
   import RAMs from "./components/RAMs/RAMs.svelte"
-  let active="Body"
+  import { onMount } from "svelte"
+  let active=""
+
+  onMount(()=>{
+    return Menus.subscribe((data)=>{
+      active = data.active;
+    });
+  });
+
+
+
 </script>
 
 <div class="container">
 
-  <Header />
-  
-  {#if active="Body"}
-    <Body/>
-    {:else if active="RAMs"}
-      <RAMs/>
-  {/if}
-  <Footer/>
+  {#key active}
+    <Header />
+    
+    {#if active=="Body"}
+      <Body/>
+      {:else if active=="RAMs"}
+        <RAMs/>
+    {/if}
+
+    <Footer/>
+  {/key}
 
 </div>
 
