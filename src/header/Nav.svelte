@@ -1,12 +1,26 @@
 <script>
+  import { get } from 'svelte/store'
   import NavElem from "./NavElem.svelte";
-  import navElements from "./jsons/navElements.json";
-  let arrayElements = navElements.Elements;
+  import Menus from "../stores/menus.js";
+  import { onMount } from 'svelte';
+
+  let menus=[];
+
+  onMount(()=>{
+    return Menus.subscribe((data)=>{
+    menus=data.menus;
+    });
+  });
 </script>
 
+
 <nav class="menu-nav">
-  {#each arrayElements as navEl}
-    <NavElem name={navEl.name} logo={navEl.logo} />
+  {#each menus as navEl}
+    {#if navEl.name=="Body"}
+        <span></span>
+    {:else}
+        <NavElem name={navEl.name} logo={navEl.logo} />
+    {/if}
   {/each}
 </nav>
 

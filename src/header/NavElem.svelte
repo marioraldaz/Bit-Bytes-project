@@ -1,11 +1,10 @@
 <script>
+  import { onMount } from "svelte";
   export let name = "name";
-  export let logo = "logo_src";
-  export let seeRAMs = false;
-  import RAMs from "../components/RAMs/RAMs.svelte";
- 
+  export let logo = "logo_default";
+  import Menus from "../stores/menus.js";
+
   function onClick(){ 
-      seeRAMs=true;
   }
 </script>
 
