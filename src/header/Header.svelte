@@ -6,21 +6,13 @@
   import Menus from "../stores/menus.js";
   import CreatorButton from "./CreatorButton.svelte";
   import { onMount } from "svelte";
-  import PC_Creator from "../stores/PC_Creator";
   import PC_Creator_Elem from "../components/PC_Creator/PC_Creator.svelte"
 
   let active=""
-  let PC_Creator_Open=false;
 
   onMount(()=>{
     return Menus.subscribe((data)=>{
       active = data.active;
-    });
-  });
-
-  onMount(()=>{
-    return PC_Creator.subscribe((data)=>{
-      PC_Creator_Open= data.open;
     });
   });
 
@@ -39,12 +31,6 @@
       <Menu />
     </div>
 
-    {#if !PC_Creator_Open}
-      <div class="header__right__CreatorButton">      
-        <CreatorButton/>
-      </div>
-    {/if}
-
     <div class="header__logo">
       <a href="/"><img src="./imagenes/logo.png" alt="logo.png" /></a>
     </div>
@@ -53,9 +39,7 @@
   {#if active != "Body"}
     <div class="header__home"><a href="/#" on:click={onClick}>Go back to home page</a></div>
   {/if}
-  {#if active=="PC_Creator"}
-    <PC_Creator_Elem/> 
-  {/if}
+ 
   <div class="header__left">
     <Carrito />
     <Usuario />
@@ -82,20 +66,8 @@
       height: inherit;
       display: inline-block;
       
-      &__CreatorButton{
-        position:absolute;
-        left:10%;
-        top:30%;
-        width:250px;
-        height: 100%;
-
-        &:hover{
-          transform: scale(110%);
-          cursor:pointer;
-        }
-      }
       &__Menu{
-        position: absolute;
+        position: fixed;
       }
     }
     &__left {

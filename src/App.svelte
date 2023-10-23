@@ -4,6 +4,7 @@
   import Footer from "./footer/Footer.svelte"
   import Menus from "./stores/menus"
   import RAMs from "./components/RAMs/RAMs.svelte"
+  import PC_Creator from "./components/PC_Creator/PC_Creator.svelte"
   import { onMount } from "svelte"
   let active=""
 
@@ -19,17 +20,20 @@
 
 <div class="container">
 
-  {#key active}
-    <Header />
-    
+  <Header />
+
+  {#key active}    
     {#if active=="Body"}
       <Body/>
       {:else if active=="RAMs"}
         <RAMs/>
+        {:else if active=="PC_Creator"}
+          <PC_Creator/>
     {/if}
-
-    <Footer/>
   {/key}
+
+  <Footer/>
+
 
 </div>
 

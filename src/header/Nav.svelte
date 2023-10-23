@@ -25,6 +25,7 @@
 
 <style lang="scss">
   .menu-nav {
+    margin-top:50px;
     display: block;
     position: fixed;
     border: 1px solid rgb(94, 176, 208);

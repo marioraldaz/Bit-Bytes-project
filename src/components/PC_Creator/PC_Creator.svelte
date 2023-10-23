@@ -9,6 +9,8 @@
       usedComponents = data.usedComponents;
     });
   });
+
+  console.log("jdnk")
 </script>
 
 <h1 class="title">PC Creator</h1>
