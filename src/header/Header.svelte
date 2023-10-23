@@ -3,13 +3,22 @@
   import Carrito from "./Carrito.svelte";
   import Usuario from "./Usuario.svelte";
   import SearchBar from "./SearchBar.svelte";
-  import Menus from "../stores/menus.js"
+  import Menus from "../stores/menus.js";
+  import CreatorButton from "./CreatorButton.svelte";
   import { onMount } from "svelte";
+  import PC_Creator from "../stores/PC_Creator";
   let active=""
+  let PC_Creator_Open=false;
 
   onMount(()=>{
     return Menus.subscribe((data)=>{
       active = data.active;
+    });
+  });
+
+  onMount(()=>{
+    return PC_Creator.subscribe((data)=>{
+      PC_Creator_Open= data.open;
     });
   });
 
@@ -24,11 +33,21 @@
 
 <div class="header">
   <div class="header__right">
-    <Menu />
+    <div class="header__right__Menu">
+      <Menu />
+    </div>
+
+    {#if !PC_Creator_Open}
+      <div class="header__right__CreatorButton">      
+        <CreatorButton/>
+      </div>
+    {/if}
+
     <div class="header__logo">
       <a href="/"><img src="./imagenes/logo.png" alt="logo.png" /></a>
     </div>
   </div>
+
   {#if active != "Body"}
     <div class="header__home"><a href="/#" on:click={onClick}>Go back to home page</a></div>
   {/if}
@@ -57,6 +76,22 @@
     &__right {
       height: inherit;
       display: inline-block;
+      
+      &__CreatorButton{
+        position:absolute;
+        left:10%;
+        top:30%;
+        width:250px;
+        height: 100%;
+
+        &:hover{
+          transform: scale(110%);
+          cursor:pointer;
+        }
+      }
+      &__Menu{
+        position: absolute;
+      }
     }
     &__left {
       display: inline;
