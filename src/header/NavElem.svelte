@@ -31,7 +31,7 @@
 
   .elem-container{
     width:100%;
-    height:100px;
+    height:10rem;
     border:3px solid rgb(176, 32, 229);
     margin:0;
     padding:0;
@@ -41,7 +41,7 @@
 
     .image{
       display: inline-block;
-      width:100px;
+      width:10rem;
       height: 100%;
 
       &:hover{

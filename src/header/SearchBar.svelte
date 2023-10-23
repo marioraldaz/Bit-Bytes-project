@@ -11,9 +11,9 @@
     transform: translate(0%, 50%);
     .searchBar {
       width: 100%;
-      height: 40px;
+      height: 4rem;
       border: 2px solid violet;
-      border-radius: 20px;
+      border-radius: 2rem;
 
       &:hover {
         transform: scale(110%);
@@ -25,5 +25,4 @@
       }
     }
   }
-
 </style>

@@ -3,6 +3,7 @@ html {
   background: linear-gradient(60deg, rgb(176, 32, 229) 25%, rgb(94, 176, 208));
   height: 100%;
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 * {

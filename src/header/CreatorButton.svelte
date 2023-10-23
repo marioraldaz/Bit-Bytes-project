@@ -33,8 +33,8 @@
         .button{
             width: 100%;
             height: 100%;
-            padding:4px;
-            border-radius: 20px;
+            padding:0.4rem;
+            border-radius: 2rem;
             border-color:red;
         }
     }
