@@ -31,8 +31,12 @@
   <Footer />
 </div>
 
-<style>
-  .container {
-    font-size: 62.5%;
+<style lang="scss">
+
+  @import "./variables";
+
+  *{
+    background: $main-gradient;
   }
+
 </style>
