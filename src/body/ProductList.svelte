@@ -24,22 +24,29 @@
   </div>
 
     <style lang="scss">
-    
-    .column{
+
+  .list{
     position: relative;
     text-align: center;
-    padding-left: 2.5rem;
+    overflow: auto;
+    border: 1px solid black;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+    .column{
+    position: relative;
     float: left;
     margin-bottom: 20px;
     }
 
     @media screen and (min-width: 1100px) {
       .column {
-      width: 20%;
+      width:calc((100% - 5rem*3)/4);
     }
 
     .column:not(:last-child){
-      margin-right: 5%;
+      margin-right: 5rem;
     }
     }
 

@@ -68,9 +68,9 @@
       border-radius: 0 10px 0 10px;
       background-color: rgb(185, 10, 185);
       position: absolute;
-      padding: 5px;
-      right: 5px;
-      top:5px;
+      padding: .5rem;
+      right: .5rem;
+      top:.5rem;
     }
 
     .component__button--specs{
@@ -99,14 +99,14 @@
       -moz-perspective: 150rem;
       position: relative;
       margin: 0 auto;
-      height: 30rem;
-      margin-bottom: 20px;
+      height: 50rem;
+      margin-bottom: 2rem;
     }
   
     .component__side {
       color: #fff;
       font-size: 2rem;
-      height: 30rem;
+      height: 50rem;
       transition: all 0.8s ease;
       position: absolute;
       top: 0;
@@ -115,16 +115,6 @@
       backface-visibility: hidden;
       margin: 0 auto;
     }
-
-  @media screen and (max-width:900px){
-    .component{
-      height: 10rem;
-    }
-    .component__side{
-      height: 10rem;
-    }
-
-  }
 
     .component__side--front {
 /*       background: linear-gradient(135deg, #00ffec, #0081ff);
@@ -165,9 +155,9 @@
       -webkit-background-clip: text;
       color: transparent;
       font-weight: bold;
-      font-size: 1.5rem;
-      padding: 5px;
-      padding-top: 15px;
+      font-size: 3rem;
+      padding: .5rem;
+      padding-top: 1.5rem;
     }
 
     .component__name:hover {
@@ -175,9 +165,9 @@
     }
 
     .component__description{
-      padding:6px;
-      margin:5px;
-      font-size:0.9rem;
+      padding:1rem;
+      margin:.5rem;
+      font-size:1.7rem;
       text-align:left;
     }
 
@@ -185,13 +175,14 @@
       height:10%;
       background-color: white;
       position: relative;
-      padding: 5px;
+      padding: .5rem;
       color: white;
+      font-size: 3rem;
     }
   
     #ddr {
       width: 42%;
-      margin-top: 5px;
+      margin-top: .5rem;
     }
   
     #fuente_alimentacion {
@@ -207,12 +198,16 @@
       width: 35%;
     }
 
-  @media screen and (max-width: 1800px) {
-    .component{
+    @media screen and (max-width:900px){
+    .component,.component__side{
       height: 30rem;
     }
-    .component__side{
-      height: 30rem;
+
+  }
+
+  @media screen and (max-width: 1800px) {
+    .component,.component__side{
+      height: 50rem;
     }
   }
 
