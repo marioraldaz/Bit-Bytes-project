@@ -1,16 +1,17 @@
 <script>
-    import PC_Creator from "../stores/PC_Creator.js";
+    import Menus from "../stores/menus.js";
     import { onMount } from "svelte";
-    import PC_Creator_Elem from "../components/PC_Creator/PC_Creator.svelte"
-    let open=false;
+    let name="PC_Creator";
 
-    function onClick() {
-        open=true;
-    }
+    function onClick(){
+    return Menus.update((data) =>{
+      data.active = name;
+      return data;
+    });
+  };
 
     onMount(()=>{
-    return PC_Creator.subscribe((data)=>{
-      open = data.open;
+    return Menus.subscribe((data)=>{
     });
     });
 </script>
@@ -21,11 +22,6 @@
     <button class="button" on:click={onClick}>
         <h2 class="title">Create your own PC</h2>
     </button>
-
-    {#if open}
-        <PC_Creator_Elem/>
-    {/if}
-  
 </div>  
 
 

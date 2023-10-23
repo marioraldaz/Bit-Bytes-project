@@ -7,6 +7,8 @@
   import CreatorButton from "./CreatorButton.svelte";
   import { onMount } from "svelte";
   import PC_Creator from "../stores/PC_Creator";
+  import PC_Creator_Elem from "../components/PC_Creator/PC_Creator.svelte"
+
   let active=""
   let PC_Creator_Open=false;
 
@@ -50,6 +52,9 @@
 
   {#if active != "Body"}
     <div class="header__home"><a href="/#" on:click={onClick}>Go back to home page</a></div>
+  {/if}
+  {#if active=="PC_Creator"}
+    <PC_Creator_Elem/> 
   {/if}
   <div class="header__left">
     <Carrito />
