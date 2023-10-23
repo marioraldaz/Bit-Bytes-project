@@ -38,6 +38,12 @@
 </div>
 
 
-<style>
+<style lang="scss">
+
+  @import "./variables";
+
+  *{
+    background: $main-gradient;
+  }
 
 </style>

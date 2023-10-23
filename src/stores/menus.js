@@ -9,7 +9,10 @@ var CPUs = { name: "CPUs", logo: "src/stores/images/CPU.png" };
 var HardDisks = { name: "Hard Disks", logo: "src/stores/images/SSD.png" };
 var Graphics = { name: "Graphics", logo: "src/stores/images/GPU.png" };
 var Body = { name: "Body" };
-var PC_Creator = { name: "PC_Creator" };
+var PC_Creator = {
+  name: "PC_Creator",
+  logo: "src/stores/images/PC_Creator.png",
+};
 const menus = [Body, RAMs, MotherBoards, CPUs, HardDisks, Graphics, PC_Creator];
 const active = "Body";
 
