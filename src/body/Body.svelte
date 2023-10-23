@@ -12,7 +12,7 @@
         alt="componentes"
       />
     </div>
-    <h1>OFERTAS</h1>
+    <h1 >OFERTAS</h1>
     <ProductList {products} />
   </div>
 

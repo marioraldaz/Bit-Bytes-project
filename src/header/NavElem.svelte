@@ -19,12 +19,13 @@
   });
 </script>
 
-<div class="elem-container">
-  <a href="/#" on:click={onClick}>
-    <img src={logo} id={name} class="image" alt="logo-nav-elem"/>
-    <span class="elem-name">{name}</span>
-  </a>
-</div>
+<a href="/#" on:click={onClick}>
+  <div class="elem-container">
+      <img src={logo} id={name} class="image" alt="logo-nav-elem"/>
+      <span class="elem-name">{name}</span>
+  </div>
+</a>
+
 
 <style lang="scss">
 
@@ -62,7 +63,7 @@
       .elem-name{
         opacity: 100;
       }
-      background-color: rgb(176, 32, 229 / 0.2);
+      background-color: rgb(176, 32, 229,0.2);
     }
   }
 </style>
