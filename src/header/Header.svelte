@@ -50,7 +50,7 @@
 
 <style lang="scss">
   .header {
-    position: fixed;
+    position: sticky;
     height: 8.2rem;
     width: 100%;
     top: 0;

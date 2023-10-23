@@ -42,7 +42,7 @@
       .bar1,
       .bar2,
       .bar3 {
-        width: 55px;
+        width: 5.5rem;
         height: 1rem;
         margin-bottom: 0.8rem;
         border-radius: 2rem;
@@ -60,7 +60,7 @@
       .bar2,
       .bar3 {
         transform: scale(120%);
-        margin-bottom: 10px;
+        margin-bottom: 1rem;
       }
     }
   }

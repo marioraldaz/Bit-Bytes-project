@@ -56,7 +56,7 @@
       float:right;
       margin:0;
       padding:0;
-      font-size:30px;
+      font-size:3rem;
       padding-right:20%;
     }
     &:hover{

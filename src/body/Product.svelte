@@ -43,7 +43,7 @@
 <style>
 
   img{
-    width: 60%;
+    width: 15rem;
   }
 
     .specifications{
@@ -101,6 +101,7 @@
       margin: 0 auto;
       height: 50rem;
       margin-bottom: 2rem;
+      margin: 3rem;
     }
   
     .component__side {
@@ -179,36 +180,45 @@
       color: white;
       font-size: 3rem;
     }
-  
-    #ddr {
-      width: 42%;
-      margin-top: .5rem;
-    }
-  
-    #fuente_alimentacion {
-      width: 48%;
 
-    }
-  
-    #ventilador {
-      width: 42%;
-    }
-  
-    #torre {
-      width: 35%;
-    }
-
-    @media screen and (max-width:900px){
-    .component,.component__side{
-      height: 30rem;
-    }
-
-  }
 
   @media screen and (max-width: 1800px) {
-    .component,.component__side{
-      height: 50rem;
+    .component__description{
+      font-size: 1.3rem;
+    }
+    .component__name{
+      font-size: 2rem;
+    }
+    .component__footer{
+      font-size:2.5rem;
     }
   }
 
+  @media screen and (max-width: 1100px) {
+    .component__description{
+      font-size: 1.8rem;
+    }
+    .component__name{
+      font-size: 3rem;
+    }
+
+  }
+
+  @media screen and (max-width:900px){
+    .component__description{
+      font-size: 1.3rem;
+    }
+    .component__name{
+      font-size: 2.5rem;
+    }
+  }
+
+  @media screen and (max-width:600px){
+    .component__description{
+      font-size: 1.8rem;
+    }
+    .component__name{
+      font-size: 3rem;
+    }
+  }
   </style>

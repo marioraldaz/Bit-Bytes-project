@@ -28,46 +28,40 @@
   .list{
     position: relative;
     text-align: center;
-    overflow: auto;
-    border: 1px solid black;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
+    overflow: auto;
   }
   
     .column{
     position: relative;
     float: left;
-    margin-bottom: 20px;
+    }
+
+    .column::after{
+      clear:both;
     }
 
     @media screen and (min-width: 1100px) {
       .column {
-      width:calc((100% - 5rem*3)/4);
+      width:25%;
     }
 
-    .column:not(:last-child){
-      margin-right: 5rem;
-    }
     }
 
 
     @media screen and (max-width: 1100px) {
       .column {
-      width: 45%;
+      width: 50%;
       }
-      .column:not(:last-child){
-      margin-right: 5%;
-      }
+
     }
 
     @media screen and (max-width: 600px) {
       .column {
-        width: 80%;
+        width: 100%;
       }
-      .list{
-        position: relative;
-        margin-left: 12%;
-      }
+
     }
 
   </style>
