@@ -18,6 +18,7 @@
 
   <style>
     h1{
+      font-size: 1.6rem;
       text-align: center;
       margin-bottom: 2rem;
     }
