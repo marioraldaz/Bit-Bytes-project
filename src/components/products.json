@@ -17,6 +17,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!"
     },
     {
+      "id": 2,
       "name": "Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
       "type": "RAM",
       "GB": "8",
@@ -32,6 +33,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!"
     },
     {
+      "id": 3,
       "name": "Team Group Delta White RGB DDR4 3200 PC4-25600 16GB 2x8GB CL16",
       "type": "RAM",
       "GB": "8",
@@ -47,6 +49,7 @@
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!"
     },
     {
+      "id": 4,
       "name": "Corsair Vengeance DDR5 6000MHz 32 GB 2x16GB CL36 Optimizado AMD",
       "type": "RAM",
       "GB": "16",

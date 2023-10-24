@@ -4,9 +4,7 @@
   import Usuario from "./Usuario.svelte";
   import SearchBar from "./SearchBar.svelte";
   import Menus from "../stores/menus.js";
-  import CreatorButton from "./CreatorButton.svelte";
   import { onMount } from "svelte";
-  import PC_Creator_Elem from "../components/PC_Creator/PC_Creator.svelte";
 
   let active = "";
 
@@ -31,7 +29,7 @@
     </div>
 
     <div class="header__logo">
-      <a href="/"><img src="./imagenes/logo.png" alt="logo.png" /></a>
+      <a href="/"><img src="./images/logo.png" alt="logo.png" /></a>
     </div>
   </div>
 
@@ -92,7 +90,7 @@
       font-size: 2.5rem;
       top: 20%;
       left: 5%;
-      border: 2px solid rgb(176, 32, 229);
+      border: 0.2rem solid rgb(176, 32, 229);
       padding: 1rem;
       border-radius: 2rem;
       a {

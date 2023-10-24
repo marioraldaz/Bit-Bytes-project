@@ -4,7 +4,7 @@ export let productos = []
 
 <div class="header__carrito">
   <a href="/"
-    ><img src="./imagenes/carrito-de-compras.png" alt="carrito.png" />
+    ><img src="./images/carrito-de-compras.png" alt="carrito.png" />
   </a>
 </div>
 
