@@ -1,8 +1,11 @@
 <script>
+
 </script>
 
 <div class="searchBar-container">
   <input class="searchBar" placeholder="   Search for amazing components" />
+  <button class="search-button"></button>
+  <img alt="search_logo" class="search_logo" src="search_logo.png"/>
 </div>
 
 <style lang="scss">

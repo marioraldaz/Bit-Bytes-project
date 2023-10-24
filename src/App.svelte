@@ -42,8 +42,5 @@
 
   @import "./variables";
 
-  *{
-    background: $main-gradient;
-  }
 
 </style>
