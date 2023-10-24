@@ -1,10 +1,24 @@
 <script>
+  import Product from "../body/Product.svelte";
+  import products from "../components/products.json"
+  let arrayProducts = products.products;
 
+  function searchProducts(userInput) {
+    let output=[];
+    for(var i = 0; i < arrayProducts.length; i++){
+      if(arrayProducts[i].name.match(userInput)){
+        output.push(arrayProducts[i]);
+      }
+    }
+    return output;
+  }
+
+  let userInput = "";
 </script>
 
 <div class="searchBar-container">
-  <input class="searchBar" placeholder="   Search for amazing components" />
-  <button class="search-button"></button>
+  <input type="search" class="searchBar" placeholder="   Search for amazing components" bind:value={userInput} />
+  <button class="search-button" on:click={searchProducts}></button>
   <img alt="search_logo" class="search_logo" src="search_logo.png"/>
 </div>
 
@@ -15,17 +29,18 @@
     .searchBar {
       width: 100%;
       height: 4rem;
-      border: 2px solid violet;
-      border-radius: 2rem;
+      border: 0.2rem solid violet;
+      border-radius: 20px;
 
       &:hover {
         transform: scale(110%);
       }
 
       &:focus {
-        border: 3 px solid violet;
+        border: 0.3rem px solid violet;
         outline: none;
       }
     }
   }
+
 </style>
