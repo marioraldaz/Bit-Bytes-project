@@ -32,7 +32,7 @@
 
 .row {
   max-width: 114rem;
-  margin: 0 10px;
+  margin: 0 1rem;
   text-align: center;
 }
 .row:not(:last-child) {
@@ -67,28 +67,16 @@
   width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem);
 }
 
-.img_encabezado {
-  width: 70%;
-}
-
-.gradiente_img_cabecera {
-  background: linear-gradient(to bottom, #333333, #007acc);
-  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
-  border-radius: 15px;
-  margin-bottom: 3rem;
-  margin-top: 100px;
-}
-
 .footer {
-  clear: both;
   background-color: #fff;
-  padding: 100px 0;
+  padding: 10rem 0;
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
+  border: 1px solid black;
 }
 
 .footer-content {
-  max-width: 1170px;
+  max-width: 117rem;
   margin: auto;
 }
 
@@ -99,14 +87,14 @@
 
 .footer-col {
   width: 25%;
-  padding: 0 15px;
+  padding: 0 1.5rem;
 }
 
 .footer-col h4 {
-  font-size: 18px;
+  font-size: 1.8rem;
   color: #000;
   text-transform: capitalize;
-  margin-bottom: 35px;
+  margin-bottom: 3.5rem;
   font-weight: 500;
   position: relative;
 }
@@ -115,23 +103,23 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -1rem;
   background-image: linear-gradient(
     60deg,
     rgb(176, 32, 229) 25%,
     rgb(94, 176, 208)
   );
-  height: 2px;
+  height: .2rem;
   box-sizing: border-box;
   width: 100%;
 }
 
 .footer-col ul li:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .footer-col ul li a {
-  font-size: 16px;
+  font-size: 1.6rem;
   text-transform: capitalize;
   color: #000;
   text-decoration: none;
@@ -143,7 +131,7 @@
 
 .footer-col ul li a:hover {
   color: #000;
-  padding-left: 8px;
+  padding-left: .8rem;
 }
 
 ul {
