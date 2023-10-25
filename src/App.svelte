@@ -5,6 +5,7 @@
   import Menus from "./stores/menus";
   import RAMs from "./components/RAMs/RAMs.svelte";
   import PC_Creator from "./components/PC_Creator/PC_Creator.svelte";
+  import ResultsPage from "./header/ResultsPage.svelte";
   import { onMount } from "svelte";
   let active = "";
 
@@ -25,6 +26,8 @@
       <RAMs />
     {:else if active == "PC_Creator"}
       <PC_Creator />
+    {:else if active == "ResultsPage"}
+      <ResultsPage />
     {/if}
   {/key}
 

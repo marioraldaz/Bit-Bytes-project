@@ -1,24 +1,64 @@
 <script>
   import products from "../components/products.json";
-
+  import Menus from "../stores/menus.js";
+  import ResultsPage from "../stores/ResultsPage.js";
+  
   let arrayProducts = products.products;
   let output = [];
   let showResults=false;
+  let userInput = "";
 
   function searchProducts(userInput) {
+    output=[];
     for (var i = 0; i < arrayProducts.length; i++) {
-      if (arrayProducts[i].name.match(userInput)) {
-        output.push(arrayProducts[i].name);
+      if (arrayProducts[i].name.toUpperCase().match(userInput.toUpperCase())) {
+        output.push(arrayProducts[i]);
+      }
+      if (arrayProducts.length>=5){
+        break;
+      }
+    }
+
+    if(output.length==0){
+      for (var i = 0;i < arrayProducts.length;i++) {
+        if(arrayProducts[i].type.toUpperCase().match(userInput.toUpperCase())) {
+          output.push(arrayProducts[i]);
+        }
       }
     }
   }
 
   $:{
     userInput.length > 0 ? showResults=true : showResults=false;
-    searchProducts(userInput);  
   }
 
-  let userInput = "";
+  $:{
+    showResults ? searchProducts(userInput) : output=[];
+  }
+
+
+  function showProduct(item){
+    showResults=false;
+    return function() {
+      ResultsPage.update((data) => {
+        data.products=item;
+        return data;
+      });
+      showSearchResults();
+    }    
+  }
+
+  function showSearchResults(){
+    showResults=false;
+    Menus.update((data) =>{
+      data.active = "ResultsPage";
+      return data;
+    });
+    ResultsPage.update((data) => {
+        data.products=output;
+        return data;
+      });
+  }
 </script>
 
 <div class="container">
@@ -28,19 +68,19 @@
     placeholder="   Search for amazing components"
     bind:value={userInput}
   >
-  <button class="container__search-button" on:click={searchProducts}>
+  <button class="container__search-button" on:click={showSearchResults}>
     <div class="container__search-button__div">
       <img alt="logo" src="../images/search_logo.png" />
     </div>
-  </button>
-  <div class="container__results">
-    {#if showResults}
-    <h1>Results:</h1>
-      {#each output as item}
-        <div class="container__result__elem"><p>{item.name}das</p></div>
-      {/each}
-    {/if}
-  </div>
+  </button> 
+  {#if showResults}
+    <div class="container__results"> 
+      <h1 class="container__results__title">Results:</h1>
+        {#each output as item}
+          <button class="container__results__elem" on:click={showProduct(item)}>{item.name}</button>
+        {/each}
+    </div> 
+  {/if}
 </div>
 
 <style lang="scss">
@@ -54,11 +94,24 @@
 
   
     &__results {
-      background-color: white;
-      width:100%;
-      height: 100%;
+      width:110%;
+      &__title{
+        width:100%;
+        background-color: white;
+        font-size: 2rem;
+        color: rgb(94, 176, 208);
+        border:2px solid black;
+      }
       &__elem {
+        width:100%;
+        background-color: white;
         float: inline-end;
+        font-size: 2rem;
+        border:2px solid black;
+        &:hover{
+          cursor:pointer;
+          background-color: azure;
+        }
       }
     }
     &__searchBar {
