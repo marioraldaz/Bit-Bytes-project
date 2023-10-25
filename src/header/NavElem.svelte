@@ -28,21 +28,19 @@
 
 
 <style lang="scss">
-
-  .elem-container{
-    width:100%;
-    height:10rem;
-    border:3px solid rgb(176, 32, 229);
-    margin:0;
-    padding:0;
     a{
       text-decoration: none;
     }
+.elem-container{
+    margin:0;
+    padding:0;
+    width:100%;
+    border:3px solid rgb(176, 32, 229);
+    position: relative;
+
 
     .image{
       display: inline-block;
-      width:10rem;
-      height: 100%;
 
       &:hover{
         transform: scale(120%);
@@ -53,11 +51,6 @@
       opacity: 0;
       display: block;
       color:white;
-      float:right;
-      margin:0;
-      padding:0;
-      font-size:3rem;
-      padding-right:20%;
     }
     &:hover{
       .elem-name{
@@ -66,4 +59,57 @@
       background-color: rgb(176, 32, 229,0.2);
     }
   }
+@media screen and (min-width: 1100px) {
+  .elem-container{
+    height:10rem;
+
+    .image{
+      width:10rem;
+      height: 100%;
+      position: absolute;
+
+    }
+
+    .elem-name{
+      position: absolute;
+      right: 0;
+      font-size:2.5rem;
+    }
+}
+}
+
+@media screen and (max-width: 1100px) {
+  .elem-container{
+    text-align: center;
+    height: 11rem;
+
+    .image{
+      width:8rem;
+      height: 80%;
+    }
+
+    .elem-name{
+      font-size:2.3rem;
+    }
+}
+}
+
+@media screen and (max-width: 600px) {
+
+  .elem-container{
+    text-align: center;
+    height:12rem;
+
+    .image{
+      width:10rem;
+      height: 75%;
+    }
+
+    .elem-name{
+      font-size:1.7rem;
+
+    }
+  }
+
+}
 </style>
