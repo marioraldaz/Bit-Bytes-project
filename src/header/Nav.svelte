@@ -2,7 +2,6 @@
   import NavElem from "./NavElem.svelte";
   import Menus from "../stores/menus.js";
   import { onMount } from 'svelte';
-
   let menus=[];
 
   onMount(()=>{

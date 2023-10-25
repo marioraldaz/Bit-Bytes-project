@@ -1,11 +1,15 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount,getContext,setContext} from 'svelte';
   export let name = "name";
   export let logo = "logo_default";
   import Menus from "../stores/menus.js";
   let menus=[];
+  export let context=getContext('navVisibility');
 
+
+  
   function onClick(){
+    context();
     return Menus.update((data) =>{
       data.active = name;
       return data;

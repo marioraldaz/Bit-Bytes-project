@@ -9,7 +9,7 @@
     products=data.products;
     });
   });
-  console.log("<<<<<<<<");
+
 </script>
 
 <div class="container">

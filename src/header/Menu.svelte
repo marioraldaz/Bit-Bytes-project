@@ -1,8 +1,9 @@
 <script>
   import Nav from "./Nav.svelte";
-  export let navVisibility = false;
+  import { getContext,setContext } from "svelte";
+  export let navVisibility=getContext("navVisibility");
   export let onClick = () => {
-    navVisibility = navVisibility
+      navVisibility = navVisibility
       ? (navVisibility = false)
       : (navVisibility = true);
   };
