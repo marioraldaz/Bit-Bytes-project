@@ -4,15 +4,15 @@ export let productos = []
 
 <div class="header__carrito">
   <a href="/"
-    ><img src="./imagenes/carrito-de-compras.png" alt="carrito.png" />
+    ><img src="./images/carrito-de-compras.png" alt="carrito.png" />
   </a>
 </div>
 
 <style lang="scss">
   .header__carrito {
     float: right;
-    width: 80px;
-    height: 80px;
+    width: 8rem;
+    height: 8rem;
     img {
       position: relative;
       width: 60%;

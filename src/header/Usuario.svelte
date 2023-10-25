@@ -2,14 +2,14 @@
 </script>
 
 <div class="header__usuario">
-  <a href="/"><img src="./imagenes/usuario.png" alt="usuario.png" /> </a>
+  <a href="/"><img src="./images/usuario.png" alt="usuario.png" /> </a>
 </div>
 
 <style lang="scss">
   .header__usuario {
     float: right;
-    width: 80px;
-    height: 80px;
+    width: 8rem;
+    height: 8rem;
     img {
       position: relative;
       width: 60%;
