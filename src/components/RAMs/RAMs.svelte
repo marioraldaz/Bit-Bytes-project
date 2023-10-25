@@ -20,4 +20,9 @@
       margin-bottom: 2rem;
       margin-top: 2rem;
     }
+
+    .cuerpo{
+  position: relative;
+  margin-top: 9rem;
+}
 </style>

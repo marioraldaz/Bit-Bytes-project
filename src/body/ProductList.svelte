@@ -38,9 +38,7 @@
     float: left;
     }
 
-    .column::after{
-      clear:both;
-    }
+    
 
     @media screen and (min-width: 1100px) {
       .column {
