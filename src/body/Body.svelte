@@ -35,5 +35,10 @@
   width: 70%;
 }
 
+.cuerpo{
+  position: relative;
+  margin-top: 9rem;
+}
+
 
   </style>

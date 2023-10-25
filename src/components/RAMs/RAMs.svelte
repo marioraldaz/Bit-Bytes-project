@@ -11,8 +11,14 @@
 
 <style lang="scss">
 .title{
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 50px;
+      font-size: 5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+
+    .cuerpo{
+  position: relative;
+  margin-top: 9rem;
 }
 </style>
