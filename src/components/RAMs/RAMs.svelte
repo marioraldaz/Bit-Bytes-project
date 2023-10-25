@@ -1,16 +1,12 @@
 <script>
-    import Product from "../../body/Product.svelte";
-/*   import ProductList from "../../body/ProductList.svelte";
- */    /* import RAMs from "./RAMs.json";
-    let arrayRams = RAMs.RAMs; */
+    import {getRAMs} from   "../productsScript";
     import ProductList from "../../body/ProductList.svelte";
-    console.log("Product");
-    import {RAMs} from './RAMs.json';
-
 </script>
     <div class="cuerpo">
+        <div class="gradiente_img_cabecera row">
+        </div>
         <h1 class="title">RAMS</h1>
-        <ProductList products={RAMs}  />
+        <ProductList products={getRAMs()}  />
     </div>
 
 <style lang="scss">

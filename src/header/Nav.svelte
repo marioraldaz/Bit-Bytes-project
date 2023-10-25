@@ -25,10 +25,10 @@
 
 <style lang="scss">
   .menu-nav {
-    margin-top: 10rem;
+    margin-top: 6rem;
     display: block;
     position: fixed;
-    border: 1px solid rgb(94, 176, 208);
+    border: 0.1rem solid rgb(94, 176, 208);
     width: 20%;
     min-height: 100vh;
     float: right;

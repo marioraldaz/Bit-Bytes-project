@@ -2,7 +2,7 @@
 </script>
 
 <div class="header__usuario">
-  <a href="/"><img src="./imagenes/usuario.png" alt="usuario.png" /> </a>
+  <a href="/"><img src="./images/usuario.png" alt="usuario.png" /> </a>
 </div>
 
 <style lang="scss">

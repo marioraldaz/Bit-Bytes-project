@@ -24,6 +24,7 @@
 
 <style lang="scss">
   @use "sass:math";
+  @import "../variables.scss";
 
   .header_menu {
     position: relative;
@@ -34,8 +35,9 @@
       display: inline-block;
       position: absolute;
       top: 0;
-      height: 100%;
-      border: none;
+      height: 1rem;
+      width:5.5rem;
+      border: none; 
       width: 100%;
       background: none;
       cursor: pointer;

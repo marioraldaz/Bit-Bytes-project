@@ -8,7 +8,7 @@
     <div class="gradiente_img_cabecera">
       <img
         class="img_encabezado"
-        src="imagenes/componentes_cabecera.png"
+        src="images/componentes_cabecera.png"
         alt="componentes"
       />
     </div>
