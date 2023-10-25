@@ -6,15 +6,14 @@
   import Menus from "../stores/menus.js";
   import { onMount, setContext } from "svelte";
   let navVisibility = false;
-  setContext('navVisibility',() => {
+  setContext("navVisibility", () => {
     navVisibility = !navVisibility;
   });
   let active = "";
 
-  $:{
+  $: {
     console.log(navVisibility);
   }
-
 
   onMount(() => {
     return Menus.subscribe((data) => {
@@ -33,7 +32,7 @@
 <div class="header">
   <div class="header__left">
     <div class="header__left__Menu">
-      <Menu navVisibility={navVisibility}/>
+      <Menu {navVisibility} />
     </div>
 
     <div class="header__logo">
