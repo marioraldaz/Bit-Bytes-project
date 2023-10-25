@@ -11,3 +11,13 @@ export function getRAMs() {
   }
   return RAMs;
 }
+
+export function getOffers() {
+  let ofertas = [];
+  for (let product of arrayProducts) {
+    if (product.oferta) {
+      ofertas.push(product);
+    }
+  }
+  return ofertas;
+}
