@@ -10,8 +10,8 @@ var HardDisks = { name: "Hard Disks", logo: "src/stores/images/SSD.png" };
 var Graphics = { name: "Graphics", logo: "src/stores/images/GPU.png" };
 var Body = { name: "Body" };
 var PC_Creator = {
-  name: "PC_Creator",
-  logo: "src/stores/images/PC_Creator.png",
+  name: "PC Creator",
+  logo: "src/stores/images/PC_Creator_logo.png",
 };
 var Results = { name: "Results" };
 

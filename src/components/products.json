@@ -2,6 +2,7 @@
   "products": [
     {
       "id": 1,
+      "oferta": false,
       "name": "Corsair Vengeance LPX DDR4 3200MHz PC4-25600 32GB 2x16GB CL16",
       "type": "RAM",
       "brand": "Corsair",
@@ -18,6 +19,7 @@
     },
     {
       "id": 2,
+      "oferta": false,
       "name": "Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
       "type": "RAM",
       "GB": "8",
@@ -34,6 +36,7 @@
     },
     {
       "id": 3,
+      "oferta": false,
       "name": "Team Group Delta White RGB DDR4 3200 PC4-25600 16GB 2x8GB CL16",
       "type": "RAM",
       "GB": "8",
@@ -50,6 +53,7 @@
     },
     {
       "id": 4,
+      "oferta": false,
       "name": "Corsair Vengeance DDR5 6000MHz 32 GB 2x16GB CL36 Optimizado AMD",
       "type": "RAM",
       "GB": "16",
@@ -63,6 +67,71 @@
         "Specification4"
       ],
       "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!"
+    },
+    {
+      "id": 5,
+      "oferta": true,
+      "name": "Forgeon Mithril ARGB Mesh Torre ATX Negra",
+      "type": "",
+      "brand": "",
+      "logo": "images/torre_negra.png",
+      "price": "99,99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore."
+    },
+
+    {
+      "id": 6,
+      "oferta": true,
+      "name": "Corsair Vengeance RGB DDR5",
+      "type": "",
+      "brand": "",
+      "logo": "images/ddr5.png",
+      "price": "259,99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore."
+    },
+    {
+      "id": 7,
+      "oferta": true,
+      "name": "Tempest PSU 750W Fuente de Alimentación",
+      "type": "",
+      "brand": "",
+      "logo": "images/fuente_alimentacion.png",
+      "price": "35,99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore."
+    },
+    {
+      "id": 8,
+      "oferta": true,
+      "name": "Forgeon Solarian Cooler Ventilador CPU",
+      "type": "",
+      "brand": "",
+      "logo": "images/forgeon_ventilador.png",
+      "price": "33,99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore."
     }
   ]
 }

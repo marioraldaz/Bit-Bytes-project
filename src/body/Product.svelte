@@ -25,12 +25,12 @@
           </div>
         </div>
       <div class="component__footer">
-        <div class="component__button--specs"on:click={click}>Specs</div>
-        <div class="component__button--buy" ><a href="#">Buy</a></div>
+        <div class="component__button--specs  divCursor"on:click={click}>Specs</div>
+        <a href="#"><div class="component__button--buy divCursor" >Buy</div></a>
       </div>
     </div>
     <div class="component__side component__side--back component__side--back-1">
-      <div class="close" on:click={click}>X</div>
+      <div class="close divCursor" on:click={click}>X</div>
       <div class="specifications">
       <h4>Specifications</h4>
       {#each specifications as specification}
@@ -41,6 +41,10 @@
   </div>
 
 <style>
+
+  .divCursor{
+    cursor: pointer;
+  }
 
   img{
     width: 15rem;
@@ -87,9 +91,6 @@
       float: left;
       border-radius: 20px;
       background-color: purple;
-    }
-
-    .component__button--buy a{
       text-decoration: none;
       color: white;
     }
