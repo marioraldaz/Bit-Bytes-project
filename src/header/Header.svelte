@@ -4,16 +4,9 @@
   import Usuario from "./Usuario.svelte";
   import SearchBar from "./SearchBar.svelte";
   import Menus from "../stores/menus.js";
-  import { onMount, setContext } from "svelte";
-  let navVisibility = false;
-  setContext("navVisibility", () => {
-    navVisibility = !navVisibility;
-  });
-  let active = "";
+  import { onMount } from "svelte";
 
-  $: {
-    console.log(navVisibility);
-  }
+  let active = "";
 
   onMount(() => {
     return Menus.subscribe((data) => {
@@ -32,7 +25,7 @@
 <div class="header">
   <div class="header__left">
     <div class="header__left__Menu">
-      <Menu {navVisibility} />
+      <Menu />
     </div>
 
     <div class="header__logo">
@@ -94,11 +87,11 @@
 
     &__home {
       position: absolute;
-      font-size: 2.5rem;
+      font-size: 2rem;
       top: 20%;
       left: 5%;
       border: 0.2rem solid rgb(176, 32, 229);
-      padding: 1rem;
+      padding: 0.5rem;
       border-radius: 2rem;
       a {
         color: black;
@@ -107,7 +100,7 @@
 
       &:hover {
         transform: scale(120%);
-        background-color: rgb(226, 167, 226);
+        background-color: lightblue;
       }
     }
 

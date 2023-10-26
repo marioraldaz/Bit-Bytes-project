@@ -3,11 +3,17 @@
   import Nav from "../stores/nav.js";
   import { onMount } from 'svelte';
   export let visibility=false;
-  export let onClick = () => { Nav.update((data)=>{
-      data.visibility=!visibility;
+  
+
+  function onClick(){
+    Nav.update((data)=>{
+      console.log("1:",visibility)
+      visibility=!visibility;
+      data.visibility=visibility;
+      console.log("2:",visibility)
       return data;
     });
-  };
+  }
 
   onMount(()=>{
     return Nav.subscribe((data)=>{
@@ -17,12 +23,12 @@
 
 </script>
 
-<div class="header_menu">
-  <button class="hamburguer-menu" on:click={onClick}>
-    <div class="bar-container">
-      <div class="bar1" />
-      <div class="bar2" />
-      <div class="bar3" />
+<div class="menu">
+  <button class="menu__logo" on:click|preventDefault={onClick} >
+    <div class="menu__logo__container">
+      <div class="menu__logo__container__bar1" />
+      <div class="menu__logo__container__bar2" />
+      <div class="menu__logo__container__bar3" />
     </div>
   </button>
 </div>
@@ -35,12 +41,12 @@
   @use "sass:math";
   @import "../variables.scss";
 
-  .header_menu {
+  .menu {
     position: relative;
     display: inline-block;
     height: 100%;
     margin: 1.5rem;
-    .hamburguer-menu {
+    &__logo {
       display: inline-block;
       position: absolute;
       top: 0;
@@ -50,29 +56,32 @@
       width: 100%;
       background: none;
       cursor: pointer;
-      .bar1,
-      .bar2,
-      .bar3 {
-        width: 5.5rem;
-        height: 1rem;
-        margin-bottom: 0.8rem;
-        border-radius: 2rem;
-        display: block;
-        background: linear-gradient(
-          60deg,
-          rgb(176, 32, 229) 25%,
-          rgb(94, 176, 208)
-        );
-      }
-    }
 
-    &:hover {
-      .bar1,
-      .bar2,
-      .bar3 {
-        transform: scale(120%);
-        margin-bottom: 1rem;
-      }
+      &__container{
+        &__bar1,
+        &__bar2,
+        &__bar3 {
+          width: 5.5rem;
+          height: 1rem;
+          margin-bottom: 0.8rem;
+          border-radius: 2rem;
+          display: block;
+          background: linear-gradient(
+            60deg,
+            rgb(176, 32, 229) 25%,
+            rgb(94, 176, 208)
+          );
+        }
+
+        &:hover {
+          &__bar1,
+          &__bar2,
+          &__bar3 {
+            transform: scale(120%);
+            margin-bottom: 1rem;
+          }
+        }
+      }   
     }
   }
 </style>
