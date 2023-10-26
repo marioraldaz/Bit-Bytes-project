@@ -1,8 +1,7 @@
 <!-- App.svelte -->
 <script>
     import ProductList from './ProductList.svelte';
-    import {getOffers} from '../components/productsScript.js'
-    
+    import {products} from './datos.json'
   </script>
 
   <div class="cuerpo">
@@ -14,7 +13,7 @@
       />
     </div>
     <h1 class="title">OFERTAS</h1>
-    <ProductList products={getOffers()} />
+    <ProductList {products} />
   </div>
 
   <style>
@@ -34,11 +33,6 @@
 }
 .img_encabezado {
   width: 70%;
-}
-
-.cuerpo{
-  position: relative;
-  margin-top: 9rem;
 }
 
 

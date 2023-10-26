@@ -2,9 +2,7 @@
   import NavElem from "./NavElem.svelte";
   import Menus from "../stores/menus.js";
   import { onMount } from 'svelte';
-  import {clickOutside} from "../scripts/clickOutside.js"; 
-  import Nav from "../stores/nav.js";
-  let visibility = false;
+
   let menus=[];
 
   onMount(()=>{
@@ -12,23 +10,10 @@
     menus=data.menus;
     });
   });
-
-  onMount(()=>{
-    return Nav.subscribe((data)=>{
-    visibility=data.visibility;
-    });
-  });
-
-  function hide(){
-    Nav.update((data)=>{
-      data.visibility=false;
-      return data;
-    });
-  }
 </script>
 
 
-<nav class="menu-nav" use:clickOutside on:click_outside={hide}>
+<nav class="menu-nav">
   {#each menus as navEl}
     {#if navEl.name=="Body"}
         <span></span>
@@ -39,9 +24,7 @@
 </nav>
 
 <style lang="scss">
-
-  @media screen and (min-width: 1100px) {
-    .menu-nav {
+  .menu-nav {
     margin-top: 6rem;
     display: block;
     position: fixed;
@@ -57,36 +40,6 @@
     );
     transition: 0.4s;
   }
-    }
 
 
-    .menu-nav {
-    margin-top: 6rem;
-    display: block;
-    position: fixed;
-    border: 0.1rem solid rgb(94, 176, 208);
-    width: 20%;
-    min-height: 100vh;
-    float: right;
-    z-index: 98;
-    background: linear-gradient(
-      60deg,
-      rgb(176, 32, 229) 25%,
-      rgb(94, 176, 208)
-    );
-    transition: 0.4s;
-  }
-    @media screen and (max-width: 1100px) {
-      .menu-nav {
-    width: 22%;
-
-    }
-    }
-
-    @media screen and (max-width: 600px) {
-      .menu-nav {
-    width: 22%;
-
-    }
-  }
 </style>

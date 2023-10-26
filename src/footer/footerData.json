@@ -26,6 +26,15 @@
         { "text": "Bag", "url": "#" },
         { "text": "Components", "url": "#" }
       ]
+    },
+    {
+      "title": "Follow us",
+      "socialMedia": [
+        { "icon": "fab fa-facebook-f", "url": "#" },
+        { "icon": "fab fa-twitter", "url": "#" },
+        { "icon": "fab fa-instagram", "url": "#" },
+        { "icon": "fab fa-linkedin-in", "url": "#" }
+      ]
     }
   ]
 }

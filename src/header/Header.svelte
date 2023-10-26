@@ -4,16 +4,9 @@
   import Usuario from "./Usuario.svelte";
   import SearchBar from "./SearchBar.svelte";
   import Menus from "../stores/menus.js";
-  import { onMount, setContext } from "svelte";
-  let navVisibility = false;
-  setContext("navVisibility", () => {
-    navVisibility = !navVisibility;
-  });
-  let active = "";
+  import { onMount } from "svelte";
 
-  $: {
-    console.log(navVisibility);
-  }
+  let active = "";
 
   onMount(() => {
     return Menus.subscribe((data) => {
@@ -32,7 +25,7 @@
 <div class="header">
   <div class="header__left">
     <div class="header__left__Menu">
-      <Menu {navVisibility} />
+      <Menu />
     </div>
 
     <div class="header__logo">
@@ -55,7 +48,7 @@
 
 <style lang="scss">
   .header {
-    position: fixed;
+    position: sticky;
     height: 8.2rem;
     width: 100%;
     top: 0;
