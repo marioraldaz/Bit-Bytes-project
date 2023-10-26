@@ -42,7 +42,7 @@
 
   @media screen and (min-width: 1100px) {
     .menu-nav {
-    margin-top: 6rem;
+    margin-top: 1rem;
     display: block;
     position: fixed;
     border: 0.1rem solid rgb(94, 176, 208);
@@ -61,7 +61,7 @@
 
 
     .menu-nav {
-    margin-top: 6rem;
+    margin-top: 1rem;
     display: block;
     position: fixed;
     border: 0.1rem solid rgb(94, 176, 208);

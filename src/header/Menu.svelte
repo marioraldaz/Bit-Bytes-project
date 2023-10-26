@@ -23,15 +23,7 @@
 
 </script>
 
-<div class="header_menu">
-  <button class="hamburguer-menu" on:click={onClick}>
-    <div class="bar-container">
-      <div class="bar1" />
-      <div class="bar2" />
-      <div class="bar3" />
-    </div>
-  </button>
-</div>
+<input type="checkbox" role="button" aria-label="Display the menu" class="menu" bind:checked={visibility}>
 
 
 {#if visibility}
@@ -41,46 +33,76 @@
 <style lang="scss">
   @use "sass:math";
   @import "../variables.scss";
+  .menu {
+  --s: 6rem; /* control the size */
+  --c:rgb(176, 32, 229);; /* the color */
+  
+  height: var(--s);
+  aspect-ratio: 1;
+  border: none;
+  padding: 0;
+  margin-top: 1rem;
+  margin-bottom:none;
+  border-inline: calc(var(--s)/2) solid       rgb(94, 176, 208);
 
-  .header_menu {
-    position: relative;
-    display: inline-block;
-    height: 100%;
-    width:5.5rem;
-    margin: 1.5rem;
-    .hamburguer-menu {
-      display: inline-block;
-      position: absolute;
-      top: 0;
-      background: none;
-      height: 100%;
-      width:100%;
-      border: none; 
-      width: 100%;
-      cursor: pointer;
-      .bar1,
-      .bar2,
-      .bar3 {
-        width: 100%;
-        height: 1rem;
-        margin-bottom: 0.8rem;
-        border-radius: 2rem;
-        display: block;
-        background: linear-gradient(
-          60deg,
-          rgb(176, 32, 229) 25%,
-          rgb(94, 176, 208)
-        );
-      }
-    }
+  box-sizing: content-box;
+  --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0) 
+         no-repeat content-box border-box;
+  --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000) 
+         repeat-y content-box border-box;
+  background: 
+    var(--_g2) left  var(--_p,0px) top,
+    var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
+    var(--_g2) right var(--_p,0px) top,
+    var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
+  background-size: 
+    20% 80%,
+    40% 100%;
+  position: relative;
+  clip-path: inset(0 25%);
+  -webkit-mask: linear-gradient(90deg,#0000,#000 25% 75%,#0000);
+  cursor: pointer;
+  transition: 
+    background-position .3s var(--_s,.3s), 
+    clip-path 0s var(--_s,.6s);
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+}
+.menu:before,
+.menu:after {
+  content:"";
+  position: absolute;
+  border-radius: var(--s);
+  inset: 40% 0;
+  background: var(--c);
+  transition: transform .3s calc(.3s - var(--_s,.3s));
+}
 
-    &:hover {
-      .bar1,
-      .bar2,
-      .bar3 {
-        transform: scale(120%);
-        margin-bottom: 1rem;
-      }
-    }
-  }
+.menu:checked {
+  clip-path: inset(0);
+  --_p: calc(-1*var(--s));
+  --_s: 0s;
+}
+.menu:checked:before {
+  transform: rotate(45deg);
+}
+.menu:checked:after {
+  transform: rotate(-45deg);
+}
+.menu:focus-visible {
+  clip-path: none;
+  -webkit-mask: none;
+  border: none;
+  outline: 0.2rem solid var(--c);
+  outline-offset: 0.5rem;
+}
+
+body {
+  margin:0;
+  min-height:100vh;
+  display:grid;
+  place-content:center;
+}
+  
 </style>
