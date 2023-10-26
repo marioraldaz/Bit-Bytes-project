@@ -11,21 +11,18 @@
   function searchProducts(userInput) {
     output=[];
     for (var i = 0; i < arrayProducts.length; i++) {
-      if (arrayProducts[i].name.toUpperCase().match(userInput.toUpperCase())) {
+      if (output.length<5 && arrayProducts[i].name.toUpperCase().match(userInput.toUpperCase())) {
         output.push(arrayProducts[i]);
       }
-      if (arrayProducts.length>=5){
-        break;
       }
-    }
+    
 
-    if(output.length==0){
-      for (var i = 0;i < arrayProducts.length;i++) {
-        if(arrayProducts[i].type.toUpperCase().match(userInput.toUpperCase())) {
-          output.push(arrayProducts[i]);
-        }
+    for (var i = 0;i < arrayProducts.length;i++) {
+      if(output.length<5 && arrayProducts[i].type.toUpperCase().match(userInput.toUpperCase())) {
+        output.push(arrayProducts[i]);
       }
     }
+    
   }
 
   $:{

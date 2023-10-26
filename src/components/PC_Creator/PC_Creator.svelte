@@ -1,9 +1,9 @@
 <script>
     import PC_Creator from "../../stores/PC_Creator.js";
-    import {getRAMs} from   "../productsScript";
+    import {getComponent} from   "../productsScript";
     import {onMount} from "svelte";
     let usedComponents = [];
-    let arrayRAMs = getRAMs();
+    let arrayRAMs = getComponent("RAM");
 
 
     onMount(()=>{

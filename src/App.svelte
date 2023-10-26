@@ -24,7 +24,7 @@
       <Body />
     {:else if active == "RAMs"}
       <RAMs />
-    {:else if active == "PC_Creator"}
+    {:else if active == "PC Creator"}
       <PC_Creator />
     {:else if active == "ResultsPage"}
       <ResultsPage />
