@@ -17,7 +17,7 @@
   
   <div class="component {clicked ? 'clicked' : ''}" >
     <div class="component__side component__side--front">
-        <div class="component__img"><img id={id} src={logo} alt="Producto" /></div>
+        <div class="component__img" style="background-image: url({logo});"></div>
         <div class="component__box--description">
           <div class="component__name">{name}</div>
           <div class="component__description">
@@ -142,6 +142,9 @@
 
     
     .component__img{
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
       background-color: rgb(94, 176, 208);
       height:35%;
     }

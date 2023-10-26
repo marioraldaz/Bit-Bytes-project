@@ -20,9 +20,13 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-    }
-    &:hover {
-      background-color: rgba(128, 128, 128, 0.271);
+      transition: all 0.3s;
+
+      &:hover {
+        width: 75%;
+        height: 75%;
+        filter: drop-shadow(0.2rem 0.2rem 0.2rem rgb(176, 32, 229));
+      }
     }
   }
 </style>
