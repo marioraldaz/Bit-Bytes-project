@@ -2,12 +2,12 @@ import products from "./products.json";
 
 let arrayProducts = products.products;
 
-export function getRAMs() {
-  let RAMs = [];
+export function getComponents(componentType) {
+  let components = [];
   for (let product of arrayProducts) {
-    if (product.type == "RAM") {
-      RAMs.push(product);
+    if (product.type == componentType) {
+      components.push(product);
     }
   }
-  return RAMs;
+  return components;
 }

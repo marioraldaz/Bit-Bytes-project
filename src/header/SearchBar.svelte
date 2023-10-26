@@ -1,17 +1,20 @@
 <script>
   import products from "../components/products.json"
-
+  import { onMount } from "svelte";
+  import searching from "../stores/searching.js";
   let arrayProducts = products.products;
   let output=[];
+  let name="Results"
 
   function searchProducts(userInput) {
     for(var i = 0; i < arrayProducts.length; i++){
       if(arrayProducts[i].name.match(userInput)){
-        output.push(arrayProducts[i].name);
+        output.push(arrayProducts[i]);
       }
     }
-  }
 
+  }
+  onMount(searchProducts
   let userInput = "";
 </script>
 
@@ -21,15 +24,7 @@
     <div class="container__search-button__div">
       <img alt="logo" src="src/images/usuario.png"/>
     </div>
-  </button>
-   <div class="container__results">
-    <h1>Results:</h1>
-    {#key output}
-    {#each output as item, index (item.id)}
-      <div class="container__result__elem"><p>dasdasda</p></div>
-    {/each}
-    {/key}
-  </div>
+  </button>  
 </div>
 
  

@@ -1,12 +1,12 @@
 <script>
-    import {getRAMs} from   "../productsScript";
+    import {getComponents} from   "../productsScript";
     import ProductList from "../../body/ProductList.svelte";
 </script>
     <div class="cuerpo">
         <div class="gradiente_img_cabecera row">
         </div>
         <h1 class="title">RAMS</h1>
-        <ProductList products={getRAMs()}  />
+        <ProductList products={getComponents("RAM")}  />
     </div>
 
 <style lang="scss">
