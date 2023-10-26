@@ -14,7 +14,7 @@
 
 
 <div class="container">
-  
+<div class="cuerpo">
   {#if products.length == 0}
     <h1 class="container__title">We could not find any products matching your search :c</h1>
   {:else}
@@ -24,6 +24,8 @@
     </div>
   {/if}
 </div>
+</div>
+
 
 <style type="scss">
   .container{
@@ -33,6 +35,13 @@
       background-color: red !important;
     }
   }
+
+  .cuerpo{
+  position: relative;
+  margin-top: 9rem;
+  font-size: 2rem;
+  text-align: center;
+}
  
 </style>
 

@@ -14,15 +14,20 @@
 
 </script>
 
-<h1 class="title">PC Creator</h1>
-
-<select class="RAMs">
-    {#each arrayRAMs as RAM}
-        <option value={RAM.name}>{RAM.name}</option>
-    {/each}
-</select>
-
+<div class="cuerpo">
+  <h1 class="title">PC Creator</h1>
+  <select class="RAMs">
+      {#each arrayRAMs as RAM}
+          <option value={RAM.name}>{RAM.name}</option>
+      {/each}
+  </select>
+</div>
 
 <style lang="scss">
-
+.cuerpo{
+  position: relative;
+  margin-top: 9rem;
+  text-align: center;
+  font-size: 3rem;
+}
 </style>
