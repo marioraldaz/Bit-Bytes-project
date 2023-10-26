@@ -13,18 +13,7 @@ var PC_Creator = {
   name: "PC Creator",
   logo: "src/stores/images/PC_Creator_logo.png",
 };
-var Results = { name: "Results" };
-
-const menus = [
-  Body,
-  RAMs,
-  MotherBoards,
-  CPUs,
-  HardDisks,
-  Graphics,
-  PC_Creator,
-  Results,
-];
+const menus = [Body, RAMs, MotherBoards, CPUs, HardDisks, Graphics, PC_Creator];
 const active = "Body";
 
 export default writable({
