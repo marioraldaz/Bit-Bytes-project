@@ -3,9 +3,7 @@
     export let products;
 
 
-    function addComponent(producto){
-      
-    }
+
 
   </script>
 

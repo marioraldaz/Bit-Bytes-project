@@ -1,12 +1,26 @@
 <script>
-  export let productos = [];
+  import Product from '../body/Product.svelte'
+  import Carrito from '../stores/nav'
+  import { onMount } from 'svelte'
+  let visibility = false;
+
+  onMount(()=>{
+    return Carrito.subscribe((data)=>{
+    visibility=data.visibility;
+    });
+  });
+
 </script>
 
-<div class="header__carrito">
-  <a href="/#"
-    ><img src="./images/carrito-de-compras.png" alt="carrito.png" />
-  </a>
+<div class="header__carrito" >
+  <label for="carrito"><img src="./images/carrito-de-compras.png" alt="carrito.png" /></label>
+  <input type="checkbox" id="carrito" name="" bind:checked={visibility}>
+  {#if visibility}
+    <div class= "carrito__container">El carrito está vacío</div>
+  {/if}
+  
 </div>
+
 
 <style lang="scss">
   .header__carrito {
@@ -29,4 +43,22 @@
       }
     }
   }
+
+  .carrito__container{
+      position: absolute;
+      background-color: rgba(211, 17, 17, 0.8);
+      transform: translate(-80%, 40%);
+      overflow-y: auto;
+      width: 20%;
+      height: 10rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: rgb(226, 84, 7);
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    [type ="checkbox"] {
+      display: none;
+    }
 </style>

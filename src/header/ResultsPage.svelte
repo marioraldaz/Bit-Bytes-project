@@ -27,6 +27,7 @@
 
 <style type="scss">
   .container{
+    margin-top: 10rem;
     width: 100%;
     height: 100%;
     &__products{

@@ -6,6 +6,9 @@
   export let specifications;
   export let description;
   export let clicked = false;
+
+  
+  
   function click() {
 
       clicked = !clicked;
@@ -25,8 +28,8 @@
           </div>
         </div>
       <div class="component__footer">
-        <div class="component__button--specs  divCursor"on:click={click}>Specs</div>
-        <a href="#"><div class="component__button--buy divCursor" >Buy</div></a>
+        <div class="component__div--specs  divCursor"on:click={click}>Specs</div>
+        <div class="component__div--buy divCursor" >BUY<button class="component__button--buy" ></button></div>
       </div>
     </div>
     <div class="component__side component__side--back component__side--back-1">
@@ -77,7 +80,7 @@
       top:.5rem;
     }
 
-    .component__button--specs{
+    .component__div--specs{
       width: 40%;
       float: left;
       margin-right: 10%;
@@ -86,13 +89,25 @@
       background-color: purple;
     }
 
-    .component__button--buy{
+    .component__div--buy{
+      position: relative;
       width: 40%;
       float: left;
-      border-radius: 20px;
+      border-radius: 2rem;
       background-color: purple;
       text-decoration: none;
       color: white;
+    }
+
+    .component__button--buy{
+      width: 100%;
+      height: 3.5rem;
+      border-radius: 2rem;
+      border: none;
+      position: absolute;
+      background-color: transparent;
+      transform: translate(-70%);
+      z-index: -1;
     }
 
     .component {
