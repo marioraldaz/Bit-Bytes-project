@@ -3,7 +3,7 @@
   import ResultsPage from "../stores/ResultsPage.js";
   import { onMount } from "svelte";
   let products = [];
-
+  
   onMount(()=>{
     return ResultsPage.subscribe((data)=>{
     products=data.products;
@@ -12,8 +12,16 @@
 
 </script>
 
-<div class="container">
-  <h1>Results</h1>
-    <ProductList products={products}/>
+<h1 class="title">Results</h1>
 
+<div class="container">
+    <ProductList products={products}/>
 </div>
+
+<style type="scss">
+  .title{
+    font-size: 3rem;
+    color:black;
+  }
+</style>
+

@@ -2,7 +2,7 @@
   import products from "../components/products.json";
   import Menus from "../stores/menus.js";
   import ResultsPage from "../stores/ResultsPage.js";
-  
+  import {clickOutside} from "../scripts/clickOutside.js"; 
   let arrayProducts = products.products;
   let output = [];
   let showResults=false;
@@ -59,6 +59,10 @@
         return data;
       });
   }
+
+  function hideResults(){
+    showResults=false;
+  }
 </script>
 
 <div class="container">
@@ -74,7 +78,7 @@
     </div>
   </button> 
   {#if showResults}
-    <div class="container__results"> 
+    <div class="container__results" use:clickOutside on:click_outside={hideResults}> 
       <h1 class="container__results__title">Results:</h1>
         {#each output as item}
           <button class="container__results__elem" on:click={showProduct(item)}>{item.name}</button>

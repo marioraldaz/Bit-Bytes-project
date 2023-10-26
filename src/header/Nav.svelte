@@ -2,6 +2,9 @@
   import NavElem from "./NavElem.svelte";
   import Menus from "../stores/menus.js";
   import { onMount } from 'svelte';
+  import {clickOutside} from "../scripts/clickOutside.js"; 
+  import Nav from "../stores/nav.js";
+  let visibility = false;
   let menus=[];
 
   onMount(()=>{
@@ -9,10 +12,23 @@
     menus=data.menus;
     });
   });
+
+  onMount(()=>{
+    return Nav.subscribe((data)=>{
+    visibility=data.visibility;
+    });
+  });
+
+  function hide(){
+    Nav.update((data)=>{
+      data.visibility=false;
+      return data;
+    });
+  }
 </script>
 
 
-<nav class="menu-nav">
+<nav class="menu-nav" use:clickOutside on:click_outside={hide}>
   {#each menus as navEl}
     {#if navEl.name=="Body"}
         <span></span>

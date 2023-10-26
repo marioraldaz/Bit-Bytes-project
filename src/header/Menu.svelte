@@ -1,12 +1,20 @@
 <script>
-  import Nav from "./Nav.svelte";
-  import { getContext,setContext } from "svelte";
-  export let navVisibility=getContext("navVisibility");
-  export let onClick = () => {
-      navVisibility = navVisibility
-      ? (navVisibility = false)
-      : (navVisibility = true);
+  import NavElem from "./Nav.svelte";
+  import Nav from "../stores/nav.js";
+  import { onMount } from 'svelte';
+  export let visibility=false;
+  export let onClick = () => { Nav.update((data)=>{
+      data.visibility=!visibility;
+      return data;
+    });
   };
+
+  onMount(()=>{
+    return Nav.subscribe((data)=>{
+    visibility=data.visibility;
+    });
+  });
+
 </script>
 
 <div class="header_menu">
@@ -19,8 +27,8 @@
   </button>
 </div>
 
-{#if navVisibility}
-  <Nav />
+{#if visibility}
+  <NavElem />
 {/if}
 
 <style lang="scss">
