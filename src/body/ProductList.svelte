@@ -10,17 +10,17 @@
   </script>
 
   <div class="list">
-      {#each products as product }
-          <div class="column">
-            <Product
-                id = {product.id}
-                name={product.name}
-                logo={product.logo}
-                price={product.price}
-                specifications={product.specifications}
-                description={product.description}/>
-          </div>
-      {/each}
+        {#each products as product }
+            <div class="column">
+              <Product
+                  id = {product.id}
+                  name={product.name}
+                  logo={product.logo}
+                  price={product.price}
+                  specifications={product.specifications}
+                  description={product.description}/>
+            </div>
+        {/each}
   </div>
 
     <style lang="scss">

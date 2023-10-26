@@ -11,14 +11,14 @@
   function searchProducts(userInput) {
     output=[];
     for (var i = 0; i < arrayProducts.length; i++) {
-      if (output.length<5 && arrayProducts[i].name.toUpperCase().match(userInput.toUpperCase())) {
+      if (arrayProducts[i].name.toUpperCase().match(userInput.toUpperCase())) {
         output.push(arrayProducts[i]);
       }
       }
-    
+    //need to save all of them and show only 5.
 
     for (var i = 0;i < arrayProducts.length;i++) {
-      if(output.length<5 && arrayProducts[i].type.toUpperCase().match(userInput.toUpperCase())) {
+      if(arrayProducts[i].type.toUpperCase().match(userInput.toUpperCase())) {
         output.push(arrayProducts[i]);
       }
     }
@@ -70,7 +70,7 @@
   {#if showResults}
     <div class="container__results" use:clickOutside on:click_outside={hideResults}> 
       <h1 class="container__results__title">Results:</h1>
-        {#each output as item}
+        {#each output.slice(0,5) as item}
           <button class="container__results__elem" on:click={showSearchResults([item])}>{item.name}</button>
         {/each}
     </div> 

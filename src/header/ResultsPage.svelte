@@ -12,16 +12,27 @@
 
 </script>
 
-<h1 class="title">Results</h1>
 
 <div class="container">
-    <ProductList products={products}/>
+  
+  {#if products.length == 0}
+    <h1 class="container__title">We could not find any products matching your search :c</h1>
+  {:else}
+    <h1 class="container__title">This is what we found:</h1>
+    <div class="container__products">
+      <ProductList products={products}/>
+    </div>
+  {/if}
 </div>
 
 <style type="scss">
-  .title{
-    font-size: 3rem;
-    color:black;
+  .container{
+    width: 100%;
+    height: 100%;
+    &__products{
+      background-color: red !important;
+    }
   }
+ 
 </style>
 
