@@ -3,7 +3,7 @@
 </script>
 
 <div class="header__carrito">
-  <a href="#"
+  <a href="/#"
     ><img src="./images/carrito-de-compras.png" alt="carrito.png" />
   </a>
 </div>

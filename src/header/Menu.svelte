@@ -98,6 +98,10 @@
   outline-offset: 0.5rem;
 }
 
+.menu:hover{
+  transform: scale(120%);
+}
+
 body {
   margin:0;
   min-height:100vh;

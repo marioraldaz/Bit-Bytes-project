@@ -4,7 +4,7 @@
   import ResultsPage from "../stores/ResultsPage.js";
   import {clickOutside} from "../scripts/clickOutside.js"; 
   let arrayProducts = products.products;
-  let output = [];
+  let output = arrayProducts;
   let showResults=false;
   let userInput = "";
 
@@ -22,7 +22,6 @@
         output.push(arrayProducts[i]);
       }
     }
-    
   }
 
   $:{
@@ -30,36 +29,30 @@
   }
 
   $:{
-    showResults ? searchProducts(userInput) : output=[];
+    showResults ? searchProducts(userInput) : output=output;
   }
 
 
-  function showProduct(item){
-    showResults=false;
-    return function() {
+  function showSearchResults(item){
+    return function (){
+      showResults=false;
+      Menus.update((data) =>{
+        data.active = "ResultsPage";
+        return data;
+      });
       ResultsPage.update((data) => {
-        data.products=item;
-        return data;
-      });
-      showSearchResults();
-    }    
-  }
-
-  function showSearchResults(){
-    showResults=false;
-    Menus.update((data) =>{
-      data.active = "ResultsPage";
-      return data;
-    });
-    ResultsPage.update((data) => {
-        data.products=output;
-        return data;
-      });
+        console.log("length:", item.length);
+          item.length==0 ? data.products=output : data.products=item;
+          console.log("data:", data.products);
+          return data;
+        });
+    }
   }
 
   function hideResults(){
     showResults=false;
   }
+
 </script>
 
 <div class="container">
@@ -69,7 +62,7 @@
     placeholder="   Search for amazing components"
     bind:value={userInput}
   >
-  <button class="container__search-button" on:click={showSearchResults}>
+  <button class="container__search-button" on:click={showSearchResults([])}>
     <div class="container__search-button__div">
       <img alt="logo" src="../images/search_logo.png" />
     </div>
@@ -78,7 +71,7 @@
     <div class="container__results" use:clickOutside on:click_outside={hideResults}> 
       <h1 class="container__results__title">Results:</h1>
         {#each output as item}
-          <button class="container__results__elem" on:click={showProduct(item)}>{item.name}</button>
+          <button class="container__results__elem" on:click={showSearchResults([item])}>{item.name}</button>
         {/each}
     </div> 
   {/if}
