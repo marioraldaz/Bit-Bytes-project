@@ -3,8 +3,11 @@
     import {getComponent} from   "../productsScript";
     import {onMount} from "svelte";
     let usedComponents = [];
+    let arrayCPUs = getComponent("CPUs");
     let arrayRAMs = getComponent("RAM");
-
+    let arrayMotherBoards = getComponent("MotherBoards");
+    let arraySSDs = getComponent("SSD");
+    let arrayCases = getComponent("PC_Case");
 
     onMount(()=>{
     return PC_Creator.subscribe((data)=>{
@@ -16,11 +19,32 @@
 
 <div class="cuerpo">
   <h1 class="title">PC Creator</h1>
+
+  <select class="MotherBoards">
+    {#each arrayMotherBoards as component}
+        <option value={component.name}>{component.name}</option>
+    {/each}
+  </select>
+
   <select class="RAMs">
-      {#each arrayRAMs as RAM}
-          <option value={RAM.name}>{RAM.name}</option>
+      {#each arrayRAMs as component}
+          <option value={component.name}>{component.name}</option>
       {/each}
   </select>
+
+  <select class="CPUs">
+    {#each arrayCPUs as component}
+        <option value={component.name}>{component.name}</option>
+    {/each}
+  </select>
+
+<select class="SSDs">
+  {#each arraySSDs as component}
+      <option value={component.name}>{component.name}</option>
+  {/each}
+</select>
+
+  
 </div>
 
 <style lang="scss">

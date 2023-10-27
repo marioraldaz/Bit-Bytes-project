@@ -15,7 +15,7 @@ export function getComponent(component) {
 export function getOffers() {
   let ofertas = [];
   for (let product of arrayProducts) {
-    if (product.oferta) {
+    if (product.sale) {
       ofertas.push(product);
     }
   }

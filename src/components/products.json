@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "oferta": false,
+      "sale": false,
       "name": "Corsair Vengeance LPX DDR4 3200MHz PC4-25600 32GB 2x16GB CL16",
       "type": "RAM",
       "brand": "Corsair",
@@ -19,7 +19,7 @@
     },
     {
       "id": 2,
-      "oferta": false,
+      "sale": false,
       "name": "Kingston FURY Beast DDR4 3200 MHz 16GB 2x8GB CL16",
       "type": "RAM",
       "GB": "8",
@@ -36,7 +36,7 @@
     },
     {
       "id": 3,
-      "oferta": false,
+      "sale": false,
       "name": "Team Group Delta White RGB DDR4 3200 PC4-25600 16GB 2x8GB CL16",
       "type": "RAM",
       "GB": "8",
@@ -53,7 +53,7 @@
     },
     {
       "id": 4,
-      "oferta": false,
+      "sale": false,
       "name": "Corsair Vengeance DDR5 6000MHz 32 GB 2x16GB CL36 Optimizado AMD",
       "type": "RAM",
       "GB": "16",
@@ -70,10 +70,10 @@
     },
     {
       "id": 5,
-      "oferta": true,
+      "sale": true,
       "name": "Forgeon Mithril ARGB Mesh Torre ATX Negra",
       "type": "PC_Case",
-      "brand": "",
+      "brand": "Forgeon",
       "logo": "images/torre_negra.png",
       "price": "99,99€",
       "specifications": [
@@ -87,10 +87,10 @@
 
     {
       "id": 6,
-      "oferta": true,
+      "sale": true,
       "name": "Corsair Vengeance RGB DDR5",
-      "type": "",
-      "brand": "",
+      "type": "RAM",
+      "brand": "Corsair",
       "logo": "images/ddr5.png",
       "price": "259,99€",
       "specifications": [
@@ -103,10 +103,10 @@
     },
     {
       "id": 7,
-      "oferta": true,
-      "name": "Tempest PSU 750W Fuente de Alimentación",
-      "type": "",
-      "brand": "",
+      "sale": true,
+      "name": "Tempest PSU 750W Power Supply",
+      "type": "PC_Case",
+      "brand": "Tempest",
       "logo": "images/fuente_alimentacion.png",
       "price": "35,99€",
       "specifications": [
@@ -119,10 +119,10 @@
     },
     {
       "id": 8,
-      "oferta": true,
-      "name": "Forgeon Solarian Cooler Ventilador CPU",
-      "type": "",
-      "brand": "",
+      "sale": true,
+      "name": "Forgeon Solarian Cooler CPU Fan",
+      "type": "Fan",
+      "brand": "Forgeon",
       "logo": "images/forgeon_ventilador.png",
       "price": "33,99€",
       "specifications": [
@@ -132,6 +132,310 @@
         "Specification4"
       ],
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore."
+    },
+    {
+      "id": 9,
+      "sale": false,
+      "name": "Samsung SSD 250GB",
+      "type": "SSD",
+      "brand": "Samsung",
+      "logo": "src/components/images/samsung250gb.png",
+      "price": "89.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "High-speed Samsung SSD with 250GB storage capacity."
+    },
+    {
+      "id": 10,
+      "sale": false,
+      "name": "Samsung SSD 500GB",
+      "type": "SSD",
+      "brand": "Samsung",
+      "logo": "src/components/images/samsung250gb.png",
+      "price": "129.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "High-performance Samsung SSD with 500GB storage capacity."
+    },
+    {
+      "id": 11,
+      "sale": false,
+      "name": "Samsung SSD 1TB",
+      "type": "SSD",
+      "brand": "Samsung",
+      "logo": "src/components/images/samsung250gb.png",
+      "price": "249.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "Large-capacity Samsung SSD with 1TB storage."
+    },
+    {
+      "id": 12,
+      "sale": false,
+      "name": "Samsung SSD 2TB",
+      "type": "SSD",
+      "brand": "Samsung",
+      "logo": "src/components/images/samsung250gb.png",
+      "price": "449.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "Massive 2TB Samsung SSD for all your storage needs."
+    },
+    {
+      "id": 13,
+      "sale": false,
+      "name": "AMD Ryzen 5 5600X",
+      "type": "CPU",
+      "brand": "AMD",
+      "logo": "",
+      "price": "279.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "High-performance AMD Ryzen 5 processor for gaming and multitasking."
+    },
+    {
+      "id": 14,
+      "sale": false,
+      "name": "AMD Ryzen 7 5800X",
+      "type": "CPU",
+      "brand": "AMD",
+      "logo": "",
+      "price": "389.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "AMD Ryzen 7 processor with exceptional performance and efficiency."
+    },
+    {
+      "id": 15,
+      "sale": false,
+      "name": "Intel Core i5-11600K",
+      "type": "CPU",
+      "brand": "Intel",
+      "logo": "",
+      "price": "269.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "Intel Core i5 processor with excellent performance for gaming and productivity."
+    },
+    {
+      "id": 16,
+      "sale": false,
+      "name": "Intel Core i7-12700K",
+      "type": "CPU",
+      "brand": "Intel",
+      "logo": "",
+      "price": "469.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "Intel Core i7 processor with high-speed performance for demanding tasks."
+    },
+    {
+      "id": 13,
+      "sale": false,
+      "name": "AMD Ryzen 5 5600X",
+      "type": "CPU",
+      "brand": "AMD",
+      "logo": "",
+      "price": "279.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "High-performance AMD Ryzen 5 processor for gaming and multitasking."
+    },
+    {
+      "id": 14,
+      "sale": false,
+      "name": "AMD Ryzen 7 5800X",
+      "type": "CPU",
+      "brand": "AMD",
+      "logo": "",
+      "price": "389.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "AMD Ryzen 7 processor with exceptional performance and efficiency."
+    },
+    {
+      "id": 17,
+      "sale": false,
+      "name": "MSI GeForce RTX 3070 Gaming X Trio",
+      "type": "GPU",
+      "brand": "MSI",
+      "logo": "",
+      "price": "899.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "High-performance MSI GeForce RTX 3070 GPU for gaming and graphics workloads."
+    },
+    {
+      "id": 18,
+      "sale": false,
+      "name": "MSI GeForce GTX 1660 Super Ventus XS",
+      "type": "GPU",
+      "brand": "MSI",
+      "logo": "",
+      "price": "289.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "MSI GeForce GTX 1660 Super GPU for smooth gaming performance."
+    },
+    {
+      "id": 19,
+      "sale": false,
+      "name": "NVIDIA GeForce RTX 3080 Ti",
+      "type": "GPU",
+      "brand": "NVIDIA",
+      "logo": "",
+      "price": "1399.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "NVIDIA GeForce RTX 3080 Ti GPU for ultimate gaming and rendering."
+    },
+    {
+      "id": 20,
+      "sale": false,
+      "name": "NVIDIA GeForce GTX 1650",
+      "type": "GPU",
+      "brand": "NVIDIA",
+      "logo": "",
+      "price": "179.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "NVIDIA GeForce GTX 1650 GPU for budget-friendly gaming performance."
+    },
+    {
+      "id": 21,
+      "sale": false,
+      "name": "ASUS TUF Gaming GTX 1660 Super",
+      "type": "GPU",
+      "brand": "ASUS",
+      "logo": "",
+      "price": "289.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "ASUS TUF Gaming GTX 1660 Super for reliable and efficient gaming."
+    },
+    {
+      "id": 22,
+      "sale": false,
+      "name": "MSI MPG B550 Gaming Plus Motherboard",
+      "type": "Motherboard",
+      "brand": "MSI",
+      "logo": "",
+      "price": "159.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "MSI MPG B550 Gaming Plus Motherboard for gaming and performance builds."
+    },
+    {
+      "id": 23,
+      "sale": false,
+      "name": "MSI MAG B460M Mortar Micro-ATX Motherboard",
+      "type": "Motherboard",
+      "brand": "MSI",
+      "logo": "",
+      "price": "109.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "MSI MAG B460M Mortar Micro-ATX Motherboard for compact gaming setups."
+    },
+    {
+      "id": 24,
+      "sale": false,
+      "name": "NVIDIA nForce 780i SLI Motherboard",
+      "type": "Motherboard",
+      "brand": "NVIDIA",
+      "logo": "",
+      "price": "129.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "NVIDIA nForce 780i SLI Motherboard for gaming and multi-GPU support."
+    },
+    {
+      "id": 25,
+      "sale": false,
+      "name": "NVIDIA nForce 680i SLI Motherboard",
+      "type": "Motherboard",
+      "brand": "NVIDIA",
+      "logo": "",
+      "price": "99.99€",
+      "specifications": [
+        "Specification1",
+        "Specification2",
+        "Specification3",
+        "Specification4"
+      ],
+      "description": "NVIDIA nForce 680i SLI Motherboard for budget-friendly gaming builds."
     }
   ]
 }

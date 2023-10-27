@@ -1,7 +1,7 @@
 <!-- App.svelte -->
 <script>
     import ProductList from './ProductList.svelte';
-    import {getOffers} from '../components/productsScript.js'
+    import {getOffers} from '../../src/components/productsScript.js'
     
   </script>
 
