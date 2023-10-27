@@ -1,11 +1,9 @@
 <script>
-  export let id;
-  export let name;
-  export let logo;
-  export let price;
-  export let specifications;
-  export let description;
-  export let clicked = false;
+  export let product;
+
+  let clicked = false;
+  export let addToCarrito = () => {};
+
   function click() {
     clicked = !clicked;
   }
@@ -13,17 +11,20 @@
 
 <div class="component {clicked ? 'clicked' : ''}">
   <div class="component__side component__side--front">
-    <div class="component__img" style="background-image: url({logo});" />
+    <div
+      class="component__img"
+      style="background-image: url({product.logo});"
+    />
     <div class="component__box--description">
-      <div class="component__name">{name}</div>
+      <div class="component__name">{product.name}</div>
       <div class="component__description">
-        <p>{description}</p>
+        <p>{product.description}</p>
       </div>
     </div>
     <div class="component__footer">
       <div class="component__div--specs divCursor" on:click={click}>Specs</div>
       <div class="component__div--buy divCursor">
-        BUY<button class="component__button--buy" />
+        BUY<button class="component__button--buy" on:click={addToCarrito} />
       </div>
     </div>
   </div>
@@ -31,14 +32,14 @@
     <div class="close divCursor" on:click={click}>X</div>
     <div class="specifications">
       <h4>Specifications</h4>
-      {#each specifications as specification}
+      {#each product.specifications as specification}
         <div>{specification}</div>
       {/each}
     </div>
   </div>
 </div>
 
-<style>
+<style lang="scss">
   .divCursor {
     cursor: pointer;
   }
@@ -49,20 +50,19 @@
 
   .specifications {
     height: 100%;
+    & div {
+      height: 15%;
+      &:not(:last-child) {
+        margin-bottom: 10%;
+      }
+    }
+  
+    & h4 {
+      height: 10%;
+      margin-bottom: 5%;
+    }
   }
 
-  .specifications div {
-    height: 15%;
-  }
-
-  .specifications div:not(:last-child) {
-    margin-bottom: 10%;
-  }
-
-  .specifications h4 {
-    height: 10%;
-    margin-bottom: 5%;
-  }
 
   .close {
     font-size: 1.5rem;
@@ -73,36 +73,6 @@
     right: 0.5rem;
     top: 0.5rem;
   }
-
-  .component__div--specs {
-    width: 40%;
-    float: left;
-    margin-right: 10%;
-    margin-left: 5%;
-    border-radius: 20px;
-    background-color: purple;
-  }
-
-  .component__div--buy {
-    width: 40%;
-    float: left;
-    border-radius: 2rem;
-    background-color: purple;
-    text-decoration: none;
-    color: white;
-  }
-
-  .component__button--buy {
-    width: 100%;
-    height: 3.5rem;
-    border-radius: 2rem;
-    border: none;
-    position: absolute;
-    background-color: transparent;
-    transform: translate(-70%);
-    z-index: -1;
-  }
-
   .component {
     perspective: 150rem;
     -moz-perspective: 150rem;
@@ -111,87 +81,117 @@
     height: 50rem;
     margin-bottom: 2rem;
     margin: 3rem;
+    &__div--specs {
+      width: 40%;
+      float: left;
+      margin-right: 10%;
+      margin-left: 5%;
+      border-radius: 20px;
+      background-color: purple;
+    }
+    &__div--buy {
+      width: 40%;
+      float: left;
+      border-radius: 2rem;
+      background-color: purple;
+      text-decoration: none;
+      color: white;
+    }
+    &__button--buy {
+      width: 40%;
+      height: 3.5rem;
+      border-radius: 2rem;
+      border: none;
+      position: absolute;
+      background-color: transparent;
+      transform: translate(-70%);
+      cursor: pointer;
+    }
+    &__side {
+      color: #fff;
+      font-size: 2rem;
+      height: 50rem;
+      transition: all 0.8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      backface-visibility: hidden;
+      margin: 0 auto;
+      &--front {
+        /*       background: linear-gradient(135deg, #00ffec, #0081ff);
+     */
+        color: grey;
+        background-color: green;
+      }
+    
+      &--back {
+        transform: rotateY(180deg);
+      }
+    
+      &--back-1 {
+        background: linear-gradient(135deg, #00ffec, #0081ff);
+      }
+    }
+  
+    &.clicked &__side--front {
+      transform: rotateY(180deg);
+    }
+  
+    &.clicked &__side--back {
+      transform: rotateY(0);
+    }
+  
+    &__img {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: rgb(94, 176, 208);
+      height: 35%;
+    }
+  
+    &__box--description {
+      background-color: white;
+      height: 55%;
+    }
+  
+    &__name {
+      text-align: center;
+      background: black;
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: bold;
+      font-size: 3rem;
+      padding: 0.5rem;
+      padding-top: 1.5rem;
+      &:hover {
+        transform: skewX(-10deg);
+      }
+    }
+  
+  
+    &__description {
+      padding: 1rem;
+      margin: 0.5rem;
+      font-size: 1.7rem;
+      text-align: left;
+    }
+  
+    &__footer {
+      height: 10%;
+      background-color: white;
+      position: relative;
+      padding: 0.5rem;
+      color: white;
+      font-size: 3rem;
+    }
   }
 
-  .component__side {
-    color: #fff;
-    font-size: 2rem;
-    height: 50rem;
-    transition: all 0.8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    backface-visibility: hidden;
-    margin: 0 auto;
-  }
 
-  .component__side--front {
-    /*       background: linear-gradient(135deg, #00ffec, #0081ff);
- */
-    color: grey;
-    background-color: green;
-  }
 
-  .component__side--back {
-    transform: rotateY(180deg);
-  }
 
-  .component__side--back-1 {
-    background: linear-gradient(135deg, #00ffec, #0081ff);
-  }
 
-  .component.clicked .component__side--front {
-    transform: rotateY(180deg);
-  }
 
-  .component.clicked .component__side--back {
-    transform: rotateY(0);
-  }
-
-  .component__img {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: rgb(94, 176, 208);
-    height: 35%;
-  }
-
-  .component__box--description {
-    background-color: white;
-    height: 55%;
-  }
-
-  .component__name {
-    text-align: center;
-    background: black;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: bold;
-    font-size: 3rem;
-    padding: 0.5rem;
-    padding-top: 1.5rem;
-  }
-
-  .component__name:hover {
-    transform: skewX(-10deg);
-  }
-
-  .component__description {
-    padding: 1rem;
-    margin: 0.5rem;
-    font-size: 1.7rem;
-    text-align: left;
-  }
-
-  .component__footer {
-    height: 10%;
-    background-color: white;
-    position: relative;
-    padding: 0.5rem;
-    color: white;
-    font-size: 3rem;
-  }
 
   @media screen and (max-width: 1800px) {
     .component__description {
