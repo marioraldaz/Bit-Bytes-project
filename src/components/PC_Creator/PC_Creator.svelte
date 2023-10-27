@@ -26,11 +26,11 @@
     {/each}
   </select>
 
-  <select class="RAMs">
-      {#each arrayRAMs as component}
-          <option value={component.name}>{component.name}</option>
-      {/each}
-  </select>
+  <select class="Graphics">
+    {#each arrayRAMs as component}
+        <option value={component.name}>{component.name}</option>
+    {/each}
+</select>
 
   <select class="CPUs">
     {#each arrayCPUs as component}
@@ -38,11 +38,17 @@
     {/each}
   </select>
 
-<select class="SSDs">
+  <select class="RAMs">
+      {#each arrayRAMs as component}
+          <option value={component.name}>{component.name}</option>
+      {/each}
+  </select>
+
+  <select class="SSDs">
   {#each arraySSDs as component}
       <option value={component.name}>{component.name}</option>
   {/each}
-</select>
+  </select>
 
   
 </div>

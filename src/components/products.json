@@ -7,7 +7,7 @@
       "type": "RAM",
       "brand": "Corsair",
       "GB": 16,
-      "logo": "src/components/RAMs/images/1441-corsair-vengeance-lpx-ddr4-3200mhz-pc4-25600-32gb-2x16gb-cl16.jpg",
+      "logo": "src/components/images/1441-corsair-vengeance-lpx-ddr4-3200mhz-pc4-25600-32gb-2x16gb-cl16.jpg",
       "price": 75.99,
       "specifications": [
         "Specification1",
@@ -24,7 +24,7 @@
       "type": "RAM",
       "GB": "8",
       "brand": "Team Group",
-      "logo": "src/components/RAMs/images/1441-corsair-vengeance-lpx-ddr4-3200mhz-pc4-25600-32gb-2x16gb-cl16.jpg",
+      "logo": "src/components/images/1441-corsair-vengeance-lpx-ddr4-3200mhz-pc4-25600-32gb-2x16gb-cl16.jpg",
       "price": 42.99,
       "specifications": [
         "Specification1",
@@ -41,7 +41,7 @@
       "type": "RAM",
       "GB": "8",
       "brand": "Team Group",
-      "logo": "src/components/RAMs/images/Team-Group-Delta.jpg",
+      "logo": "src/components/images/Team-Group-Delta.jpg",
       "price": 45.99,
       "specifications": [
         "Specification1",
@@ -58,7 +58,7 @@
       "type": "RAM",
       "GB": "16",
       "brand": "Corsair",
-      "logo": "src/components/RAMs/images/2394-corsair-vengeance-ddr5-6000mhz-32-gb-2x16gb-cl36.jpg",
+      "logo": "src/components/images/2394-corsair-vengeance-ddr5-6000mhz-32-gb-2x16gb-cl36.jpg",
       "price": 120,
       "specifications": [
         "Specification1",
@@ -203,7 +203,7 @@
       "name": "AMD Ryzen 5 5600X",
       "type": "CPU",
       "brand": "AMD",
-      "logo": "",
+      "logo": "src/components/images/ryzen5.png",
       "price": "279.99€",
       "specifications": [
         "Specification1",
@@ -219,7 +219,7 @@
       "name": "AMD Ryzen 7 5800X",
       "type": "CPU",
       "brand": "AMD",
-      "logo": "",
+      "logo": "src/components/images/ryzen7.png",
       "price": "389.99€",
       "specifications": [
         "Specification1",
@@ -235,7 +235,7 @@
       "name": "Intel Core i5-11600K",
       "type": "CPU",
       "brand": "Intel",
-      "logo": "",
+      "logo": "src/components/images/i5.png",
       "price": "269.99€",
       "specifications": [
         "Specification1",
@@ -251,7 +251,7 @@
       "name": "Intel Core i7-12700K",
       "type": "CPU",
       "brand": "Intel",
-      "logo": "",
+      "logo": "src/components/images/i7.jpg",
       "price": "469.99€",
       "specifications": [
         "Specification1",
@@ -261,45 +261,14 @@
       ],
       "description": "Intel Core i7 processor with high-speed performance for demanding tasks."
     },
-    {
-      "id": 13,
-      "sale": false,
-      "name": "AMD Ryzen 5 5600X",
-      "type": "CPU",
-      "brand": "AMD",
-      "logo": "",
-      "price": "279.99€",
-      "specifications": [
-        "Specification1",
-        "Specification2",
-        "Specification3",
-        "Specification4"
-      ],
-      "description": "High-performance AMD Ryzen 5 processor for gaming and multitasking."
-    },
-    {
-      "id": 14,
-      "sale": false,
-      "name": "AMD Ryzen 7 5800X",
-      "type": "CPU",
-      "brand": "AMD",
-      "logo": "",
-      "price": "389.99€",
-      "specifications": [
-        "Specification1",
-        "Specification2",
-        "Specification3",
-        "Specification4"
-      ],
-      "description": "AMD Ryzen 7 processor with exceptional performance and efficiency."
-    },
+
     {
       "id": 17,
       "sale": false,
       "name": "MSI GeForce RTX 3070 Gaming X Trio",
       "type": "GPU",
       "brand": "MSI",
-      "logo": "",
+      "logo": "src/components/images/msi3070trio.jpg",
       "price": "899.99€",
       "specifications": [
         "Specification1",
@@ -315,7 +284,7 @@
       "name": "MSI GeForce GTX 1660 Super Ventus XS",
       "type": "GPU",
       "brand": "MSI",
-      "logo": "",
+      "logo": "src/components/images/ventusXS.jpg",
       "price": "289.99€",
       "specifications": [
         "Specification1",
@@ -331,7 +300,7 @@
       "name": "NVIDIA GeForce RTX 3080 Ti",
       "type": "GPU",
       "brand": "NVIDIA",
-      "logo": "",
+      "logo": "src/components/images/NVIDIA3080ti.jpg",
       "price": "1399.99€",
       "specifications": [
         "Specification1",
@@ -347,7 +316,7 @@
       "name": "NVIDIA GeForce GTX 1650",
       "type": "GPU",
       "brand": "NVIDIA",
-      "logo": "",
+      "logo": "src/components/images/NVIDIA1650.jpg",
       "price": "179.99€",
       "specifications": [
         "Specification1",
@@ -363,7 +332,7 @@
       "name": "ASUS TUF Gaming GTX 1660 Super",
       "type": "GPU",
       "brand": "ASUS",
-      "logo": "",
+      "logo": "src/components/images/ASUS1660.jpg",
       "price": "289.99€",
       "specifications": [
         "Specification1",
@@ -379,7 +348,7 @@
       "name": "MSI MPG B550 Gaming Plus Motherboard",
       "type": "Motherboard",
       "brand": "MSI",
-      "logo": "",
+      "logo": "src/components/images/MSIB550.jpg",
       "price": "159.99€",
       "specifications": [
         "Specification1",
@@ -395,7 +364,7 @@
       "name": "MSI MAG B460M Mortar Micro-ATX Motherboard",
       "type": "Motherboard",
       "brand": "MSI",
-      "logo": "",
+      "logo": "src/components/images/MSImortar.jpg",
       "price": "109.99€",
       "specifications": [
         "Specification1",
@@ -411,7 +380,7 @@
       "name": "NVIDIA nForce 780i SLI Motherboard",
       "type": "Motherboard",
       "brand": "NVIDIA",
-      "logo": "",
+      "logo": "src/components/images/NVIDIA780i.jpg",
       "price": "129.99€",
       "specifications": [
         "Specification1",
@@ -427,7 +396,7 @@
       "name": "NVIDIA nForce 680i SLI Motherboard",
       "type": "Motherboard",
       "brand": "NVIDIA",
-      "logo": "",
+      "logo": "src/components/images/NVIDIA680i.jpg",
       "price": "99.99€",
       "specifications": [
         "Specification1",

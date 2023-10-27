@@ -27,7 +27,7 @@
     {:else if active == "PC Creator"}
       <PC_Creator />
     {:else if active == "ResultsPage"}
-      <ResultsPage />
+        <ResultsPage />
     {/if}
   {/key}
 
@@ -37,6 +37,5 @@
 <style lang="scss">
 
   @import "./variables";
-
 
 </style>
