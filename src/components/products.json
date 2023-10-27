@@ -75,7 +75,7 @@
       "type": "PC_Case",
       "brand": "Forgeon",
       "logo": "images/torre_negra.png",
-      "price": "99,99€",
+      "price": 99.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -92,7 +92,7 @@
       "type": "RAM",
       "brand": "Corsair",
       "logo": "images/ddr5.png",
-      "price": "259,99€",
+      "price": 259.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -108,7 +108,7 @@
       "type": "PC_Case",
       "brand": "Tempest",
       "logo": "images/fuente_alimentacion.png",
-      "price": "35,99€",
+      "price": 35.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -124,7 +124,7 @@
       "type": "Fan",
       "brand": "Forgeon",
       "logo": "images/forgeon_ventilador.png",
-      "price": "33,99€",
+      "price": 33.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -140,7 +140,7 @@
       "type": "SSD",
       "brand": "Samsung",
       "logo": "src/components/images/samsung250gb.png",
-      "price": "89.99€",
+      "price": 89.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -156,7 +156,7 @@
       "type": "SSD",
       "brand": "Samsung",
       "logo": "src/components/images/samsung250gb.png",
-      "price": "129.99€",
+      "price": 129.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -172,7 +172,7 @@
       "type": "SSD",
       "brand": "Samsung",
       "logo": "src/components/images/samsung250gb.png",
-      "price": "249.99€",
+      "price": 249.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -188,7 +188,7 @@
       "type": "SSD",
       "brand": "Samsung",
       "logo": "src/components/images/samsung250gb.png",
-      "price": "449.99€",
+      "price": 449.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -204,7 +204,7 @@
       "type": "CPU",
       "brand": "AMD",
       "logo": "src/components/images/ryzen5.png",
-      "price": "279.99€",
+      "price": 279.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -220,7 +220,7 @@
       "type": "CPU",
       "brand": "AMD",
       "logo": "src/components/images/ryzen7.png",
-      "price": "389.99€",
+      "price": 389.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -236,7 +236,7 @@
       "type": "CPU",
       "brand": "Intel",
       "logo": "src/components/images/i5.png",
-      "price": "269.99€",
+      "price": 269.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -252,7 +252,7 @@
       "type": "CPU",
       "brand": "Intel",
       "logo": "src/components/images/i7.jpg",
-      "price": "469.99€",
+      "price": 469.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -269,7 +269,7 @@
       "type": "GPU",
       "brand": "MSI",
       "logo": "src/components/images/msi3070trio.jpg",
-      "price": "899.99€",
+      "price": 899.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -285,7 +285,7 @@
       "type": "GPU",
       "brand": "MSI",
       "logo": "src/components/images/ventusXS.jpg",
-      "price": "289.99€",
+      "price": 289.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -301,7 +301,7 @@
       "type": "GPU",
       "brand": "NVIDIA",
       "logo": "src/components/images/NVIDIA3080ti.jpg",
-      "price": "1399.99€",
+      "price": 1399.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -317,7 +317,7 @@
       "type": "GPU",
       "brand": "NVIDIA",
       "logo": "src/components/images/NVIDIA1650.jpg",
-      "price": "179.99€",
+      "price": 179.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -333,7 +333,7 @@
       "type": "GPU",
       "brand": "ASUS",
       "logo": "src/components/images/ASUS1660.jpg",
-      "price": "289.99€",
+      "price": 289.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -349,7 +349,7 @@
       "type": "Motherboard",
       "brand": "MSI",
       "logo": "src/components/images/MSIB550.jpg",
-      "price": "159.99€",
+      "price": 159.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -365,7 +365,7 @@
       "type": "Motherboard",
       "brand": "MSI",
       "logo": "src/components/images/MSImortar.jpg",
-      "price": "109.99€",
+      "price": 109.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -381,7 +381,7 @@
       "type": "Motherboard",
       "brand": "NVIDIA",
       "logo": "src/components/images/NVIDIA780i.jpg",
-      "price": "129.99€",
+      "price": 129.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -397,7 +397,7 @@
       "type": "Motherboard",
       "brand": "NVIDIA",
       "logo": "src/components/images/NVIDIA680i.jpg",
-      "price": "99.99€",
+      "price": 99.99,
       "specifications": [
         "Specification1",
         "Specification2",

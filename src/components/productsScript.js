@@ -2,14 +2,14 @@ import products from "./products.json";
 
 let arrayProducts = products.products;
 
-export function getComponent(component) {
-  let RAMs = [];
+export function getComponents(component) {
+  let array = [];
   for (let product of arrayProducts) {
     if (product.type == component) {
-      RAMs.push(product);
+      array.push(product);
     }
   }
-  return RAMs;
+  return array;
 }
 
 export function getOffers() {
