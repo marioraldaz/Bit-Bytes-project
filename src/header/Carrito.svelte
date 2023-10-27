@@ -1,21 +1,16 @@
 <script>
   import Product from '../body/Product.svelte'
-  import Carrito from '../stores/nav'
-  import { onMount } from 'svelte'
-  let visibility = false;
+  import carrito from '../stores/carrito'
+  
 
-  onMount(()=>{
-    return Carrito.subscribe((data)=>{
-    visibility=data.visibility;
-    });
-  });
+
 
 </script>
 
 <div class="header__carrito" >
   <label for="carrito"><img src="./images/carrito-de-compras.png" alt="carrito.png" /></label>
-  <input type="checkbox" id="carrito" name="" bind:checked={visibility}>
-  {#if visibility}
+  <input type="checkbox" id="carrito" name="" bind:checked={$carrito.visibility}>
+  {#if $carrito.visibility}
     <div class= "carrito__container">El carrito está vacío</div>
   {/if}
   
