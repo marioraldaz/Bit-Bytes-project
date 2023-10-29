@@ -3,8 +3,9 @@
 </script>
 
     <select name="" on:change >
+      <option disabled selected value> -- select an option -- </option>
       {#each array as component}
-          <option value={component.id}>{component.name}</option>
+          <option value={component.id} data-price={component.price}>{component.name}</option>
       {/each}
     </select> 
 

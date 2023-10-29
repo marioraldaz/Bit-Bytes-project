@@ -1,5 +1,5 @@
 <script>
-    import {getComponents} from   "../productsScript";
+    import {getComponents} from   "../../stores/PC_Creator";
     import ProductList from "../../body/ProductList.svelte";
 </script>
     <div class="cuerpo">

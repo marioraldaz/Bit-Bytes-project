@@ -1,8 +1,9 @@
 <script>
     import PC_Creator from "../../stores/PC_Creator.js";
     import Select from "./Select.svelte"
-    import {getComponents} from   "../productsScript";
     import {onMount} from "svelte";
+    import {getComponent,getComponents,calPrice} from "../../stores/PC_Creator.js"
+
     let usedComponents = [];
     let arrays = [];
     let totalPrice = 0;
@@ -13,18 +14,21 @@
     onMount(()=>{
       return PC_Creator.subscribe((data)=>{
         usedComponents = data.usedComponents;
+        totalPrice = data.totalPrice;
       });
     });
 
     function buy(){
-      return PC_Creator.update((data)=>{
-        data.usedComponents = usedComponents;
-        return data;
-      });
+  
     }
 
     function handleChange(e) {
-      totalPrice += e.target;
+      return PC_Creator.update((data)=>{
+        data.usedComponents.push(getComponent(e.target.value));
+       
+        totalPrice = calPrice();
+        return data;
+      });
     }
 
 </script>
