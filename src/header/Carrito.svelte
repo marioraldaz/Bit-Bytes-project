@@ -1,21 +1,19 @@
 <script>
-  import Product from '../body/Product.svelte'
-  import carrito from '../stores/carrito'
-  
+  import Product from "../body/Product.svelte";
+  import CarritoElem from "./CarritoElem.svelte";
 
-
-
+  let visibility = false;
 </script>
 
-<div class="header__carrito" >
-  <label for="carrito"><img src="./images/carrito-de-compras.png" alt="carrito.png" /></label>
-  <input type="checkbox" id="carrito" name="" bind:checked={$carrito.visibility}>
-  {#if $carrito.visibility}
-    <div class= "carrito__container">El carrito está vacío</div>
+<div class="header__carrito">
+  <label for="carrito"
+    ><img src="./images/carrito-de-compras.png" alt="carrito.png" /></label
+  >
+  <input type="checkbox" id="carrito" name="" bind:checked={visibility} />
+  {#if visibility}
+    <CarritoElem />
   {/if}
-  
 </div>
-
 
 <style lang="scss">
   .header__carrito {
@@ -39,21 +37,7 @@
     }
   }
 
-  .carrito__container{
-      position: absolute;
-      background-color: rgba(211, 17, 17, 0.8);
-      transform: translate(-80%, 40%);
-      overflow-y: auto;
-      width: 20%;
-      height: 10rem;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: rgb(226, 84, 7);
-      text-align: center;
-      transition: all 0.3s;
-    }
-
-    [type ="checkbox"] {
-      display: none;
-    }
+  [type="checkbox"] {
+    display: none;
+  }
 </style>

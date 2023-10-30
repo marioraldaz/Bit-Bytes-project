@@ -1,7 +1,6 @@
 import { writable } from "svelte/store";
-let visibility = false;
+let cantidad = 0;
 
 export default writable({
-    visibility,
     carrito: []
 });

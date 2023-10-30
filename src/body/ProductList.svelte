@@ -9,9 +9,9 @@
   {#each products as product}
     <div class="column">
       <Product
-        product = {product}
+        {product}
         addToCarrito={() => {
-          $carrito.carrito.push(product);
+          $carrito.carrito = [...$carrito.carrito, product];
           console.log($carrito.carrito);
         }}
       />
