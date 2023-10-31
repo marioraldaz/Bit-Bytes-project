@@ -105,7 +105,7 @@
       "id": 7,
       "sale": true,
       "name": "Tempest PSU 750W Power Supply",
-      "type": "PC_Case",
+      "type": "Power",
       "brand": "Tempest",
       "logo": "images/fuente_alimentacion.png",
       "price": 35.99,

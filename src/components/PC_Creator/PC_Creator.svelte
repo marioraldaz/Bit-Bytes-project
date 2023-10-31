@@ -1,32 +1,46 @@
 <script>
     import PC_Creator from "../../stores/PC_Creator.js";
     import Select from "./Select.svelte"
-    import {onMount} from "svelte";
-    import {getComponent,getComponents,calPrice} from "../../stores/PC_Creator.js"
+    import {getComponents,getProducts} from "../../stores/PC_Creator.js"
 
-    let usedComponents = [];
+    let products=getProducts();
+    let PC={
+      "CPU":null,
+      "RAM":null,
+      "Motherboard":null,
+      "SSD":null,
+      "PC_Case":null,
+    }
     let arrays = [];
     let totalPrice = 0;
     let arrayComponents = ["Motherboard","CPU", "RAM","SSD", "PC_Case"];
+
     for (let i = 0; i < arrayComponents.length; i++){
       arrays.push(getComponents(arrayComponents[i]));
     }
-    onMount(()=>{
-      return PC_Creator.subscribe((data)=>{
-        usedComponents = data.usedComponents;
-        totalPrice = data.totalPrice;
-      });
-    });
 
     function buy(){
   
     }
+    function calPrice(array){
+        totalPrice = 0;
+        for(let i=0;i<array.length;i++){
+          if(array[i]){
+            totalPrice += array[i].price;
+          }
+        }
+      }
 
     function handleChange(e) {
-      return PC_Creator.update((data)=>{
-        data.usedComponents.push(getComponent(e.target.value));
-       
-        totalPrice = calPrice();
+      
+      for(let product of products){
+        if(product.id == e.target.value){
+          PC[product.type] = product;
+        }
+      }
+      calPrice(Object.values(PC));
+      return PC_Creator.update((data)=>{ 
+        data.usedComponents=Object.values(PC);
         return data;
       });
     }
