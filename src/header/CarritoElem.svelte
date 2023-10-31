@@ -8,7 +8,7 @@
 {:else}
   <div class="carrito__container">
     {#each $carrito.carrito as product}
-      <ProductoCarrito nombre={product.name} />
+      <ProductoCarrito nombre={product.product.name} cantidad ={product.cantidad}/>
     {/each}
   </div>
 {/if}
