@@ -1,5 +1,5 @@
 <script>
-  export let cantidad = 0;
+  export let cantidad;
   export let nombre = "";
 
   function addCantity(nombre){

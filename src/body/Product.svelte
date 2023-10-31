@@ -1,8 +1,8 @@
 <script>
+  import carrito from "../stores/carrito"
   export let product;
 
   let clicked = false;
-  export let addToCarrito = () => {};
 
   function click() {
     clicked = !clicked;
@@ -24,7 +24,7 @@
     <div class="component__footer">
       <div class="component__div--specs divCursor" on:click={click}>Specs</div>
       <div class="component__div--buy divCursor">
-        BUY<button class="component__button--buy" on:click={addToCarrito} />
+        BUY<button class="component__button--buy" on:click={()=> $carrito.addToCarrito(product)} />
       </div>
     </div>
   </div>
