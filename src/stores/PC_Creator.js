@@ -22,9 +22,9 @@ export function getComponents(component) {
   return array;
 }
 
-export function calPrice() {
+export function calPrice(components) {
   let totalPrice = 0;
-  for (let product of usedComponents) {
+  for (let product of components) {
     totalPrice += product.price;
   }
   return totalPrice;

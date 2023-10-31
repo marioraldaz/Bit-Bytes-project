@@ -25,8 +25,8 @@
     function handleChange(e) {
       return PC_Creator.update((data)=>{
         data.usedComponents.push(getComponent(e.target.value));
-       
-        totalPrice = calPrice();
+        
+        totalPrice = calPrice(usedComponents);
         return data;
       });
     }
