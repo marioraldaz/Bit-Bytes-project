@@ -1,8 +1,8 @@
 <script>
+  import carrito from "../stores/carrito"
   export let product;
 
   let clicked = false;
-  export let addToCarrito = () => {};
 
   function click() {
     clicked = !clicked;
@@ -24,7 +24,7 @@
     <div class="component__footer">
       <div class="component__div--specs divCursor" on:click={click}>Specs</div>
       <div class="component__div--buy divCursor">
-        BUY<button class="component__button--buy" on:click={addToCarrito} />
+        BUY<button class="component__button--buy" on:click={()=> $carrito.addToCarrito(product)} />
       </div>
     </div>
   </div>
@@ -56,13 +56,12 @@
         margin-bottom: 10%;
       }
     }
-  
+
     & h4 {
       height: 10%;
       margin-bottom: 5%;
     }
   }
-
 
   .close {
     font-size: 1.5rem;
@@ -124,24 +123,24 @@
         color: grey;
         background-color: green;
       }
-    
+
       &--back {
         transform: rotateY(180deg);
       }
-    
+
       &--back-1 {
         background: linear-gradient(135deg, #00ffec, #0081ff);
       }
     }
-  
+
     &.clicked &__side--front {
       transform: rotateY(180deg);
     }
-  
+
     &.clicked &__side--back {
       transform: rotateY(0);
     }
-  
+
     &__img {
       background-size: contain;
       background-repeat: no-repeat;
@@ -149,12 +148,12 @@
       background-color: rgb(94, 176, 208);
       height: 35%;
     }
-  
+
     &__box--description {
       background-color: white;
       height: 55%;
     }
-  
+
     &__name {
       text-align: center;
       background: black;
@@ -168,15 +167,14 @@
         transform: skewX(-10deg);
       }
     }
-  
-  
+
     &__description {
       padding: 1rem;
       margin: 0.5rem;
       font-size: 1.7rem;
       text-align: left;
     }
-  
+
     &__footer {
       height: 10%;
       background-color: white;
@@ -186,12 +184,6 @@
       font-size: 3rem;
     }
   }
-
-
-
-
-
-
 
   @media screen and (max-width: 1800px) {
     .component__description {

@@ -101,4 +101,11 @@
 	padding-left: 8px;
 }
 
+@media(max-width: 700px) {
+  .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
 </style>

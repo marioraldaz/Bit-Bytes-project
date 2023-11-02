@@ -109,4 +109,18 @@ body {
   place-content:center;
 }
   
+@media screen and (max-width: 1100px) {
+  .menu {
+    --s: 4rem;
+    top:.9rem;
+      }
+
+    }
+
+    @media screen and (max-width: 600px) {
+      .menu {
+    --s: 4.5rem;
+    top:.8rem;
+      }
+  }
 </style>

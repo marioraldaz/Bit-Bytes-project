@@ -1,6 +1,5 @@
 <script>
   import Product from "./Product.svelte";
-  import carrito from "../stores/carrito.js";
 
   export let products;
 </script>
@@ -9,11 +8,7 @@
   {#each products as product}
     <div class="column">
       <Product
-        product = {product}
-        addToCarrito={() => {
-          $carrito.carrito.push(product);
-          console.log($carrito.carrito);
-        }}
+        {product}
       />
     </div>
   {/each}
