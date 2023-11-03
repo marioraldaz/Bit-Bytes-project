@@ -19,7 +19,7 @@
     position: relative;
     text-align: center;
     width: 100%;
-    margin: 0 auto;
+    padding: 1rem;
     overflow: auto;
   }
 
@@ -44,5 +44,6 @@
     .column {
       width: 100%;
     }
+
   }
 </style>

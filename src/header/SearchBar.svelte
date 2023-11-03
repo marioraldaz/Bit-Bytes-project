@@ -7,6 +7,10 @@
   let output = arrayProducts;
   let showResults=false;
   let userInput = "";
+  let hiddenSearchBar = true;
+  function hiddenSearch(){
+    hiddenSearchBar = !hiddenSearchBar;
+  }
 
   function searchProducts(userInput) {
     output=[];
@@ -56,17 +60,27 @@
 </script>
 
 <div class="container">
-  <input
-    type="search"
-    class="container__searchBar"
-    placeholder="   Search for amazing components"
-    bind:value={userInput}
-  >
-  <button class="container__search-button" on:click={showSearchResults([])}>
-    <div class="container__search-button__div">
-      <img alt="logo" src="../images/search_logo.png" />
+  {#if hiddenSearchBar}
+    <button class="container__hidden-search-button" on:click={hiddenSearch}>
+        <img alt="logo" src="../images/search_logo.png" />
+    </button>
+    {:else}
+    <div class="container__searchBar">
+    <button class="container__searchBar--close" on:click={hiddenSearch}>X</button>
+      <input
+      type="search"
+      class="container__searchBar--input"
+      placeholder="   Search for amazing components"
+      bind:value={userInput}
+    >
+    <button class="container__search-button" on:click={showSearchResults([])}>
+      <div class="container__search-button__div">
+        <img alt="logo" src="../images/search_logo.png" />
+      </div>
+    </button>
     </div>
-  </button> 
+  {/if}
+
   {#if showResults}
     <div class="container__results" use:clickOutside on:click_outside={hideResults}> 
       <h1 class="container__results__title">Results:</h1>
@@ -78,15 +92,16 @@
 </div>
 
 <style lang="scss">
+
+
   .container {
-    position:absolute;
-    left: 60%;
-    top:-10%;
+    position:relative;
+    top: -10%;
     width: 35rem;
     height: 5rem;
     transform: translate(0%, 50%);
+    float: right;
 
-  
     &__results {
       width:110%;
       &__title{
@@ -108,21 +123,60 @@
         }
       }
     }
+    
     &__searchBar {
+      position:relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 2rem;
+      background-color: red;
+      &:hover {
+        transform: scale(110%);
+      }
+
+      &--input {
       position:relative;
       width: 100%;
       height: 100%;
       border: 0.2rem solid violet;
       border-radius: 2rem;
-      padding-left: 2rem;
-      &:hover {
-        transform: scale(110%);
-      }
+      padding-left: 3rem;
 
       &:focus {
         border: 0.3rem px solid violet;
         outline: none;
       }
+    }
+
+    &--close{
+      position: absolute;
+      z-index: 2;
+      top: 6%;
+      left: 2%;
+      font-size: 1rem;
+      border-radius: 50%;
+      background-color: violet;
+      padding: 0.2rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    }
+
+    &__hidden-search-button {
+      position: relative;
+      left:85%;
+      top: 15%;
+      background: none;
+      border:none;
+      z-index: 1000;
+      &:hover{
+        cursor: pointer;
+        transform: scale(120%);
+      }
+        & img{
+          width: 3.5rem;
+        }
+      
     }
     &__search-button {
       position: relative;
@@ -146,6 +200,16 @@
         }
       }
 
+    }
+  }
+
+
+  @media screen and (max-width: 1100px) {
+    .container{
+      top: 90%;
+      &__hidden-search-button{
+        top:-150%
+      }
     }
   }
 </style>
