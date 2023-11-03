@@ -89,7 +89,7 @@
       position: absolute;
       font-size: 2rem;
       top: 25%;
-      left: 10%;
+      left: 12%;
       border: 0.2rem solid rgb(176, 32, 229);
       padding: 0.5rem;
       border-radius: 2rem;
