@@ -70,6 +70,7 @@
     }
     &__right {
       display: inline;
+      height: inherit;
     }
     &__logo {
       display: inline-block;

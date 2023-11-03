@@ -61,14 +61,15 @@
 
 <div class="container">
   {#if hiddenSearchBar}
-    <button class="container__search-button--1" on:click={hiddenSearch}>
+    <button class="container__hidden-search-button" on:click={hiddenSearch}>
         <img alt="logo" src="../images/search_logo.png" />
     </button>
     {:else}
-    <button class="close" on:click={hiddenSearch}>X</button>
+    <div class="container__searchBar">
+    <button class="container__searchBar--close" on:click={hiddenSearch}>X</button>
       <input
       type="search"
-      class="container__searchBar"
+      class="container__searchBar--input"
       placeholder="   Search for amazing components"
       bind:value={userInput}
     >
@@ -76,7 +77,8 @@
       <div class="container__search-button__div">
         <img alt="logo" src="../images/search_logo.png" />
       </div>
-    </button> 
+    </button>
+    </div>
   {/if}
 
   {#if showResults}
@@ -100,16 +102,6 @@
     transform: translate(0%, 50%);
     float: right;
 
-    & .close{
-      position: absolute;
-      top: -25%;
-      left: -10%;
-      font-size: 1rem;
-      border-radius: 0 10px 0 10px;
-      background-color: rgb(185, 10, 185);
-      padding: 0.5rem;
-      cursor: pointer;
-    }
     &__results {
       width:110%;
       &__title{
@@ -131,23 +123,46 @@
         }
       }
     }
+    
     &__searchBar {
+      position:relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 2rem;
+      background-color: red;
+      &:hover {
+        transform: scale(110%);
+      }
+
+      &--input {
       position:relative;
       width: 100%;
       height: 100%;
       border: 0.2rem solid violet;
       border-radius: 2rem;
-      padding-left: 2rem;
-      &:hover {
-        transform: scale(110%);
-      }
+      padding-left: 3rem;
 
       &:focus {
         border: 0.3rem px solid violet;
         outline: none;
       }
     }
-    &__search-button--1 {
+
+    &--close{
+      position: absolute;
+      z-index: 2;
+      top: 6%;
+      left: 2%;
+      font-size: 1rem;
+      border-radius: 50%;
+      background-color: violet;
+      padding: 0.2rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    }
+
+    &__hidden-search-button {
       position: relative;
       left:85%;
       top: 15%;
@@ -185,6 +200,16 @@
         }
       }
 
+    }
+  }
+
+
+  @media screen and (max-width: 1100px) {
+    .container{
+      top: 90%;
+      &__hidden-search-button{
+        top:-150%
+      }
     }
   }
 </style>
