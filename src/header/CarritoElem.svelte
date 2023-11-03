@@ -8,7 +8,11 @@
 {:else}
   <div class="carrito__container">
     {#each $carrito.carrito as product}
-      <ProductoCarrito nombre={product.product.name} cantidad ={product.cantidad}/>
+      <ProductoCarrito
+        logo={product.product.logo}
+        nombre={product.product.name}
+        cantidad={product.cantidad}
+      />
     {/each}
   </div>
 {/if}
@@ -16,15 +20,18 @@
 <style lang="scss">
   .carrito__container {
     position: absolute;
-    background-color: rgba(211, 17, 17, 0.8);
-    transform: translate(-80%, 40%);
-    overflow: scroll;
-    width: 20%;
-    height: 10rem;
+    top: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 1rem;
+    transform: translateY(40%);
+    overflow: auto;
+    right: 2rem;
+    width: 50%;
+    max-width: 40rem;
+    height: 20rem;
     font-size: 1.5rem;
-    font-weight: 600;
-    color: rgb(226, 84, 7);
-    text-align: center;
+    font-weight: 900;
     transition: all 0.3s;
 
     & img {
