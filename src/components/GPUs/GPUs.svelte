@@ -5,8 +5,8 @@
 
 <div class="cuerpo">
   <div class="gradiente_img_cabecera row" />
-  <h1 class="title">MotherBoards</h1>
-  <ProductList products={getComponents("Motherboard")} />
+  <h1 class="title">Graphic Cards</h1>
+  <ProductList products={getComponents("GPU")} />
 </div>
 
 <style lang="scss">

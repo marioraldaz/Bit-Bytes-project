@@ -1,12 +1,13 @@
 <script>
   import { getComponents } from "../../stores/PC_Creator";
   import ProductList from "../../body/ProductList.svelte";
+  console.log(getComponents("SSD"));
 </script>
 
 <div class="cuerpo">
   <div class="gradiente_img_cabecera row" />
-  <h1 class="title">MotherBoards</h1>
-  <ProductList products={getComponents("Motherboard")} />
+  <h1 class="title">SSDs</h1>
+  <ProductList products={getComponents("SSD")} />
 </div>
 
 <style lang="scss">
