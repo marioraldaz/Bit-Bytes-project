@@ -35,7 +35,7 @@
 
   {#if active != "Body"}
     <div class="header__home">
-      <a href="/#" on:click={onClick}>Go back to home page</a>
+      <a href="/#" on:click={onClick}>Home</a>
     </div>
   {/if}
 
@@ -88,10 +88,9 @@
 
     &__home {
       position: absolute;
-      font-size: 2rem;
+      font-size: 3rem;
       top: 25%;
       left: 12%;
-      border: 0.2rem solid rgb(176, 32, 229);
       padding: 0.5rem;
       border-radius: 2rem;
       a {
@@ -126,163 +125,161 @@
     }
   }
 
-   
   @media screen and (max-width: 1100px) {
     .header {
-    position: fixed;
-    height: 8.2rem;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgb(255, 255, 255);
-    border-bottom: 2px solid black;
-    animation: headerHeight;
-    animation-duration: 4s;
-    animation-timing-function: ease-out;
-    z-index: 9999;
-
-    &__left {
-      height: inherit;
-      display: inline-block;
-
-      &__Menu {
-        position: fixed;
-      }
-    }
-    &__right {
-      display: inline;
-    }
-    &__logo {
-      display: inline-block;
+      position: fixed;
       height: 8.2rem;
-    }
-    &__logo img {
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%);
-      height: 100%;
-      animation: introLogo;
-      animation-duration: 2.5s;
-      animation-timing-function: ease-in;
-    }
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgb(255, 255, 255);
+      border-bottom: 2px solid black;
+      animation: headerHeight;
+      animation-duration: 4s;
+      animation-timing-function: ease-out;
+      z-index: 9999;
 
-    &__home {
-      position: absolute;
-      font-size: 1.5rem;
-      top: 30%;
-      left: 15%;
-      border: 0.2rem solid rgb(176, 32, 229);
-      padding: 0.5rem;
-      border-radius: 2rem;
-      a {
-        color: black;
-        text-decoration: none;
+      &__left {
+        height: inherit;
+        display: inline-block;
+
+        &__Menu {
+          position: fixed;
+        }
+      }
+      &__right {
+        display: inline;
+      }
+      &__logo {
+        display: inline-block;
+        height: 8.2rem;
+      }
+      &__logo img {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        height: 100%;
+        animation: introLogo;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-in;
       }
 
-      &:hover {
-        transform: scale(120%);
-        background-color: lightblue;
-      }
-    }
+      &__home {
+        position: absolute;
+        font-size: 1.5rem;
+        top: 30%;
+        left: 15%;
+        border: 0.2rem solid rgb(176, 32, 229);
+        padding: 0.5rem;
+        border-radius: 2rem;
+        a {
+          color: black;
+          text-decoration: none;
+        }
 
-    @keyframes headerHeight {
-      0% {
-        min-height: 100vh;
+        &:hover {
+          transform: scale(120%);
+          background-color: lightblue;
+        }
       }
 
-      100% {
-        min-height: 0;
-      }
-    }
+      @keyframes headerHeight {
+        0% {
+          min-height: 100vh;
+        }
 
-    @keyframes introLogo {
-      0% {
-        opacity: 0;
-        height: 50%;
+        100% {
+          min-height: 0;
+        }
       }
-      100% {
-        opacity: 1;
+
+      @keyframes introLogo {
+        0% {
+          opacity: 0;
+          height: 50%;
+        }
+        100% {
+          opacity: 1;
+        }
       }
     }
   }
-    }
 
-    @media screen and (max-width: 600px) {
-      .header {
-    position: fixed;
-    height: 8.2rem;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgb(255, 255, 255);
-    border-bottom: 2px solid black;
-    animation: headerHeight;
-    animation-duration: 4s;
-    animation-timing-function: ease-out;
-    z-index: 9999;
-
-    &__left {
-      height: inherit;
-      display: inline-block;
-      &__Menu {
-        position: fixed;
-      }
-    }
-    &__right {
-      display: inline;
-    }
-    &__logo {
-      display: inline-block;
+  @media screen and (max-width: 600px) {
+    .header {
+      position: fixed;
       height: 8.2rem;
-    }
-    &__logo img {
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%);
-      height: 100%;
-      animation: introLogo;
-      animation-duration: 2.5s;
-      animation-timing-function: ease-in;
-    }
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgb(255, 255, 255);
+      border-bottom: 2px solid black;
+      animation: headerHeight;
+      animation-duration: 4s;
+      animation-timing-function: ease-out;
+      z-index: 9999;
 
-    &__home {
-      position: absolute;
-      font-size: 1rem;
-      top: 35%;
-      left: 19%;
-      border: 0.2rem solid rgb(176, 32, 229);
-      padding: 0.5rem;
-      border-radius: 2rem;
-      a {
-        color: black;
-        text-decoration: none;
+      &__left {
+        height: inherit;
+        display: inline-block;
+        &__Menu {
+          position: fixed;
+        }
+      }
+      &__right {
+        display: inline;
+      }
+      &__logo {
+        display: inline-block;
+        height: 8.2rem;
+      }
+      &__logo img {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        height: 100%;
+        animation: introLogo;
+        animation-duration: 2.5s;
+        animation-timing-function: ease-in;
       }
 
-      &:hover {
-        transform: scale(120%);
-        background-color: lightblue;
+      &__home {
+        position: absolute;
+        font-size: 1rem;
+        top: 35%;
+        left: 19%;
+        padding: 0.5rem;
+        border-radius: 2rem;
+        a {
+          color: black;
+          text-decoration: none;
+        }
+
+        &:hover {
+          transform: scale(120%);
+          background-color: lightblue;
+        }
+      }
+
+      @keyframes headerHeight {
+        0% {
+          min-height: 100vh;
+        }
+
+        100% {
+          min-height: 0;
+        }
+      }
+
+      @keyframes introLogo {
+        0% {
+          opacity: 0;
+          height: 50%;
+        }
+        100% {
+          opacity: 1;
+        }
       }
     }
-
-    @keyframes headerHeight {
-      0% {
-        min-height: 100vh;
-      }
-
-      100% {
-        min-height: 0;
-      }
-    }
-
-    @keyframes introLogo {
-      0% {
-        opacity: 0;
-        height: 50%;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-  }
   }
 </style>

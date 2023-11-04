@@ -1,123 +1,115 @@
 <script>
-  import { onMount} from 'svelte';
+  import { onMount } from "svelte";
   export let name = "name";
   export let logo = "logo_default";
   import Menus from "../stores/menus.js";
   import Nav from "../stores/nav.js";
 
-  let menus=[];
+  let menus = [];
 
-  
-  
-  function onClick(){
-    Nav.update((data)=>{
-      data.visibility=false;
+  function onClick() {
+    Nav.update((data) => {
+      data.visibility = false;
       return data;
     });
-    Menus.update((data) =>{
+    Menus.update((data) => {
       data.active = name;
       return data;
     });
-  };
-  
-  onMount(()=>{
-    return Menus.subscribe((data)=>{
-    menus=data.menus;
+  }
+
+  onMount(() => {
+    return Menus.subscribe((data) => {
+      menus = data.menus;
     });
   });
 </script>
 
 <a href="/#" on:click={onClick}>
   <div class="elem-container">
-      <img src={logo} id={name} class="image" alt="logo-nav-elem"/>
-      <span class="elem-name">{name}</span>
+    <img src={logo} id={name} class="image" alt="logo-nav-elem" />
+    <span class="elem-name">{name}</span>
   </div>
 </a>
 
-
 <style lang="scss">
-    a{
-      text-decoration: none;
-    }
-.elem-container{
-    margin:0;
-    padding:0;
-    width:100%;
-    border:3px solid rgb(176, 32, 229);
+  a {
+    text-decoration: none;
+  }
+  .elem-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border: 3px solid rgb(176, 32, 229);
     position: relative;
 
-
-    .image{
+    .image {
       display: inline-block;
 
-      &:hover{
+      &:hover {
         transform: scale(120%);
       }
     }
 
-    .elem-name{
+    .elem-name {
       opacity: 0;
       display: block;
-      color:white;
+      color: white;
     }
-    &:hover{
-      .elem-name{
+    &:hover {
+      .elem-name {
         opacity: 100;
       }
-      background-color: rgb(176, 32, 229,0.2);
+      background-color: rgb(176, 32, 229, 0.2);
     }
   }
-@media screen and (min-width: 1100px) {
-  .elem-container{
-    height:10rem;
+  @media screen and (min-width: 1100px) {
+    .elem-container {
+      height: 10rem;
 
-    .image{
-      width:10rem;
-      height: 100%;
-      position: absolute;
+      .image {
+        width: 10rem;
+        height: 100%;
+        position: absolute;
+      }
 
-    }
-
-    .elem-name{
-      position: absolute;
-      right: 0;
-      font-size:2.5rem;
-    }
-}
-}
-
-@media screen and (max-width: 1100px) {
-  .elem-container{
-    text-align: center;
-    height: 11rem;
-
-    .image{
-      width:8rem;
-      height: 80%;
-    }
-
-    .elem-name{
-      font-size:2.3rem;
-    }
-}
-}
-
-@media screen and (max-width: 600px) {
-
-  .elem-container{
-    text-align: center;
-    height:12rem;
-
-    .image{
-      width:10rem;
-      height: 75%;
-    }
-
-    .elem-name{
-      font-size:1.7rem;
-
+      .elem-name {
+        position: absolute;
+        right: 0;
+        font-size: 2.5rem;
+      }
     }
   }
 
-}
+  @media screen and (max-width: 1100px) {
+    .elem-container {
+      text-align: center;
+      height: 11rem;
+
+      .image {
+        width: 8rem;
+        height: 80%;
+      }
+
+      .elem-name {
+        font-size: 2.3rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .elem-container {
+      text-align: center;
+      height: 12rem;
+      .image {
+        width: 5rem;
+        height: 55%;
+      }
+
+      .elem-name {
+        font-size: 1.7rem;
+        opacity: 100%;
+      }
+    }
+  }
 </style>
