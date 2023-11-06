@@ -1,5 +1,5 @@
 <script>
-  import carrito from "../stores/carrito"
+  import carrito from "../stores/trelly"
   export let product;
 
   let clicked = false;
@@ -19,6 +19,9 @@
       <div class="component__name">{product.name}</div>
       <div class="component__description">
         <p>{product.description}</p>
+      </div>
+      <div class="component__price">
+        <p>{product.price}€</p>
       </div>
     </div>
     <div class="component__footer">
@@ -152,27 +155,35 @@
     &__box--description {
       background-color: white;
       height: 55%;
+      padding:  2rem  2rem 2rem;
     }
 
     &__name {
       text-align: center;
-      background: black;
-      -webkit-background-clip: text;
-      color: transparent;
+      color:black;
       font-weight: bold;
-      font-size: 3rem;
-      padding: 0.5rem;
-      padding-top: 1.5rem;
+      height: 30%;
+      font-size: 2.5rem;
       &:hover {
         transform: skewX(-10deg);
       }
     }
 
     &__description {
-      padding: 1rem;
-      margin: 0.5rem;
+      margin-top: 1rem;
       font-size: 1.7rem;
       text-align: left;
+      height: 55%;
+    }
+
+    &__price {
+      position: relative;
+      color:rgb(192, 26, 26);
+      font-weight: bold;
+      font-size: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 10%;
     }
 
     &__footer {
@@ -185,7 +196,7 @@
     }
   }
 
-  @media screen and (max-width: 1800px) {
+  @media screen and (max-width: 1600px) {
     .component__description {
       font-size: 1.3rem;
     }
@@ -194,6 +205,9 @@
     }
     .component__footer {
       font-size: 2.5rem;
+    }
+    .component__price {
+      font-size: 3rem;
     }
   }
 
@@ -204,6 +218,11 @@
     .component__name {
       font-size: 3rem;
     }
+    .component__price {
+      font-size: 3.5rem;
+    }
+
+
   }
 
   @media screen and (max-width: 900px) {
@@ -211,7 +230,10 @@
       font-size: 1.3rem;
     }
     .component__name {
-      font-size: 2.5rem;
+      font-size: 2rem;
+    }
+    .component__price {
+      font-size: 3rem;
     }
   }
 
@@ -221,6 +243,9 @@
     }
     .component__name {
       font-size: 3rem;
+    }
+    .component__price {
+      font-size: 3.5rem;
     }
   }
 </style>
