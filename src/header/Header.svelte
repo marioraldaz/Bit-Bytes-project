@@ -1,6 +1,6 @@
 <script>
   import Menu from "./Menu.svelte";
-  import Carrito from "./Carrito.svelte";
+  import Carrito from "./Trelly.svelte";
   import Usuario from "./Usuario.svelte";
   import SearchBar from "./SearchBar.svelte";
   import Menus from "../stores/menus.js";

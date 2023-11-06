@@ -1,5 +1,5 @@
 <script>
-  export let cantidad;
+  export let cantity;
   export let nombre = "";
   export let logo;
 </script>
@@ -10,7 +10,7 @@
   </div>
   <div class="col-2-of-3 trelly__product--name">
     <div>{nombre}</div>
-    <div>Cantidad: {cantidad}</div>
+    <div>Cantidad: {cantity}</div>
   </div>
 </div>
 
@@ -34,30 +34,30 @@
     margin: 0 auto;
     background-color: aqua;
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-bottom: 2rem;
     }
-    &:after{
+    &:after {
       content: "";
       display: table;
       clear: both;
     }
 
-    .col-1-of-3{
+    .col-1-of-3 {
       float: left;
       background-color: rgb(255, 166, 0);
-      width: calc((100% - (1rem*2))/3);
+      width: calc((100% - (1rem * 2)) / 3);
       height: 100%;
 
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-right: 1rem;
       }
     }
-    .col-2-of-3{
+    .col-2-of-3 {
       float: left;
-      width: calc(((100% - (1rem * 2))/3) * 2 + 1rem);
+      width: calc(((100% - (1rem * 2)) / 3) * 2 + 1rem);
 
-      &:not(:last-child){
+      &:not(:last-child) {
         margin-right: 1rem;
       }
     }
