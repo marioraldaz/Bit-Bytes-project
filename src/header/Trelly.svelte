@@ -2,32 +2,30 @@
   import { beforeUpdate, tick } from "svelte";
   import Product from "../body/Product.svelte";
   import TrellyElem from "./TrellyElem.svelte";
+  import { clickOutside } from "../scripts/clickOutside";
 
   let visibility = false;
   let outsideClicked = false;
 
   function setVisibility() {
-    if (!outsideClicked) {
-      visibility = !visibility;
-    } else {
-      outsideClicked = false;
-    }
+    console.log(">>>>");
+    visibility = !visibility;
   }
 </script>
 
-<div class="header__trelly">
+<div
+  class="header__trelly"
+  use:clickOutside
+  on:click_outside={() => {
+    visibility = false;
+  }}
+>
   <label for="trelly"
     ><img src="./images/carrito-de-compras.png" alt="trelly.png" /></label
   >
   <input type="checkbox" id="trelly" name="" on:click={setVisibility} />
   {#if visibility}
-    <TrellyElem
-      bind:visibility
-      on:click_outside={() => {
-        outsideClicked = true;
-        visibility = false;
-      }}
-    />
+    <TrellyElem />
   {/if}
 </div>
 

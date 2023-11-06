@@ -2,19 +2,12 @@
   import { clickOutside } from "../scripts/clickOutside";
   import trelly from "../stores/trelly";
   import TrellyProduct from "./TrellyProduct.svelte";
-
-  export let visibility;
-  function hide() {
-    visibility = false;
-  }
 </script>
 
 {#if $trelly.trelly.length == 0}
-  <div class="trelly__container" use:clickOutside on:click_outside>
-    El carrito está vacío
-  </div>
+  <div class="trelly__container">El carrito está vacío</div>
 {:else}
-  <div class="trelly__container" use:clickOutside on:click_outside>
+  <div class="trelly__container">
     {#each $trelly.trelly as product}
       <TrellyProduct
         logo={product.product.logo}
