@@ -1,27 +1,27 @@
 import { writable } from "svelte/store";
-let cantidad = 1;
-let carrito = [];
+let cantity = 1;
+let trelly = [];
 function addToCarrito(product) {
   storeCarrito.update((data) => {
     let repetido = false;
 
-    for (var car of data.carrito) {
+    for (var car of data.trelly) {
       if (car.product.id === product.id) {
-        car.cantidad++;
+        car.cantity++;
         repetido = true;
       }
     }
 
     if (!repetido) {
-      data.carrito.push({ product, cantidad });
+      data.trelly.push({ product, cantity });
     }
     return data;
   });
 }
 
 const storeCarrito = writable({
-  carrito,
-  cantidad,
+  trelly,
+  cantity,
   addToCarrito,
 });
 export default storeCarrito;

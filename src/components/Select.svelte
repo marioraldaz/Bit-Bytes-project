@@ -1,5 +1,6 @@
 <script>
     export let array=[]
+    console.log(array)
 </script>
 
     <select data-prueba="dsad" on:change >

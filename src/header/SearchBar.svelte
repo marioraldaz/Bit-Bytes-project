@@ -3,6 +3,8 @@
   import Menus from "../stores/menus.js";
   import ResultsPage from "../stores/ResultsPage.js";
   import { clickOutside } from "../scripts/clickOutside.js";
+
+  
   let arrayProducts = products.products;
   let output = arrayProducts;
   let showResults = false;
@@ -53,6 +55,7 @@
     };
   }
 
+
   function hideResults() {
     showResults = false;
   }
@@ -64,7 +67,7 @@
       <img alt="logo" src="../images/search_logo.png" />
     </button>
   {:else}
-    <div class="container__searchBar">
+    <div class="container__searchBar" >
       <button class="container__searchBar--close" on:click={hiddenSearch}
         >X</button
       >
@@ -72,8 +75,8 @@
         type="search"
         class="container__searchBar--input"
         placeholder="   Search for amazing components"
-        bind:value={userInput}
-      />
+        bind:value={userInput} />
+      
       <button class="container__search-button" on:click={showSearchResults([])}>
         <div class="container__search-button__div">
           <img alt="logo" src="../images/search_logo.png" />

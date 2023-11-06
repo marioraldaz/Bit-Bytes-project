@@ -1,5 +1,5 @@
 <script>
-  import carrito from "../stores/carrito"
+  import carrito from "../stores/trelly"
   export let product;
 
   let clicked = false;
