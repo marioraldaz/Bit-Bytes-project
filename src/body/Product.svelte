@@ -248,4 +248,15 @@
       font-size: 3.5rem;
     }
   }
+  @media screen and (max-width: 450px) {
+    .component__description {
+      font-size: 1.5rem;
+    }
+    .component__name {
+      font-size: 2.3rem;
+    }
+    .component__price {
+      font-size: 3rem;
+    }
+  }
 </style>
