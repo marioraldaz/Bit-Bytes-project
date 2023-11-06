@@ -5,7 +5,6 @@
   import SearchBar from "./SearchBar.svelte";
   import Menus from "../stores/menus.js";
   import { onMount } from "svelte";
-
   let active = "";
 
   onMount(() => {
@@ -42,7 +41,7 @@
   <div class="header__right">
     <Carrito />
     <Usuario />
-    <SearchBar />
+    <SearchBar/>
   </div>
 </div>
 

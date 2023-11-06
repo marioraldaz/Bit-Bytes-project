@@ -1,6 +1,6 @@
 <script>
   import PC_Creator from "../../stores/PC_Creator.js";
-  import Select from "./Select.svelte"
+  import Select from "../Select.svelte"
   import {getComponents,getProducts} from "../../stores/PC_Creator.js"
 
   

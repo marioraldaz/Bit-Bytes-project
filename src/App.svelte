@@ -16,7 +16,6 @@
   onMount(() => {
     return Menus.subscribe((data) => {
       active = data.active;
-      console.log(active);
     });
   });
 </script>
