@@ -3,6 +3,7 @@
   import Menus from "../stores/menus.js";
   import ResultsPage from "../stores/ResultsPage.js";
   import { clickOutside } from "../scripts/clickOutside.js";
+  import ImageSearch from "./ImageSearch.svelte";
 
   
   let arrayProducts = products.products;
@@ -61,48 +62,58 @@
   }
 </script>
 
-<div class="container">
   {#if hiddenSearchBar}
-    <button class="container__hidden-search-button" on:click={hiddenSearch}>
-      <img alt="logo" src="../images/search_logo.png" />
-    </button>
-  {:else}
-    <div class="container__searchBar" >
-      <button class="container__searchBar--close" on:click={hiddenSearch}
+  <div class="header__searchBar">
+    <ImageSearch on:click={hiddenSearch} urlImage="../images/search_logo.png"/>
+  </div>
+    {:else}
+    <div class="container" 
+    use:clickOutside
+    on:click_outside={hiddenSearch}>
+      <div class="container__searchBar" >
+        <button class="container__searchBar--close" on:click={hiddenSearch}
         >X</button
-      >
-      <input
+        >
+        <input
         type="search"
         class="container__searchBar--input"
         placeholder="   Search for amazing components"
         bind:value={userInput} />
+        
+        <button class="container__search-button" on:click={showSearchResults([])}>
+          <div class="container__search-button__div">
+            <img alt="logo" src="../images/search_logo.png" />
+          </div>
+        </button>
+      </div>
       
-      <button class="container__search-button" on:click={showSearchResults([])}>
-        <div class="container__search-button__div">
-          <img alt="logo" src="../images/search_logo.png" />
-        </div>
-      </button>
-    </div>
-  {/if}
-
-  {#if showResults}
-    <div
+      {#if showResults}
+      <div
       class="container__results"
       use:clickOutside
       on:click_outside={hideResults}
-    >
+      >
       <h1 class="container__results__title">Results:</h1>
       {#each output.slice(0, 5) as item}
-        <button
-          class="container__results__elem"
-          on:click={showSearchResults([item])}>{item.name}</button
-        >
+      <button
+      class="container__results__elem"
+      on:click={showSearchResults([item])}>{item.name}</button
+      >
       {/each}
     </div>
+    {/if}
+  </div>
   {/if}
-</div>
 
 <style lang="scss">
+  .header__searchBar{
+        float: right;
+        position: relative;
+        top: 27%;
+        left: -5%;
+        height: auto; 
+    }
+    
   .container {
     position: relative;
     top: -10%;
@@ -171,21 +182,6 @@
       }
     }
 
-    &__hidden-search-button {
-      position: relative;
-      left: 85%;
-      top: 15%;
-      background: none;
-      border: none;
-      z-index: 1000;
-      &:hover {
-        cursor: pointer;
-        transform: scale(120%);
-      }
-      & img {
-        width: 3.5rem;
-      }
-    }
     &__search-button {
       position: relative;
       top: -90%;
@@ -210,21 +206,21 @@
     }
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1300px) {
     .container {
-      top: 90%;
-      &__hidden-search-button {
-        top: -150%;
-      }
+        top: -20%;
+        left: -30%;
+        clear: both;
     }
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 400px) {
     .container {
-      top: 90%;
-      &__hidden-search-button {
-        top: -150%;
-      }
+      transform: scale(80%);
+      left: 7%;
     }
   }
+
+
+
 </style>
