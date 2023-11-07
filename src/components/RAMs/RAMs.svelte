@@ -50,11 +50,11 @@ $: {
                 <option value=32>32GB</option>
             </select>
         </div>
-
+        
       
-    <PriceRange {minPrice} {maxPrice} {highestPrice} {lowestPrice}/>
-
+        <PriceRange {minPrice} {maxPrice} {highestPrice} {lowestPrice}/>
     
+    </div>
     <ProductList {products}  />
 
 

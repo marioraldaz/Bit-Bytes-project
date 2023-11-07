@@ -67,7 +67,9 @@
     <ImageSearch on:click={hiddenSearch} urlImage="../images/search_logo.png"/>
   </div>
     {:else}
-    <div class="container">
+    <div class="container" 
+    use:clickOutside
+    on:click_outside={hiddenSearch}>
       <div class="container__searchBar" >
         <button class="container__searchBar--close" on:click={hiddenSearch}
         >X</button
