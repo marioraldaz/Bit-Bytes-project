@@ -3,7 +3,7 @@ import {
     getComponents
 } from "../../stores/PC_Creator";
 import ProductList from "../../body/ProductList.svelte";
-
+import PriceRange from "../PriceRange.svelte"
 let GBs;
 let products = getComponents("RAM");
 let prices = [];
@@ -13,6 +13,8 @@ let lowestPrice = Math.min(...prices);
 let highestPrice = Math.max(...prices);
 let minPrice = lowestPrice;
 let maxPrice = highestPrice;
+let noResultsMessage = false;
+
 $: {
     products = getComponents("RAM");
     let newProducts = [];
@@ -26,6 +28,11 @@ $: {
         }
     }
     products = newProducts;
+}
+
+$: {
+  console.log(noResultsMessage)
+    products.length == 0 ? noResultsMessage = true : noResultsMessage = false;
 }
 </script>
 
@@ -44,20 +51,16 @@ $: {
             </select>
         </div>
 
-        <div class="cuerpo__filters__price">
-            <h1 class="cuerpo__filters__price__title">Price Range</h1>
-            <div class="cuerpo__filters__price__min">
-                MIN:<input type="number" class="cuerpo__filters__price__min__numberbox" value={minPrice} min={lowestPrice} max={highestPrice}/>
-                <input type="range" min={lowestPrice} max={highestPrice} bind:value={minPrice}/>
-            </div>
-            <div class="cuerpo__filters__price__max">
-              <input type="range" max={highestPrice} min={lowestPrice} bind:value={maxPrice}/>
-              MAX:<input type="number" class="cuerpo__filters__price__max__numberbox" value={maxPrice} min={lowestPrice} max={highestPrice}/>
-            </div>
-        </div>
-    </div>
+      
+    <PriceRange {minPrice} {maxPrice} {highestPrice} {lowestPrice}/>
 
+    
     <ProductList {products}  />
+
+
+    {#if noResultsMessage}
+      <h1 class="cuerpo__noResults">We couldn´t find anything that matches your search.</h1>
+    {/if}
 </div>
 
 <style lang="scss">
@@ -65,12 +68,15 @@ $: {
     position: relative;
     margin-top: 9rem;
     display: inline;
-    &__title {  
+    &__noResults{
+      font-size:10rem;
+    }
+    &__title {
         font-size: 5rem;
         text-align: center;
         margin-bottom: 2rem;
         margin-top: 2rem;
-        
+
     }
 
     &__filters {
@@ -78,15 +84,17 @@ $: {
         width: 100%;
         height: 14rem;
         float: left;
+
         &__GBs {
             width: 20%;
             height: 6rem;
             margin-left: 2rem;
             float: left;
             position: relative;
+
             &__title {
                 font-size: 4rem;
-                top:0;
+                top: 0;
             }
 
             &__select {
@@ -102,14 +110,15 @@ $: {
             margin-left: 5rem;
             float: left;
             position: relative;
+
             &__title {
                 font-size: 4rem;
                 position: absolute;
-                top:0;
+                top: 0;
             }
 
             &__min {
-              cursor: pointer;
+                cursor: pointer;
                 font-size: 3rem;
                 position: absolute;
                 top: 40%;
@@ -120,18 +129,19 @@ $: {
                     width: 7rem;
                     height: 50%;
                     transform: translateY(-0.4rem);
-                  }
+                }
             }
 
             &__max {
-              cursor: pointer;
+                cursor: pointer;
 
-              font-size: 3rem;
+                font-size: 3rem;
                 position: absolute;
                 top: 40%;
                 left: 36.3%;
                 height: 50%;
-                &__numberbox {
+
+                 &__numberbox {
                     width: 7rem;
                     height: 50%;
                     transform: translateY(-0.4rem);
@@ -140,44 +150,124 @@ $: {
         }
     }
 }
+
 /*Chrome*/
 @media screen and (-webkit-min-device-pixel-ratio:0) {
-    input[type='range'] {
-      overflow: hidden;
-      width: 11rem;
-      -webkit-appearance: none;
-      background-color: #9a905d;
+    input[type="range"] {
+        overflow: hidden;
+        width: 11rem;
+        -webkit-appearance: none;
+        background-color: #d8b400;
     }
-    
+
     input[type='range']::-webkit-slider-runnable-track {
-      height: 1.5rem;
-      -webkit-appearance: none;
-      color: rgb(19, 187, 117);
-      margin-top: -0.1rem;
+        height: 1.5rem;
+        -webkit-appearance: none;
+        color: rgb(19, 187, 117);
+        margin-top: -0.1rem;
     }
-    
+
     input[type='range']::-webkit-slider-thumb {
-      width: 1rem;
-      -webkit-appearance: none;
-      height: 1.5rem;
-      cursor: ew-resize;
-      background: #434343;
-      box-shadow: -8rem 0 0 80rem #43e5f7;
+        width: 1rem;
+        -webkit-appearance: none;
+        height: 1.5rem;
+        cursor: ew-resize;
+        background: #000000;
+        box-shadow: -8rem 0 0 80rem #43e5f7;
     }
 
 }
+
 /** FF*/
 input[type="range"]::-moz-range-progress {
-  background-color: #43e5f7; 
+    background-color: #43e5f7;
 }
-input[type="range"]::-moz-range-track {  
-  background-color: #9a905d;
+
+input[type="range"]::-moz-range-track {
+    background-color: #9a905d;
 }
+
 /* IE*/
 input[type="range"]::-ms-fill-lower {
-  background-color: #43e5f7; 
+    background-color: #43e5f7;
 }
-input[type="range"]::-ms-fill-upper {  
-  background-color: #9a905d;
+
+input[type="range"]::-ms-fill-upper {
+    background-color: #9a905d;
+}
+
+@media screen and (max-width: 1600px) {
+    .component__description {
+        font-size: 1.3rem;
+    }
+
+    .component__name {
+        font-size: 2rem;
+    }
+
+    .component__footer {
+        font-size: 2.5rem;
+    }
+
+    .component__price {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .component__description {
+        font-size: 1.8rem;
+    }
+
+    .component__name {
+        font-size: 3rem;
+    }
+
+    .component__price {
+        font-size: 3.5rem;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .component__description {
+        font-size: 1.3rem;
+    }
+
+    .component__name {
+        font-size: 2rem;
+    }
+
+    .component__price {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .component__description {
+        font-size: 1.8rem;
+    }
+
+    .component__name {
+        font-size: 3rem;
+    }
+
+    .component__price {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .component__description {
+        font-size: 1.5rem;
+    }
+
+    .component__name {
+        font-size: 2.3rem;
+    }
+
+    .component__price {
+        font-size: 3rem;
+    }
 }
 </style>
