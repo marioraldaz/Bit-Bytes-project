@@ -3,7 +3,7 @@
     console.log(array)
 </script>
 
-    <select data-prueba="dsad" on:change >
+    <select on:change >
       <option disabled selected value> -- select an option -- </option>
       {#each array as component}
           <option value={component.id}>{component.name}</option>
