@@ -1,18 +1,20 @@
 <script>
   import { clickOutside } from "../scripts/clickOutside";
-  import trelly from "../stores/trelly";
-  import TrellyProduct from "./TrellyProduct.svelte";
+  import shoppingCart from "../stores/shoppingCart";
+  import TrellyProduct from "./ShoppingCartProduct.svelte";
 </script>
 
-{#if $trelly.trelly.length == 0}
+{#if $shoppingCart.shoppingCart.length == 0}
   <div class="trelly__container">El carrito está vacío</div>
 {:else}
   <div class="trelly__container">
-    {#each $trelly.trelly as product}
+    {#each $shoppingCart.shoppingCart as product}
       <TrellyProduct
         logo={product.product.logo}
         nombre={product.product.name}
-        cantity={product.cantity}
+        price = {product.productPrice}
+        quantity={product.quantity}
+        on:click={() => $shoppingCart.addToShoppingCart(product.product)}
       />
     {/each}
   </div>

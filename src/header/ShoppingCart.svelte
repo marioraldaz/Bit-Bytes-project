@@ -1,7 +1,7 @@
 <script>
   import { beforeUpdate, tick } from "svelte";
   import Product from "../body/Product.svelte";
-  import TrellyElem from "./TrellyElem.svelte";
+  import ShoppingCartElem from "./ShoppingCartElem.svelte";
   import { clickOutside } from "../scripts/clickOutside";
 
   let visibility = false;
@@ -14,23 +14,23 @@
 </script>
 
 <div
-  class="header__trelly"
+  class="header__ShoppingCart"
   use:clickOutside
   on:click_outside={() => {
     visibility = false;
   }}
 >
-  <label for="trelly"
-    ><img src="./images/carrito-de-compras.png" alt="trelly.png" /></label
+  <label for="ShoppingCart"
+    ><img src="./images/carrito-de-compras.png" alt="ShoppingCart.png" /></label
   >
-  <input type="checkbox" id="trelly" name="" on:click={setVisibility} />
+  <input type="checkbox" id="ShoppingCart" name="" bind:checked={visibility} />
   {#if visibility}
-    <TrellyElem />
+    <ShoppingCartElem />
   {/if}
 </div>
 
 <style lang="scss">
-  .header__trelly {
+  .header__ShoppingCart {
     float: right;
     width: 8rem;
     height: 8rem;

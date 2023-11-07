@@ -1,6 +1,6 @@
 <script>
   import Menu from "./Menu.svelte";
-  import Carrito from "./Trelly.svelte";
+  import ShoppingCart from "./ShoppingCart.svelte";
   import Usuario from "./Usuario.svelte";
   import SearchBar from "./SearchBar.svelte";
   import Menus from "../stores/menus.js";
@@ -39,7 +39,7 @@
   {/if}
 
   <div class="header__right">
-    <Carrito />
+    <ShoppingCart />
     <Usuario />
     <SearchBar/>
   </div>

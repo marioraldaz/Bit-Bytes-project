@@ -1,5 +1,5 @@
 <script>
-  import carrito from "../stores/trelly"
+  import trelly from "../stores/shoppingCart";
   export let product;
 
   let clicked = false;
@@ -27,7 +27,10 @@
     <div class="component__footer">
       <div class="component__div--specs divCursor" on:click={click}>Specs</div>
       <div class="component__div--buy divCursor">
-        BUY<button class="component__button--buy" on:click={()=> $carrito.addToCarrito(product)} />
+        BUY<button
+          class="component__button--buy"
+          on:click={() => $trelly.addToShoppingCart(product)}
+        />
       </div>
     </div>
   </div>
@@ -155,12 +158,12 @@
     &__box--description {
       background-color: white;
       height: 55%;
-      padding:  2rem  2rem 2rem;
+      padding: 2rem 2rem 2rem;
     }
 
     &__name {
       text-align: center;
-      color:black;
+      color: black;
       font-weight: bold;
       height: 30%;
       font-size: 2.5rem;
@@ -178,7 +181,7 @@
 
     &__price {
       position: relative;
-      color:rgb(192, 26, 26);
+      color: rgb(192, 26, 26);
       font-weight: bold;
       font-size: 3rem;
       left: 50%;
@@ -221,8 +224,6 @@
     .component__price {
       font-size: 3.5rem;
     }
-
-
   }
 
   @media screen and (max-width: 900px) {
