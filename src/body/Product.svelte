@@ -158,14 +158,14 @@
     &__box--description {
       background-color: white;
       height: 55%;
-      padding: 2rem 2rem 2rem;
+      padding: 1rem 1rem 1rem;
     }
 
     &__name {
       text-align: center;
       color: black;
       font-weight: bold;
-      height: 30%;
+      height: 33%;
       font-size: 2.5rem;
       &:hover {
         transform: skewX(-10deg);
@@ -173,10 +173,9 @@
     }
 
     &__description {
-      margin-top: 1rem;
       font-size: 1.7rem;
       text-align: left;
-      height: 55%;
+      height: 45%;
     }
 
     &__price {
@@ -186,7 +185,8 @@
       font-size: 3rem;
       left: 50%;
       transform: translateX(-50%);
-      height: 10%;
+      height: 15%;
+      margin-top: 1rem;
     }
 
     &__footer {
@@ -240,10 +240,11 @@
 
   @media screen and (max-width: 600px) {
     .component__description {
-      font-size: 1.8rem;
+      font-size: 1.7rem;
+      margin-top: 2rem;
     }
     .component__name {
-      font-size: 3rem;
+      font-size: 2.8rem;
     }
     .component__price {
       font-size: 3.5rem;
@@ -260,4 +261,6 @@
       font-size: 3rem;
     }
   }
+
+  
 </style>
