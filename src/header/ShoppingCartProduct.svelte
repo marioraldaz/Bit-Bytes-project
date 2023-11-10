@@ -25,8 +25,10 @@
   .shoppingCart__product {
     position: relative;
     width: 100%;
-    height: 100%;
-    border: 1px solid black;
+    height: 20%;
+    outline: 1px solid ;
+    outline-style: dashed;
+    outline-offset: 0.7rem;
     border-radius: 2rem;
     &--logo {
       background-size: contain;
@@ -90,11 +92,11 @@
   .row {
     max-width: 95%;
     max-height: 90%;
-    margin: 2rem auto;
+    margin: 0 auto;
     
 
     &:not(:last-child) {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
     &:after {
       content: "";

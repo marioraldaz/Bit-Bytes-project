@@ -3,14 +3,10 @@
   import Product from "../body/Product.svelte";
   import ShoppingCartElem from "./ShoppingCartElem.svelte";
   import { clickOutside } from "../scripts/clickOutside";
+  import { fade, fly } from "svelte/transition";
+  import { bounceOut, cubicOut, quintOut } from "svelte/easing";
 
   let visibility = false;
-  let outsideClicked = false;
-
-  function setVisibility() {
-    console.log(">>>>");
-    visibility = !visibility;
-  }
 </script>
 
 <div
@@ -25,7 +21,9 @@
   >
   <input type="checkbox" id="ShoppingCart" name="" bind:checked={visibility} />
   {#if visibility}
-    <ShoppingCartElem />
+    <div class="container" transition:fly={{duration: 1000, x: 600, easing: quintOut}}  >
+      <ShoppingCartElem visibility />
+    </div>
   {/if}
 </div>
 
@@ -54,4 +52,18 @@
   [type="checkbox"] {
     display: none;
   }
+
+  .container {
+    position: absolute;
+    top: 8rem;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    transform: translateX(5%);
+    right: 2rem;
+    width: 90%;
+    max-width: 50rem;
+    height: 92vh;
+    z-index: 9999;
+  }
+
 </style>
