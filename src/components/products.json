@@ -3,12 +3,12 @@
     {
       "id": 1,
       "sale": false,
-      "name": "Corsair Vengeance LPX DDR4 3200MHz PC4-25600 32GB 2x16GB CL16",
+      "name": "Corsair Vengeance LPX DDR4 3200MHz 32GB 2x32GB",
       "type": "RAM",
       "brand": "Corsair",
-      "GB": 16,
+      "GB": 32,
       "logo": "src/components/images/1441-corsair-vengeance-lpx-ddr4-3200mhz-pc4-25600-32gb-2x16gb-cl16.jpg",
-      "price": 75.99,
+      "price": 175.99,
       "specifications": [
         "Specification1",
         "Specification2",
@@ -37,7 +37,7 @@
     {
       "id": 3,
       "sale": false,
-      "name": "Team Group Delta White RGB DDR4 3200 PC4-25600 16GB 2x8GB CL16",
+      "name": "Team Group Delta White RGB DDR4 3200 16GB 2x8GB CL16",
       "type": "RAM",
       "GB": 8,
       "brand": "Team Group",
@@ -54,7 +54,7 @@
     {
       "id": 4,
       "sale": false,
-      "name": "Corsair Vengeance DDR5 6000MHz 32 GB 2x16GB CL36 Optimizado AMD",
+      "name": "Corsair Vengeance DDR5 6000MHz 32 GB 2x16GB CL36",
       "type": "RAM",
       "GB": 16,
       "brand": "Corsair",

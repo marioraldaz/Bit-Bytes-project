@@ -9,7 +9,7 @@
   }
 </script>
 
-<div class="component {clicked ? 'clicked' : ''}">
+<div class="component {clicked ? 'clicked' : ''} {$$props.class}">
   <div class="component__side component__side--front">
     <div
       class="component__img"
@@ -25,9 +25,9 @@
       </div>
     </div>
     <div class="component__footer">
-      <div class="component__div--specs divCursor" on:click={click}>Specs</div>
+      <div class="component__div--specs divCursor" on:click={click}><span class="font">Specs</span></div>
       <div class="component__div--buy divCursor">
-        BUY<button
+        <span class="font">Buy</span><button
           class="component__button--buy"
           on:click={() => $trelly.addToShoppingCart(product)}
         />
@@ -48,7 +48,12 @@
 <style lang="scss">
   .divCursor {
     cursor: pointer;
+     
   }
+
+  .font{
+    font-size:3rem;
+    }
 
   img {
     width: 15rem;
@@ -83,10 +88,12 @@
     -moz-perspective: 150rem;
     position: relative;
     margin: 0 auto;
-    height: 100%;
+    height: 40rem;
     margin-bottom: 2rem;
     margin: 3rem;
     &__div--specs {
+      text-align: center;
+
       width: 40%;
       float: left;
       margin-right: 10%;
@@ -95,12 +102,15 @@
       background-color: purple;
     }
     &__div--buy {
+      text-align: center;
+
       width: 40%;
       float: left;
       border-radius: 2rem;
       background-color: purple;
       text-decoration: none;
       color: white;
+
     }
     &__button--buy {
       width: 40%;
@@ -111,6 +121,7 @@
       background-color: transparent;
       transform: translate(-70%);
       cursor: pointer;
+
     }
     &__side {
       color: #fff;
