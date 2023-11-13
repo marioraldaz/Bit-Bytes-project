@@ -3,7 +3,6 @@ import {
     getComponents
 } from "../../stores/PC_Creator";
 import ProductList from "../../body/ProductList.svelte";
-import PriceRange from "../PriceRange.svelte"
 let GBs;
 let products = getComponents("RAM");
 let prices = [];
@@ -37,30 +36,42 @@ $: {
 </script>
 
 <div class="cuerpo">
-    <div class="gradiente_img_cabecera row">
-    </div>
-    <h1 class="cuerpo__title">RAMS</h1>
-    <div class="cuerpo__filters">
-        <div class="cuerpo__filters__GBs">
-            <h1 class="cuerpo__filters__GBs__title">Search By GBs</h1>
-            <select class="cuerpo__filters__GBs__select" name="selectGBs" bind:value={GBs}>
-                <option value="Any">Any</option>
-                <option value=8>8GB</option>
-                <option value=16>16GB</option>
-                <option value=32>32GB</option>
-            </select>
-        </div>
-        
-      
-        <PriceRange {minPrice} {maxPrice} {highestPrice} {lowestPrice}/>
+
+  <div class="gradiente_img_cabecera row">
+  </div>
+  <h1 class="cuerpo__title">RAMS</h1>
+  <div class="cuerpo__filters">
+    <div class="cuerpo__filters__GBs">
+        <h1 class="cuerpo__filters__GBs__title">Search By GBs</h1>
+        <select class="cuerpo__filters__GBs__select" name="selectGBs" bind:value={GBs}>
+            <option value="Any">Any</option>
+            <option value=8>8GB</option>
+            <option value=16>16GB</option>
+            <option value=32>32GB</option>
+        </select>
+    </div>     
     
-    </div>
-    <ProductList {products}  />
+    <div class="cuerpo__filters__price">
+      <h1 class="cuerpo__filters__price__title">Price Range</h1>
+      <div class="cuerpo__filters__price__min">
+          MIN:<input type="number" class="cuerpo__filters__price__min__numberbox" value={minPrice} min={lowestPrice} max={highestPrice}/>
+          <input type="range" min={lowestPrice} max={highestPrice} bind:value={minPrice}/>
+      </div>
+      <div class="cuerpo__filters__price__max">
+        <input type="range" max={highestPrice} min={lowestPrice} bind:value={maxPrice}/>
+        MAX:<input type="number" class="cuerpo__filters__price__max__numberbox" value={maxPrice} min={lowestPrice} max={highestPrice}/>
+      </div>
+  </div>
+
+  </div>
+
+  
+  <ProductList {products}  />
 
 
-    {#if noResultsMessage}
-      <h1 class="cuerpo__noResults">We couldn´t find anything that matches your search.</h1>
-    {/if}
+  {#if noResultsMessage}
+    <h1 class="cuerpo__noResults">We couldn´t find anything that matches your search.</h1>
+  {/if}
 </div>
 
 <style lang="scss">
@@ -68,6 +79,7 @@ $: {
     position: relative;
     margin-top: 9rem;
     display: inline;
+    
     &__noResults{
       font-size:10rem;
     }
@@ -92,6 +104,9 @@ $: {
             float: left;
             position: relative;
 
+            &__select{
+              width:60%;
+            }
             &__title {
                 font-size: 4rem;
                 top: 0;

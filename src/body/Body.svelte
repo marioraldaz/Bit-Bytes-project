@@ -1,9 +1,36 @@
-<!-- App.svelte -->
 <script>
-    import ProductList from './ProductList.svelte';
-    import {getOffers} from '../../src/components/productsScript.js'
-    
-  </script>
+    import Caroussel from './Caroussel.svelte';
+    import { getComponents, getOffers } from "../stores/PC_Creator";
+
+ 
+    let bodyCaroussels = [
+    {
+      products:getOffers(),
+      mainImage:"images/offer-removebg-preview.png"
+    },
+    {
+      products:getComponents("Motherboars"),
+      mainImg:"src/components/images/MSImortar.jpg"
+    },
+    {
+      products:getComponents("CPU"),
+      mainImg:"src/components/images/MSImortar.jpg"
+    },
+    {
+      products:getComponents("RAM"),
+      mainImg:"src/components/images/MSImortar.jpg"
+    },
+    {
+      products:getComponents("SSD"),
+      mainImg:"src/components/images/MSImortar.jpg"
+    },
+    {
+      products:getComponents("GPU"),
+      mainImg:"src/components/images/MSImortar.jpg"
+  }
+  ];
+   
+</script>
 
   <div class="cuerpo">
     <div class="gradiente_img_cabecera">
@@ -13,32 +40,30 @@
         alt="componentes"
       />
     </div>
-    <h1 class="title">OFERTAS</h1>
-    <ProductList products={getOffers()} />
+    {#each bodyCaroussels as bodyCaroussel}
+      <Caroussel mainImg={bodyCaroussel.mainImg} products={bodyCaroussel.products} />
+    {/each}
   </div>
 
   <style>
-    .title{
-      font-size: 5rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
+    
 
-    .gradiente_img_cabecera {
-      background: linear-gradient(to bottom, #333333, #007acc);
-      clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
-      border-radius: 15px;
-      margin-bottom: 3rem;
-      margin-top: 3rem;
-      text-align: center;
+.gradiente_img_cabecera {
+  background: linear-gradient(to bottom, #333333, #007acc);
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  border-radius: 15px;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  text-align: center;
 }
 .img_encabezado {
-  width: 70%;
+  width: 40%;
 }
 
 .cuerpo{
-  position: relative;
   margin-top: 9rem;
+  position: absolute;
+  top:0;
 }
 
 

@@ -27,6 +27,7 @@
 .footer {
   padding: 70px 0;
   background-color: #fff;
+
 }
 
 .footer-content {
@@ -104,7 +105,7 @@
 @media(max-width: 700px) {
   .footer-col {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
   }
 }
 

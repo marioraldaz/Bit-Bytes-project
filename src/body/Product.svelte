@@ -83,7 +83,7 @@
     -moz-perspective: 150rem;
     position: relative;
     margin: 0 auto;
-    height: 50rem;
+    height: 100%;
     margin-bottom: 2rem;
     margin: 3rem;
     &__div--specs {
@@ -167,6 +167,7 @@
       font-weight: bold;
       height: 30%;
       font-size: 2.5rem;
+
       &:hover {
         transform: skewX(-10deg);
       }
@@ -174,7 +175,7 @@
 
     &__description {
       margin-top: 1rem;
-      font-size: 1.7rem;
+      font-size: 1rem;
       text-align: left;
       height: 55%;
     }

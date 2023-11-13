@@ -23,7 +23,8 @@
 <div class="container">
   <Header />
 
-  {#key active}
+  <div class="container__body">
+      {#key active}
     {#if active == "Body"}
       <Body />
     {:else if active == "RAMs"}
@@ -42,10 +43,32 @@
       <ResultsPage />
     {/if}
   {/key}
+  </div>
 
-  <Footer />
+
+  <div class="container__footer">
+
+    <Footer />
+  </div>
 </div>
 
 <style lang="scss">
   @import "./variables";
+  .container{
+    height: 100%;
+    width:100%;
+    position:relative;
+    &__header{
+      width:100%;
+      height: 20%;
+    }
+    &__footer{
+      width:100%;
+      position: absolute;
+      margin-top:100%;
+    }
+    &__body{
+      width:100%;
+    }
+  }
 </style>
