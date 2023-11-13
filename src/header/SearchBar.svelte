@@ -190,7 +190,7 @@
       height: 3.5rem;
       background: none;
       border: none;
-      z-index: 1000;
+      z-index: 100;
       &:hover {
         cursor: pointer;
         transform: scale(120%);

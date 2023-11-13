@@ -62,7 +62,7 @@
     animation: headerHeight;
     animation-duration: 4s;
     animation-timing-function: ease-out;
-    z-index: 9999;
+    z-index: 100;
 
     &__left {
       height: inherit;

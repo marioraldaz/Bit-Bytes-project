@@ -1,40 +1,72 @@
 <script>
+  
+  // @ts-nocheck
+  import { fly } from "svelte/transition";
+
   import { clickOutside } from "../scripts/clickOutside";
   import shoppingCart from "../stores/shoppingCart";
-  import TrellyProduct from "./ShoppingCartProduct.svelte";
+  import ShoppingCartProduct from "./ShoppingCartProduct.svelte";
+
+  export let visibility;
 </script>
 
 {#if $shoppingCart.shoppingCart.length == 0}
-  <div class="trelly__container">El carrito está vacío</div>
+  <div class="shoppingCart__container {visibility ? 'visble' : ''}">
+    <div class="shoppingCart__container--vacio" />
+  </div>
 {:else}
-  <div class="trelly__container">
+  <div class="shoppingCart__container {visibility ? '' : 'hide'}">
     {#each $shoppingCart.shoppingCart as product}
-      <TrellyProduct
+      <ShoppingCartProduct
         logo={product.product.logo}
         nombre={product.product.name}
-        price = {product.productPrice}
+        price={product.productPrice}
         quantity={product.quantity}
-        on:click={() => $shoppingCart.addToShoppingCart(product.product)}
+        on:click={(e) => {
+          if (e.target.id === "add") {
+            $shoppingCart.addToShoppingCart(product.product);
+          } else if (e.target.id === "min") {
+            $shoppingCart.removeFromShoppingCart(product.product);
+          }
+        }}
       />
     {/each}
   </div>
 {/if}
 
 <style lang="scss">
-  .trelly__container {
+  .shoppingCart__container {
     position: absolute;
-    top: 0.5rem;
     background-color: rgb(255, 255, 255);
-    border: 2px solid black;
     border-radius: 1rem;
-    transform: translateY(40%);
     overflow: auto;
-    right: 2rem;
-    width: 50%;
-    max-width: 40rem;
-    height: 20rem;
+    width: 100%;
+    height: 92vh;
     font-size: 1.5rem;
     font-weight: 900;
-    transition: all 0.3s;
+    padding: 2rem;
+    
+    &--vacio {
+      position: relative;
+      height: 50%;
+      width: 50%;
+      background-image: url("../images/cancelarEntrega.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      top: 0;
+      left: 0;
+      transform: translate(50%,50%);
+    }
+  }
+
+  @keyframes showCart {
+    0% {
+      opacity: 0;
+      transform: translateX(120%);
+    }
+    100% {
+      opacity: 1;
+    }
   }
 </style>

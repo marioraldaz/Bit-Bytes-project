@@ -12,10 +12,11 @@
   />
   <div class="col-2-of-3 shoppingCart__product--data">
     <div class="shoppingCart__product--data--name">{nombre}</div>
-    <div class="shoppingCart__product--data--price">{price.toFixed(2)}</div>
+    <div class="shoppingCart__product--data--price">Total:<br>{price.toFixed(2)}€</div>
     <div class="shoppingCart__product--data--quantityModifier">
+      <button class="shoppingCart__product--data--min" id="min" on:click> </button>
       <div class="shoppingCart__product--data--quantity">{quantity}</div>
-      <button class="shoppingCart__product--data--add" on:click>+</button>
+      <button class="shoppingCart__product--data--add" id="add" on:click></button>
     </div>
   </div>
 </div>
@@ -24,7 +25,11 @@
   .shoppingCart__product {
     position: relative;
     width: 100%;
-    height: 90%;
+    height: 20%;
+    outline: 1px solid ;
+    outline-style: dashed;
+    outline-offset: 0.7rem;
+    border-radius: 2rem;
     &--logo {
       background-size: contain;
       background-repeat: no-repeat;
@@ -33,41 +38,65 @@
     }
     &--data {
       padding: 5px;
-
-      &--quantityModifier{
+      
+      &--name{
+        font-size: 2rem;
+      }
+      &--quantityModifier {
         position: absolute;
-        bottom: 0;
+        bottom: 0.5rem;
         right: 3rem;
-        
       }
       &--quantity {
         display: inline-block;
         border: 1px solid black;
+        border-radius: 1rem;
         background-color: white;
+        padding: 1rem;
+        margin-right: 0.5rem;
       }
 
       &--price {
         position: absolute;
         display: inline-block;
-        bottom: 0;
+        bottom: 0.5rem;
         font-size: 3rem;
       }
       &--add {
         cursor: pointer;
         position: absolute;
-        
+        height: 2.5rem;
+        width: 2.5rem;
+        border: none;
+        background-color: transparent;
+        background-image: url('../images/anadir.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      &--min {
+        cursor: pointer;
+        height: 2.3rem;
+        width: 2rem;
+        border: none;
+        margin-right: 0.5rem;
+        background-color: transparent;
+        background-image: url('../images/menos.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
       }
     }
   }
 
   .row {
     max-width: 95%;
-    max-height: 50%;
-    margin: 2rem auto;
-    background-color: aqua;
+    max-height: 90%;
+    margin: 0 auto;
+    
 
     &:not(:last-child) {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
     &:after {
       content: "";
@@ -77,7 +106,6 @@
 
     .col-1-of-3 {
       float: left;
-      background-color: rgb(255, 166, 0);
       width: calc((100% - (1rem * 2)) / 3);
       height: 100%;
 

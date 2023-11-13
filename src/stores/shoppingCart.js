@@ -7,10 +7,10 @@ function addToShoppingCart(product) {
     let repetido = false;
     productPrice= product.price;
 
-    for (var trel of data.shoppingCart) {
-      if (trel.product.id === product.id) {
-        trel.quantity++;
-        trel.productPrice += product.price;  
+    for (var car of data.shoppingCart) {
+      if (car.product.id === product.id) {
+        car.quantity++;
+        car.productPrice += product.price;  
         repetido = true;
       }
     }
@@ -22,10 +22,31 @@ function addToShoppingCart(product) {
   });
 }
 
+function removeFromShoppingCart(product) {
+  storeCarrito.update((data) => {
+    productPrice= product.price;
+    
+    for (var car of data.shoppingCart) {
+      if (car.product.id === product.id) {
+        if(car.quantity > 0){
+          car.quantity--;
+          car.productPrice -= product.price;  
+        }
+        if(car.quantity == 0){
+          data.shoppingCart = data.shoppingCart.filter(elem => elem.product.id != product.id);
+        }
+      }
+    }
+
+    return data;
+  });
+}
+
 const storeCarrito = writable({
   shoppingCart,
   quantity,
   productPrice,
   addToShoppingCart,
+  removeFromShoppingCart
 });
 export default storeCarrito;
