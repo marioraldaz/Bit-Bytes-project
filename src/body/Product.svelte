@@ -80,24 +80,25 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    margin: 0 auto;
     margin: 0;
+    width: 100%;
     background-color: white;
     &__div--specs {
       font-size: 2rem;
       height: 15%;
       width: 40%;
-      position: absolute;
-      top: 125%;
-      left: 3rem;
+      float: left;
+      margin-top: 5rem;
+      margin-left: 2rem;
       border-radius: 2rem;
       background-color: rgb(3, 3, 3);
       color: white;
       transition: transform 1s;
 
       &:hover {
-        transform: translate(-1rem, -2rem);
-        height: 17%;
+        transform: translate(0, -2rem);
+        height: 20%;
+        width: 45%;
         box-shadow: 1rem 0.5rem 3rem 0.5rem rgb(199, 94, 208);
       }
     }
@@ -106,21 +107,19 @@
       font-size: 2rem;
       height: 15%;
       width: 40%;
-      margin-left: 11rem;
       color: rgb(255, 255, 255);
       border-radius: 2rem;
       border: none;
-      position: absolute;
-      left: 55%;
-      top: 125%;
-      transform: translate(-70%);
+      margin-top: 5rem;
+      float: right;
+      margin-right: 2rem;
       cursor: pointer;
       background-color: black;
       transition: transform 1s;
 
       &:hover {
-        transform: translate(-12.5rem, -2rem);
-        height: 17%;
+        transform: translate(0, -2rem);
+        height: 20%;
         width: 45%;
         box-shadow: 1rem 0.5rem 3rem 0.5rem rgb(199, 94, 208);
       }
@@ -161,6 +160,7 @@
     }
 
     &__img {
+      margin-top: 1rem;
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
@@ -209,7 +209,7 @@
     }
 
     &__footer {
-      height: 10%;
+      height: 10rem;
       background-color: rgb(255, 255, 255);
       position: relative;
       margin-top: 6rem;

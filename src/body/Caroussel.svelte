@@ -200,7 +200,7 @@
         width: 30rem;
         transform: scale(0.7);
         position: absolute;
-        left: 15%;
+        left: 17%;
         top: 10%;
         opacity: 30%;
         z-index: 5;
@@ -246,7 +246,7 @@
         width: 30rem;
         transform: scale(0.7);
         position: absolute;
-        left: 55%;
+        left: 50%;
         top: 10%;
         opacity: 30%;
         z-index: 5;
@@ -259,7 +259,7 @@
         width: 5rem;
         height: 5rem;
         position: absolute;
-        left: 70%;
+        left: 63%;
         top: 50%;
         z-index: 99;
         &__img {
@@ -281,7 +281,7 @@
         width: 5rem;
         height: 5rem;
         position: absolute;
-        left: 15%;
+        left: 17%;
         top: 50%;
         transition: transform 1s;
 
@@ -370,7 +370,7 @@
       width: 30rem;
       transform: scale(0.7);
       position: absolute;
-      left: 55%;
+      left: 50%;
       top: -5%;
       opacity: 30%;
     }
@@ -416,7 +416,7 @@
       width: 30rem;
       transform: scale(0.7);
       position: absolute;
-      left: 15%;
+      left: 17%;
       top: -5%;
       opacity: 30%;
       z-index: 5;

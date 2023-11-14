@@ -7,9 +7,7 @@
 <div class="list">
   {#each products as product}
     <div class="column">
-      <Product
-        {product}
-      />
+      <Product {product} />
     </div>
   {/each}
 </div>
@@ -19,13 +17,16 @@
     position: relative;
     text-align: center;
     width: 100%;
+    height: 100%;
     padding: 1rem;
-    overflow: auto;
   }
 
   .column {
     position: relative;
     float: left;
+    width: 20rem;
+    height: 40rem;
+    margin: 2rem;
   }
 
   @media screen and (min-width: 1100px) {
@@ -44,6 +45,5 @@
     .column {
       width: 100%;
     }
-
   }
 </style>
