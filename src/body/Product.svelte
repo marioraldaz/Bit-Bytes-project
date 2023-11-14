@@ -1,11 +1,13 @@
 <script>
   import trelly from "../stores/shoppingCart";
+  import Stars from "./Stars.svelte";
   export let product;
 
   let clicked = false;
 
   function click() {
     clicked = !clicked;
+    console.log("dasbsk");
   }
 </script>
 
@@ -18,24 +20,23 @@
     <div class="component__box--description">
       <div class="component__name">{product.name}</div>
       <div class="component__description">
-        <p>{product.description}</p>
+        Rating: <Stars nStars={product.starts} />
       </div>
       <div class="component__price">
-        <p>{product.price}€</p>
+        {product.price}€
       </div>
     </div>
-    <div class="component__footer">
-      <div class="component__div--specs divCursor" on:click={click}><span class="font">Specs</span></div>
-      <div class="component__div--buy divCursor">
-        <span class="font">Buy</span><button
-          class="component__button--buy"
-          on:click={() => $trelly.addToShoppingCart(product)}
-        />
-      </div>
-    </div>
+    <button class="component__div--specs divCursor" on:click={click}
+      >Specs</button
+    >
+    <button
+      class="component__button--buy"
+      on:click={() => $trelly.addToShoppingCart(product)}>Buy</button
+    >
   </div>
+
   <div class="component__side component__side--back component__side--back-1">
-    <div class="close divCursor" on:click={click}>X</div>
+    <button class="close divCursor" on:click={click}>X</button>
     <div class="specifications">
       <h4>Specifications</h4>
       {#each product.specifications as specification}
@@ -48,15 +49,6 @@
 <style lang="scss">
   .divCursor {
     cursor: pointer;
-     
-  }
-
-  .font{
-    font-size:3rem;
-    }
-
-  img {
-    width: 15rem;
   }
 
   .specifications {
@@ -75,7 +67,7 @@
   }
 
   .close {
-    font-size: 1.5rem;
+    font-size: 1rem;
     border-radius: 0 10px 0 10px;
     background-color: rgb(185, 10, 185);
     position: absolute;
@@ -84,49 +76,59 @@
     top: 0.5rem;
   }
   .component {
+    height: 100%;
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
     margin: 0 auto;
-    height: 40rem;
-    margin-bottom: 2rem;
-    margin: 3rem;
+    margin: 0;
+    background-color: white;
     &__div--specs {
-      text-align: center;
-
+      font-size: 2rem;
+      height: 15%;
       width: 40%;
-      float: left;
-      margin-right: 10%;
-      margin-left: 5%;
-      border-radius: 20px;
-      background-color: purple;
-    }
-    &__div--buy {
-      text-align: center;
-
-      width: 40%;
-      float: left;
+      position: absolute;
+      top: 125%;
+      left: 3rem;
       border-radius: 2rem;
-      background-color: purple;
-      text-decoration: none;
+      background-color: rgb(3, 3, 3);
       color: white;
+      transition: transform 1s;
 
+      &:hover {
+        transform: translate(-1rem, -2rem);
+        height: 17%;
+        box-shadow: 1rem 0.5rem 3rem 0.5rem rgb(199, 94, 208);
+      }
     }
+
     &__button--buy {
+      font-size: 2rem;
+      height: 15%;
       width: 40%;
-      height: 3.5rem;
+      margin-left: 11rem;
+      color: rgb(255, 255, 255);
       border-radius: 2rem;
       border: none;
       position: absolute;
-      background-color: transparent;
+      left: 55%;
+      top: 125%;
       transform: translate(-70%);
       cursor: pointer;
+      background-color: black;
+      transition: transform 1s;
 
+      &:hover {
+        transform: translate(-12.5rem, -2rem);
+        height: 17%;
+        width: 45%;
+        box-shadow: 1rem 0.5rem 3rem 0.5rem rgb(199, 94, 208);
+      }
     }
     &__side {
       color: #fff;
-      font-size: 2rem;
-      height: 50rem;
+      font-size: 1rem;
+      height: 25rem;
       transition: all 0.8s ease;
       position: absolute;
       top: 0;
@@ -138,7 +140,7 @@
         /*       background: linear-gradient(135deg, #00ffec, #0081ff);
      */
         color: grey;
-        background-color: green;
+        background-color: rgb(247, 255, 247);
       }
 
       &--back {
@@ -162,8 +164,8 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      background-color: rgb(94, 176, 208);
-      height: 35%;
+      height: 50%;
+      background-color: white;
     }
 
     &__box--description {
@@ -177,7 +179,7 @@
       color: black;
       font-weight: bold;
       height: 33%;
-      font-size: 2.5rem;
+      font-size: 1.8rem;
 
       &:hover {
         transform: skewX(-10deg);
@@ -185,30 +187,34 @@
     }
 
     &__description {
-      margin-top: 1rem;
       font-size: 1rem;
-      text-align: left;
-      height: 45%;
+      height: 20%;
+      width: 45%;
+      position: absolute;
+      left: 50%;
+      top: 80%;
     }
 
     &__price {
       position: relative;
       color: rgb(192, 26, 26);
       font-weight: bold;
-      font-size: 3rem;
+      font-size: 2.5rem;
       left: 50%;
       transform: translateX(-50%);
       height: 15%;
-      margin-top: 1rem;
+      position: absolute;
+      left: 20%;
+      top: 90%;
     }
 
     &__footer {
       height: 10%;
-      background-color: white;
+      background-color: rgb(255, 255, 255);
       position: relative;
-      padding: 0.5rem;
-      color: white;
-      font-size: 3rem;
+      margin-top: 6rem;
+      color: rgb(0, 0, 0);
+      font-size: 2rem;
     }
   }
 
@@ -274,6 +280,4 @@
       font-size: 3rem;
     }
   }
-
-  
 </style>

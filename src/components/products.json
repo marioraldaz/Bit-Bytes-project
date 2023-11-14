@@ -15,7 +15,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!"
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!",
+      "starts": 4
     },
     {
       "id": 2,
@@ -32,7 +33,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!"
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!",
+      "starts": 2
     },
     {
       "id": 3,
@@ -49,7 +51,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!"
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!",
+      "starts": 3
     },
     {
       "id": 4,
@@ -66,7 +69,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!"
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, impedit! Deleniti ad sapiente aliquid distinctio dignissimos quaerat at non eos pariatur, tenetur dicta voluptates, quibusdam expedita odio magni adipisci esse!",
+      "starts": 5
     },
     {
       "id": 5,
@@ -82,9 +86,9 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore.",
+      "starts": 4
     },
-
     {
       "id": 6,
       "sale": true,
@@ -99,7 +103,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore.",
+      "starts": 2
     },
     {
       "id": 7,
@@ -115,7 +120,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore.",
+      "starts": 3
     },
     {
       "id": 8,
@@ -131,7 +137,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore."
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit Alias aut iste tempore voluptas voluptatum, voluptatem laborum optio dignissimos corporis provident velit commodi libero perferendis ad odit inventore rem! Deleniti, inventore.",
+      "starts": 5
     },
     {
       "id": 9,
@@ -147,7 +154,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "High-speed Samsung SSD with 250GB storage capacity."
+      "description": "High-speed Samsung SSD with 250GB storage capacity.",
+      "starts": 2
     },
     {
       "id": 10,
@@ -163,7 +171,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "High-performance Samsung SSD with 500GB storage capacity."
+      "description": "High-performance Samsung SSD with 500GB storage capacity.",
+      "starts": 4
     },
     {
       "id": 11,
@@ -179,7 +188,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "Large-capacity Samsung SSD with 1TB storage."
+      "description": "Large-capacity Samsung SSD with 1TB storage.",
+      "starts": 3
     },
     {
       "id": 12,
@@ -195,7 +205,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "Massive 2TB Samsung SSD for all your storage needs."
+      "description": "Massive 2TB Samsung SSD for all your storage needs.",
+      "starts": 5
     },
     {
       "id": 13,
@@ -211,7 +222,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "High-performance AMD Ryzen 5 processor for gaming and multitasking."
+      "description": "High-performance AMD Ryzen 5 processor for gaming and multitasking.",
+      "starts": 2
     },
     {
       "id": 14,
@@ -227,7 +239,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "AMD Ryzen 7 processor with exceptional performance and efficiency."
+      "description": "AMD Ryzen 7 processor with exceptional performance and efficiency.",
+      "starts": 4
     },
     {
       "id": 15,
@@ -243,7 +256,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "Intel Core i5 processor with excellent performance for gaming and productivity."
+      "description": "Intel Core i5 processor with excellent performance for gaming and productivity.",
+      "starts": 3
     },
     {
       "id": 16,
@@ -259,9 +273,9 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "Intel Core i7 processor with high-speed performance for demanding tasks."
+      "description": "Intel Core i7 processor with high-speed performance for demanding tasks.",
+      "starts": 5
     },
-
     {
       "id": 17,
       "sale": false,
@@ -276,7 +290,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "High-performance MSI GeForce RTX 3070 GPU for gaming and graphics workloads."
+      "description": "High-performance MSI GeForce RTX 3070 GPU for gaming and graphics workloads.",
+      "starts": 2
     },
     {
       "id": 18,
@@ -292,7 +307,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "MSI GeForce GTX 1660 Super GPU for smooth gaming performance."
+      "description": "MSI GeForce GTX 1660 Super GPU for smooth gaming performance.",
+      "starts": 4
     },
     {
       "id": 19,
@@ -308,7 +324,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "NVIDIA GeForce RTX 3080 Ti GPU for ultimate gaming and rendering."
+      "description": "NVIDIA GeForce RTX 3080 Ti GPU for ultimate gaming and rendering.",
+      "starts": 3
     },
     {
       "id": 20,
@@ -324,7 +341,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "NVIDIA GeForce GTX 1650 GPU for budget-friendly gaming performance."
+      "description": "NVIDIA GeForce GTX 1650 GPU for budget-friendly gaming performance.",
+      "starts": 5
     },
     {
       "id": 21,
@@ -336,11 +354,10 @@
       "price": 289.99,
       "specifications": [
         "Specification1",
-        "Specification2",
-        "Specification3",
-        "Specification4"
+        "Specification2"
       ],
-      "description": "ASUS TUF Gaming GTX 1660 Super for reliable and efficient gaming."
+      "description": "ASUS TUF Gaming GTX 1660 Super for budget-friendly gaming performance.",
+      "starts": 4
     },
     {
       "id": 22,
@@ -356,7 +373,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "MSI MPG B550 Gaming Plus Motherboard for gaming and performance builds."
+      "description": "MSI MPG B550 Gaming Plus Motherboard for gaming and performance builds.",
+      "starts": 3
     },
     {
       "id": 23,
@@ -372,7 +390,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "MSI MAG B460M Mortar Micro-ATX Motherboard for compact gaming setups."
+      "description": "MSI MAG B460M Mortar Micro-ATX Motherboard for compact gaming setups.",
+      "starts": 5
     },
     {
       "id": 24,
@@ -388,7 +407,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "NVIDIA nForce 780i SLI Motherboard for gaming and multi-GPU support."
+      "description": "NVIDIA nForce 780i SLI Motherboard for gaming and multi-GPU support.",
+      "starts": 3
     },
     {
       "id": 25,
@@ -404,7 +424,8 @@
         "Specification3",
         "Specification4"
       ],
-      "description": "NVIDIA nForce 680i SLI Motherboard for budget-friendly gaming builds."
+      "description": "NVIDIA nForce 680i SLI Motherboard for budget-friendly gaming builds.",
+      "starts": 5
     }
   ]
 }

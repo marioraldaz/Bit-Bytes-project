@@ -2,9 +2,18 @@ body,
 html {
   background: linear-gradient(60deg, rgb(176, 32, 229) 25%, rgb(94, 176, 208));
   height: 100%;
+  width:100%;
+  margin:0;
+  padding:0;
   box-sizing: border-box;
   font-size: 62.5%;
 }
+
+#app{
+  width:100%;
+  height: fit-content;
+}
+
 
 @font-face {
     font-family: 'MyWebFont';

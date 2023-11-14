@@ -20,55 +20,33 @@
   });
 </script>
 
-<div class="container">
-  <Header />
+<Header />
 
-  <div class="container__body">
-      {#key active}
-    {#if active == "Body"}
-      <Body />
-    {:else if active == "RAMs"}
-      <RAMs />
-    {:else if active == "SSDs"}
-      <SSDs />
-    {:else if active == "CPUs"}
-      <CPUs />
-    {:else if active == "Motherboards"}
-      <MotherBoards />
-    {:else if active == "GPUs"}
-      <GPUs />
-    {:else if active == "PC Creator"}
-      <PC_Creator />
-    {:else if active == "ResultsPage"}
-      <ResultsPage />
-    {/if}
-  {/key}
-  </div>
+{#key active}
+  {#if active == "Body"}
+    <Body />
+  {:else if active == "RAMs"}
+    <RAMs />
+  {:else if active == "SSDs"}
+    <SSDs />
+  {:else if active == "CPUs"}
+    <CPUs />
+  {:else if active == "Motherboards"}
+    <MotherBoards />
+  {:else if active == "GPUs"}
+    <GPUs />
+  {:else if active == "PC Creator"}
+    <PC_Creator />
+  {:else if active == "ResultsPage"}
+    <ResultsPage />
+  {/if}
+{/key}
 
+<!--
+  <Footer />
 
-  <div class="container__footer">
-
-    <Footer />
-  </div>
-</div>
+-->
 
 <style lang="scss">
   @import "./variables";
-  .container{
-    height: 100%;
-    width:100%;
-    position:relative;
-    &__header{
-      width:100%;
-      height: 20%;
-    }
-    &__footer{
-      width:100%;
-      position: absolute;
-      margin-top:100%;
-    }
-    &__body{
-      width:100%;
-    }
-  }
 </style>
