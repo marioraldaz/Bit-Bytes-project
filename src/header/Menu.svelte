@@ -36,7 +36,7 @@
     padding: 0;
     margin-top: 1rem;
     margin-bottom: none;
-    border-inline: calc(var(--s) / 2) solid rgb(94, 176, 208);
+    border-inline: calc(var(--s) / 2) solid rgb(255, 255, 255);
 
     box-sizing: content-box;
     --_g1: linear-gradient(var(--c) 20%, #0000 0 80%, var(--c) 0) no-repeat

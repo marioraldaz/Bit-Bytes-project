@@ -96,8 +96,7 @@
       top: 25%;
       left: 12%;
       padding: 0.5rem;
-      border-radius: 2rem;
-      border: 0.2rem solid rgb(176, 32, 229);
+    
       a {
         color: black;
         text-decoration: none;
@@ -105,7 +104,6 @@
 
       &:hover {
         transform: scale(120%);
-        background-color: lightblue;
       }
     }
 

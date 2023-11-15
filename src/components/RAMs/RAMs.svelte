@@ -65,8 +65,9 @@ $: {
 
   </div>
 
-  
-  <ProductList {products}  />
+  <div class="cuerpo__products">
+      <ProductList {products}  />
+  </div>
 
 
   {#if noResultsMessage}
@@ -91,8 +92,11 @@ $: {
 
     }
 
+    &__products{
+        height: 80%;
+    }
     &__filters {
-
+        background-color: white;
         width: 100%;
         height: 14rem;
         float: left;

@@ -20,33 +20,42 @@
   });
 </script>
 
-<Header />
+<div>
 
-{#key active}
-  {#if active == "Body"}
-    <Body />
-  {:else if active == "RAMs"}
-    <RAMs />
-  {:else if active == "SSDs"}
-    <SSDs />
-  {:else if active == "CPUs"}
-    <CPUs />
-  {:else if active == "Motherboards"}
-    <MotherBoards />
-  {:else if active == "GPUs"}
-    <GPUs />
-  {:else if active == "PC Creator"}
-    <PC_Creator />
-  {:else if active == "ResultsPage"}
-    <ResultsPage />
-  {/if}
-{/key}
+  <div class="app__header">
 
-<!--
+    <Header />
+  </div>
+  
+  <div class="app__body">
+
+    {#key active}
+      {#if active == "Body"}
+        <Body />
+      {:else if active == "RAMs"}
+        <RAMs />
+      {:else if active == "SSDs"}
+        <SSDs />
+      {:else if active == "CPUs"}
+        <CPUs />
+      {:else if active == "Motherboards"}
+        <MotherBoards />
+      {:else if active == "GPUs"}
+        <GPUs />
+      {:else if active == "PC Creator"}
+        <PC_Creator />
+      {:else if active == "ResultsPage"}
+        <ResultsPage />
+      {/if}
+    {/key}
+  </div>
+  
+  <div class="footer">
   <Footer />
-
--->
-
+  </div>
+</div>
 <style lang="scss">
-  @import "./variables";
+
+
 </style>
+

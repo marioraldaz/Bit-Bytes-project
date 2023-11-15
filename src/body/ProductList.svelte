@@ -14,19 +14,18 @@
 
 <style lang="scss">
   .list {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    height: 100%;
+    display: table;
     padding: 1rem;
+    margin-left:6rem;
+    width:100%;
   }
 
   .column {
-    position: relative;
-    float: left;
-    width: 20rem;
-    height: 37.5rem;
-    margin: 2rem;
+    display: table-row;
+    float:left;
+    width: 35rem;
+    height: 40.5rem;
+    margin: 1rem;
   }
 
   @media screen and (min-width: 1100px) {

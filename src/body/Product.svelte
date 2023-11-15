@@ -93,7 +93,7 @@
     width: 100%;
     &__div--specs {
       font-size: 2rem;
-      height: 15%;
+      height: 25%;
       width: 40%;
       float: left;
       margin-top: 10rem;
@@ -104,8 +104,8 @@
       transition: transform 1s;
 
       &:hover {
-        transform: translate(0, -2rem);
-        height: 20%;
+        transform: translate(0, -1rem);
+        height: 35%;
         width: 45%;
         box-shadow: 1rem 0.5rem 3rem 0.5rem rgb(199, 94, 208);
       }
@@ -113,7 +113,7 @@
 
     &__button--buy {
       font-size: 2rem;
-      height: 15%;
+      height: 25%;
       width: 40%;
       color: rgb(255, 255, 255);
       border-radius: 2rem;
@@ -126,8 +126,8 @@
       transition: transform 1s;
 
       &:hover {
-        transform: translate(0, -2rem);
-        height: 20%;
+        transform: translate(0, -1rem);
+        height: 35%;
         width: 45%;
         box-shadow: 1rem 0.5rem 3rem 0.5rem rgb(199, 94, 208);
       }
@@ -147,7 +147,8 @@
         /*       background: linear-gradient(135deg, #00ffec, #0081ff);
      */
         height: 100%;
-        background-color: rgb(247, 255, 247);
+        background-color: rgb(255, 255, 255);
+        
       }
 
       &--back {

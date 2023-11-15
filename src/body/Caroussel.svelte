@@ -135,6 +135,8 @@
 </div>
 
 <style lang="scss">
+
+
   .container {
     height: 100%;
     width: 100%;
@@ -178,14 +180,14 @@
         }
         background-color: white;
         z-index: 2;
-        width: 35rem;
-        height: 100%;
+        width: 30rem;
+        height: 30rem;
         top: -20%;
         left: 2.5%;
         opacity: 0%;
         position: absolute;
-        transform: scale(0.3);
       }
+
       &__inactive1 {
         &.openAnimation {
           animation-duration: 5s;
@@ -198,10 +200,10 @@
           animation-timing-function: ease-in-out;
         }
         width: 30rem;
-        transform: scale(0.7);
+        height: 30rem;
         position: absolute;
         left: 17%;
-        top: 10%;
+        top:0%;
         opacity: 30%;
         z-index: 5;
       }
@@ -219,7 +221,7 @@
         }
 
         width: 45rem;
-        height: 100%;
+        height: 37rem;
         position: absolute;
         left: 30%;
         z-index: 6;
@@ -245,10 +247,10 @@
           animation-timing-function: ease-in-out;
         }
         width: 30rem;
-        transform: scale(0.7);
+        height: 30rem;
         position: absolute;
         left: 50%;
-        top: 10%;
+        top: 0%;
         opacity: 30%;
         z-index: 5;
         pointer-events: none;
@@ -260,7 +262,7 @@
         width: 5rem;
         height: 5rem;
         position: absolute;
-        left: 63%;
+        left: 65%;
         top: 50%;
         z-index: 99;
         &__img {
@@ -282,7 +284,7 @@
         width: 5rem;
         height: 5rem;
         position: absolute;
-        left: 17%;
+        left: 15%;
         top: 50%;
         transition: transform 1s;
 
@@ -367,13 +369,14 @@
     from {
     }
     to {
-      border: none;
-      width: 30rem;
-      transform: scale(0.7);
-      position: absolute;
-      left: 50%;
-      top: -5%;
-      opacity: 30%;
+        border:none;
+        width: 30rem;
+        height: 30rem;
+        position: absolute;
+        left: 50%;
+        top:5%;
+        opacity: 30%;
+        z-index: 5;
     }
   }
 
@@ -382,8 +385,8 @@
     }
     to {
       border: none;
-      width: 30rem;
-      transform: scale(0);
+      width: 20rem;
+      height: 20rem;
       position: absolute;
       left: 58%;
       top: 20%;
@@ -396,31 +399,46 @@
       opacity: 50%;
     }
     to {
-      height: 100%;
+    
       width: 45rem;
-      left: 30%;
-      top: 2.5%;
-      z-index: 6;
-      background-color: white;
-      border: 0.5rem solid black;
-      padding: 0.5rem;
-      transform: scale(1);
-      opacity: 100%;
+        height: 37rem;
+        position: absolute;
+        left: 30%;
+        z-index: 6;
+        background-color: white;
+        border: 0.5rem solid black;
+        padding-bottom: 3rem;
+        transition: transform 1s;
+        top: 2.5%;
+        opacity: 100%;
     }
   }
 
   @keyframes moveHiddenProdRight {
     from {
       opacity: 0%;
+      width: 20rem;
+      height: 20rem;
     }
     to {
-      width: 30rem;
-      transform: scale(0.7);
+    
       position: absolute;
       left: 17%;
-      top: -5%;
+      top: 0;
       opacity: 30%;
       z-index: 5;
+    }
+  }
+  @keyframes moveHiddenProdLeft {
+    from {
+      opacity: 0%;
+    }
+    to {
+        position: absolute;
+        left: 17%;
+        top:0%;
+        opacity: 30%;
+        z-index: 5;
     }
   }
 </style>

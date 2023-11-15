@@ -1,6 +1,7 @@
 <script>
   import Caroussel from "./Caroussel.svelte";
   import { getComponents, getOffers } from "../stores/PC_Creator";
+  import Footer from "../footer/Footer.svelte";
 
   let bodyCaroussels = [
     {
@@ -46,6 +47,7 @@
       />
     </div>
   {/each}
+  
 </div>
 
 <style lang="scss">
@@ -59,11 +61,11 @@
   .img_encabezado {
     width: 40%;
   }
-
+ 
   .cuerpo {
     margin-top: 9rem;
-    position: absolute;
-    top: 0;
+  
+
     width: 100%;
     height: fit-content;
     &__caroussel {
