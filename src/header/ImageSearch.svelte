@@ -9,7 +9,6 @@
 <style lang="scss">
   .search-button {
     position: relative;
-    right: 0;
     background: none;
     border: none;
     z-index: 1000;
@@ -17,8 +16,17 @@
       cursor: pointer;
       transform: scale(120%);
     }
-    & img {
+    & img{
       width: 3.5rem;
+    }
+  }
+
+  @media screen and (max-width:600px){
+    .search-button{
+     & img {
+      width: 2.5rem;
+      margin-top: .5rem;
+    }
     }
   }
 </style>
