@@ -11,7 +11,7 @@
   }
 </script>
 
-<div class="component {clicked ? 'clicked' : ''} {$$props.class}">
+<div class="component {clicked ? 'clicked' : 'notClicked'} {$$props.class}">
   <div class="component__side component__side--front">
     <div
       class="component__img"
@@ -20,30 +20,35 @@
     <div class="component__box--description">
       <div class="component__name">{product.name}</div>
       <div class="component__description">
-        Rating: <Stars nStars={product.starts} />
+        Rating: 
+        <div class="component__description__stars">
+          <Stars nStars={product.starts} />
+        </div>
       </div>
       <div class="component__price">
         {product.price}€
       </div>
+      <button class="component__div--specs divCursor" on:click={click}
+          >Specs</button
+        >
+        <button
+          class="component__button--buy"
+          on:click={() => $trelly.addToShoppingCart(product)}>Buy</button
+        >
     </div>
-    <button class="component__div--specs divCursor" on:click={click}
-      >Specs</button
-    >
-    <button
-      class="component__button--buy"
-      on:click={() => $trelly.addToShoppingCart(product)}>Buy</button
-    >
+  
   </div>
 
   <div class="component__side component__side--back component__side--back-1">
     <button class="close divCursor" on:click={click}>X</button>
     <div class="specifications">
-      <h4>Specifications</h4>
+      <h4 class="specifications__title">Specifications</h4>
       {#each product.specifications as specification}
         <div>{specification}</div>
       {/each}
     </div>
   </div>
+    
 </div>
 
 <style lang="scss">
@@ -52,7 +57,10 @@
   }
 
   .specifications {
-    height: 100%;
+    &__title{
+      font-size:3rem;
+    }
+    height: 80%;
     & div {
       height: 15%;
       &:not(:last-child) {
@@ -76,19 +84,19 @@
     top: 0.5rem;
   }
   .component {
+ 
     height: 100%;
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
     margin: 0;
     width: 100%;
-    background-color: white;
     &__div--specs {
       font-size: 2rem;
       height: 15%;
       width: 40%;
       float: left;
-      margin-top: 5rem;
+      margin-top: 10rem;
       margin-left: 2rem;
       border-radius: 2rem;
       background-color: rgb(3, 3, 3);
@@ -110,7 +118,7 @@
       color: rgb(255, 255, 255);
       border-radius: 2rem;
       border: none;
-      margin-top: 5rem;
+      margin-top: 10rem;
       float: right;
       margin-right: 2rem;
       cursor: pointer;
@@ -127,7 +135,7 @@
     &__side {
       color: #fff;
       font-size: 1rem;
-      height: 25rem;
+      height:25rem;
       transition: all 0.8s ease;
       position: absolute;
       top: 0;
@@ -138,7 +146,7 @@
       &--front {
         /*       background: linear-gradient(135deg, #00ffec, #0081ff);
      */
-        color: grey;
+        height: 100%;
         background-color: rgb(247, 255, 247);
       }
 
@@ -147,14 +155,18 @@
       }
 
       &--back-1 {
+        height: 36.5rem;
+        border: 0.2rem solid purple;
+        margin-right: 0.2rem;
         background: linear-gradient(135deg, #00ffec, #0081ff);
       }
     }
 
+    
     &.clicked &__side--front {
       transform: rotateY(180deg);
     }
-
+    
     &.clicked &__side--back {
       transform: rotateY(0);
     }
@@ -164,8 +176,8 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      height: 50%;
-      background-color: white;
+      height: 40%;
+      background-color: rgb(255, 255, 255);
     }
 
     &__box--description {
@@ -187,12 +199,17 @@
     }
 
     &__description {
-      font-size: 1rem;
-      height: 20%;
-      width: 45%;
+      color:rgb(117, 117, 14);
+      height: 5%;
+      width: 10%;
       position: absolute;
+      z-index:150;
       left: 50%;
-      top: 80%;
+      top: 65%;
+      &__stars{
+        margin-top:0.5rem;
+        width:400%;
+      }
     }
 
     &__price {
@@ -205,17 +222,9 @@
       height: 15%;
       position: absolute;
       left: 20%;
-      top: 90%;
+      top: 70%;
     }
 
-    &__footer {
-      height: 10rem;
-      background-color: rgb(255, 255, 255);
-      position: relative;
-      margin-top: 6rem;
-      color: rgb(0, 0, 0);
-      font-size: 2rem;
-    }
   }
 
   @media screen and (max-width: 1600px) {

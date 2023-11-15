@@ -207,6 +207,7 @@
       }
 
       &__active {
+
         &.openAnimation {
           animation-duration: 6s;
           animation-name: slidein3;
@@ -224,7 +225,7 @@
         z-index: 6;
         background-color: white;
         border: 0.5rem solid black;
-        padding: 0.5rem;
+        padding-bottom: 3rem;
         transition: transform 1s;
         top: 2.5%;
         &:hover {
