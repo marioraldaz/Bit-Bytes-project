@@ -29,12 +29,11 @@
 
 <style lang="scss">
   .header__ShoppingCart {
-    position: relative;
     float: right;
     width: 8rem;
     height: 8rem;
     img {
-      position: absolute;
+      position: relative;
       width: 60%;
       height: 60%;
       top: 50%;
@@ -72,7 +71,7 @@
     .header__ShoppingCart  {
       width: 5.5rem;
       height: 5.5rem;
-      top:15%;
+      margin-top:6%;
     }
   }
 </style>

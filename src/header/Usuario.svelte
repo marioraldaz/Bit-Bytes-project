@@ -7,13 +7,12 @@
 
 <style lang="scss">
   .header__usuario {
-    position: relative;
     float: right;
     width: 8rem;
     height: 8rem;
     img {
-      position: absolute;
-      width: 60%;
+      position: relative;
+      width: 60%; 
       height: 60%;
       top: 50%;
       left: 50%;
@@ -33,7 +32,7 @@
     .header__usuario  {
       width: 5.5rem;
       height: 5.5rem;
-      top:15%;
+      margin-top:6%;
     }
   }
 </style>
