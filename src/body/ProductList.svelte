@@ -25,7 +25,7 @@
     position: relative;
     float: left;
     width: 20rem;
-    height: 40rem;
+    height: 37.5rem;
     margin: 2rem;
   }
 
