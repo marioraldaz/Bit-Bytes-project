@@ -1,3 +1,4 @@
+
 <script>
   import products from "../components/products.json";
   import Menus from "../stores/menus.js";
@@ -121,7 +122,10 @@
     transform: translate(0%, 50%);
     float: right;
 
+    transition: all 2s ease-out;
+
     &__results {
+      transition: all .5s ease-out;
       width: 150%;
       margin-top: 1rem;
       float: right;
@@ -162,6 +166,7 @@
       height: 100%;
       border-radius: 2rem;
       background-color: red;
+      transition: all .5s ease-out;
       &:hover {
         transform: scale(110%);
       }
@@ -205,18 +210,32 @@
     }
   }
 
-  @media screen and (max-width: 1300px) {
-    .container {
-      top: -20%;
-      left: -30%;
+  @media screen and (max-width: 1600px) {
+    .container{
       clear: both;
+      left: -30%;
     }
   }
 
-  @media screen and (max-width: 400px) {
-    .container {
-      transform: scale(80%);
-      left: 7%;
+  @media screen and (max-width: 1100px) {
+    .container{
+      &__results {
+      width: 120%;
+      transform: translateX(5rem);
+      }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .container{
+      &__searchBar{
+        top:50%;
+        margin-bottom:5%;
+      }
+      &__results {
+      width: 90%;
+      transform: translateX(2rem);
+      }
     }
   }
 </style>

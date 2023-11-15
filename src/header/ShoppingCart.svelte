@@ -47,6 +47,7 @@
         filter: drop-shadow(0.2rem 0.2rem 0.2rem rgb(176, 32, 229));
       }
     }
+    transition: all .5s ease-out;
   }
 
   [type="checkbox"] {
@@ -66,4 +67,11 @@
     z-index: 9999;
   }
 
+  @media screen and (max-width:600px){
+    .header__ShoppingCart  {
+      width: 5.5rem;
+      height: 5.5rem;
+      margin-top:6%;
+    }
+  }
 </style>

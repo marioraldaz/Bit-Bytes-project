@@ -12,7 +12,7 @@
     height: 8rem;
     img {
       position: relative;
-      width: 60%;
+      width: 60%; 
       height: 60%;
       top: 50%;
       left: 50%;
@@ -24,6 +24,15 @@
         height: 75%;
         filter: drop-shadow(0.2rem 0.2rem 0.2rem rgb(176, 32, 229));
       }
+    }
+    transition: all .5s ease-out;
+  }
+
+  @media screen and (max-width:600px){
+    .header__usuario  {
+      width: 5.5rem;
+      height: 5.5rem;
+      margin-top:6%;
     }
   }
 </style>
