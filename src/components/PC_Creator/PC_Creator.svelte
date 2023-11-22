@@ -1,9 +1,10 @@
 <script>
   import PC_Creator from "../../stores/PC_Creator.js";
+  import shoppingCart from "../../stores/shoppingCart.js";
   import Select from "../Select.svelte"
   import {getComponents,getProducts} from "../../stores/PC_Creator.js"
 
-  
+  let productSelected = [];
   let products=getProducts();
   let PC={
     "CPU":null,
@@ -21,7 +22,11 @@
   }
 
   function buy(){
-
+    for(let product of $PC_Creator.usedComponents){
+      if(product){
+        $shoppingCart.addToShoppingCart(product);
+      }
+    }
   }
   function calPrice(array){
       totalPrice = 0;
@@ -42,6 +47,7 @@
     calPrice(Object.values(PC));
     return PC_Creator.update((data)=>{ 
       data.usedComponents=Object.values(PC);
+      console.log(data.usedComponents);
       return data;
     });
   }
@@ -54,7 +60,7 @@
 {#each arrays as array}
   <div class="container__section">
     <h1 class="container__section__title">{array[0].type}</h1>  
-    <Select {array} on:change={handleChange}/>
+    <Select {array} {productSelected} on:change={handleChange}/>
   </div>
 {/each}
 <h1 class="container__section__price">Total: {totalPrice}$</h1>

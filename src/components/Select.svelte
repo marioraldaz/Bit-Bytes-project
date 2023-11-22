@@ -1,5 +1,6 @@
 <script>
-    export let array=[]
+    export let array=[];
+    export let productSelected = [];
     console.log(array)
 </script>
 

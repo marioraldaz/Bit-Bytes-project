@@ -40,7 +40,7 @@
       padding: 5px;
       
       &--name{
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
       &--quantityModifier {
         position: absolute;
@@ -116,10 +116,25 @@
     .col-2-of-3 {
       float: left;
       width: calc(((100% - (1rem * 2)) / 3) * 2 + 1rem);
+      height: 100%;
 
       &:not(:last-child) {
         margin-right: 1rem;
       }
     }
+  }
+
+  @media screen and (max-width:600px){
+    .row .col-1-of-3  {
+      position: relative;
+      width: 0% ;
+    }
+    .shoppingCart__product--data--name{
+      font-size: 1.2rem;
+    }
+    .shoppingCart__product--data--price{
+      font-size: 2rem;
+    }
+
   }
 </style>

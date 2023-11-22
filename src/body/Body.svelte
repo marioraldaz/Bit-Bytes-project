@@ -64,8 +64,7 @@
  
   .cuerpo {
     margin-top: 9rem;
-  
-
+    overflow: hidden;
     width: 100%;
     height: fit-content;
     &__caroussel {

@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
-let usedComponents = [];
 import products from "../components/products.json";
+let usedComponents = [];
 let arrayProducts = products.products;
 
 export function getComponents(component) {

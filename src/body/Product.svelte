@@ -1,5 +1,5 @@
 <script>
-  import trelly from "../stores/shoppingCart";
+  import shoppingCart from "../stores/shoppingCart";
   import Stars from "./Stars.svelte";
   export let product;
 
@@ -11,7 +11,7 @@
   }
 </script>
 
-<div class="component {clicked ? 'clicked' : 'notClicked'} {$$props.class}">
+<div class="component {clicked ? 'clicked' : 'notClicked'}">
   <div class="component__side component__side--front">
     <div
       class="component__img"
@@ -20,7 +20,7 @@
     <div class="component__box--description">
       <div class="component__name">{product.name}</div>
       <div class="component__description">
-        Rating: 
+        Rating:
         <div class="component__description__stars">
           <Stars nStars={product.starts} />
         </div>
@@ -29,14 +29,13 @@
         {product.price}€
       </div>
       <button class="component__div--specs divCursor" on:click={click}
-          >Specs</button
-        >
-        <button
-          class="component__button--buy"
-          on:click={() => $trelly.addToShoppingCart(product)}>Buy</button
-        >
+        >Specs</button
+      >
+      <button
+        class="component__button--buy"
+        on:click={() => $shoppingCart.addToShoppingCart(product)}>Buy</button
+      >
     </div>
-  
   </div>
 
   <div class="component__side component__side--back component__side--back-1">
@@ -48,7 +47,6 @@
       {/each}
     </div>
   </div>
-    
 </div>
 
 <style lang="scss">
@@ -57,8 +55,8 @@
   }
 
   .specifications {
-    &__title{
-      font-size:3rem;
+    &__title {
+      font-size: 3rem;
     }
     height: 80%;
     & div {
@@ -84,7 +82,6 @@
     top: 0.5rem;
   }
   .component {
- 
     height: 100%;
     perspective: 150rem;
     -moz-perspective: 150rem;
@@ -135,7 +132,7 @@
     &__side {
       color: #fff;
       font-size: 1rem;
-      height:25rem;
+      height: 25rem;
       transition: all 0.8s ease;
       position: absolute;
       top: 0;
@@ -148,7 +145,6 @@
      */
         height: 100%;
         background-color: rgb(255, 255, 255);
-        
       }
 
       &--back {
@@ -163,11 +159,10 @@
       }
     }
 
-    
     &.clicked &__side--front {
       transform: rotateY(180deg);
     }
-    
+
     &.clicked &__side--back {
       transform: rotateY(0);
     }
@@ -200,16 +195,16 @@
     }
 
     &__description {
-      color:rgb(117, 117, 14);
+      color: rgb(117, 117, 14);
       height: 5%;
       width: 10%;
       position: absolute;
-      z-index:150;
+      z-index: 150;
       left: 50%;
       top: 65%;
-      &__stars{
-        margin-top:0.5rem;
-        width:400%;
+      &__stars {
+        margin-top: 0.5rem;
+        width: 400%;
       }
     }
 
@@ -225,7 +220,6 @@
       left: 20%;
       top: 70%;
     }
-
   }
 
   @media screen and (max-width: 1600px) {

@@ -74,4 +74,11 @@
       margin-top:6%;
     }
   }
+
+  @media screen and (max-width:600px){
+    .container  {
+      width: 100vw;
+      max-width: none;
+    }
+  }
 </style>
