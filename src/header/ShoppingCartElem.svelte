@@ -1,9 +1,6 @@
 <script>
   
   // @ts-nocheck
-  import { fly } from "svelte/transition";
-
-  import { clickOutside } from "../scripts/clickOutside";
   import shoppingCart from "../stores/shoppingCart";
   import ShoppingCartProduct from "./ShoppingCartProduct.svelte";
 
@@ -31,17 +28,17 @@
         }}
       />
     {/each}
+    <div class="shoppingCart__total">TOTAL: {$shoppingCart.totalPrice.toFixed(2)}€</div>
   </div>
 {/if}
 
 <style lang="scss">
   .shoppingCart__container {
-    position: absolute;
     background-color: rgb(255, 255, 255);
     border-radius: 1rem;
     overflow: auto;
     width: 100%;
-    height: 92vh;
+    height: 90vh;
     font-size: 1.5rem;
     font-weight: 900;
     padding: 2rem;
@@ -58,6 +55,13 @@
       left: 0;
       transform: translate(50%,50%);
     }
+  }
+
+  .shoppingCart__total{
+    text-align: center;
+    font-size: 5rem;
+    bottom: 0;
+
   }
 
   @keyframes showCart {
