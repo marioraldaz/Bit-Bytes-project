@@ -16,15 +16,15 @@
   .list {
     display: table;
     padding: 1rem;
-    margin-left:6rem;
-    width:100%;
+    margin-left: 6rem;
+    width: 100%;
   }
 
   .column {
     display: table-row;
-    float:left;
+    float: left;
     width: 35rem;
-    height: 40.5rem;
+    height: 45.5rem;
     margin: 1rem;
   }
 

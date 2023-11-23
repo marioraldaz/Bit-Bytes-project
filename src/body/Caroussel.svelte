@@ -135,8 +135,6 @@
 </div>
 
 <style lang="scss">
-
-
   .container {
     height: 100%;
     width: 100%;
@@ -203,13 +201,12 @@
         height: 30rem;
         position: absolute;
         left: 17%;
-        top:0%;
+        top: 0%;
         opacity: 30%;
         z-index: 5;
       }
 
       &__active {
-
         &.openAnimation {
           animation-duration: 6s;
           animation-name: slidein3;
@@ -320,7 +317,9 @@
     }
 
     100% {
-      left: 15%;
+      position: absolute;
+      left: 17%;
+      top: 0%;
     }
   }
 
@@ -347,7 +346,9 @@
     }
 
     100% {
-      left: 55%;
+      position: absolute;
+      left: 50%;
+      top: 0%;
     }
   }
   @keyframes buttonAnimation {
@@ -369,14 +370,14 @@
     from {
     }
     to {
-        border:none;
-        width: 30rem;
-        height: 30rem;
-        position: absolute;
-        left: 50%;
-        top:5%;
-        opacity: 30%;
-        z-index: 5;
+      border: none;
+      width: 30rem;
+      height: 30rem;
+      position: absolute;
+      left: 50%;
+      top: 5%;
+      opacity: 30%;
+      z-index: 5;
     }
   }
 
@@ -399,18 +400,17 @@
       opacity: 50%;
     }
     to {
-    
       width: 45rem;
-        height: 37rem;
-        position: absolute;
-        left: 30%;
-        z-index: 6;
-        background-color: white;
-        border: 0.5rem solid black;
-        padding-bottom: 3rem;
-        transition: transform 1s;
-        top: 2.5%;
-        opacity: 100%;
+      height: 37rem;
+      position: absolute;
+      left: 30%;
+      z-index: 6;
+      background-color: white;
+      border: 0.5rem solid black;
+      padding-bottom: 3rem;
+      transition: transform 1s;
+      top: 2.5%;
+      opacity: 100%;
     }
   }
 
@@ -421,7 +421,6 @@
       height: 20rem;
     }
     to {
-    
       position: absolute;
       left: 17%;
       top: 0;
@@ -434,11 +433,11 @@
       opacity: 0%;
     }
     to {
-        position: absolute;
-        left: 17%;
-        top:0%;
-        opacity: 30%;
-        z-index: 5;
+      position: absolute;
+      left: 17%;
+      top: 0%;
+      opacity: 30%;
+      z-index: 5;
     }
   }
 </style>

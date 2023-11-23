@@ -6,6 +6,7 @@
   import Nav from "../stores/nav.js";
   let visibility = false;
   let menus = [];
+  let hideAnimation = false;
 
   onMount(() => {
     return Menus.subscribe((data) => {
@@ -20,14 +21,22 @@
   });
 
   function hide() {
-    Nav.update((data) => {
-      data.visibility = false;
-      return data;
-    });
+    hideAnimation = true;
+    setTimeout(() => {
+      console.log("dhoas");
+      Nav.update((data) => {
+        data.visibility = false;
+        return data;
+      });
+    }, 1000);
   }
 </script>
 
-<nav class="menu-nav" use:clickOutside on:click_outside={hide}>
+<nav
+  class=" {hideAnimation ? 'hide' : 'menu-nav'}"
+  use:clickOutside
+  on:click_outside={hide}
+>
   {#each menus as navEl}
     {#if navEl.name == "Body"}
       <span />
@@ -39,6 +48,8 @@
 
 <style lang="scss">
   .menu-nav {
+    animation-name: slide;
+    animation-duration: 1s;
     margin-top: 1rem;
     display: block;
     position: fixed;
@@ -55,6 +66,42 @@
     transition: 0.4s;
   }
 
+  .hide {
+    animation-name: hide;
+    animation-duration: 2s;
+    margin-top: 1rem;
+    display: block;
+    position: fixed;
+    border: 0.1rem solid rgb(94, 176, 208);
+    width: 20%;
+    min-height: 100vh;
+    float: right;
+    z-index: 98;
+    background: linear-gradient(
+      60deg,
+      rgb(176, 32, 229) 25%,
+      rgb(94, 176, 208)
+    );
+    transition: 0.4s;
+  }
+
+  @keyframes slide {
+    from {
+      left: -30%;
+    }
+    to {
+      left: 0;
+    }
+  }
+
+  @keyframes hide {
+    from {
+      left: 0;
+    }
+    to {
+      left: -30%;
+    }
+  }
   @media screen and (max-width: 1100px) {
     .menu-nav {
       margin-top: 2.9rem;
