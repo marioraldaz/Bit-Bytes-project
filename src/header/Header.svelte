@@ -1,7 +1,7 @@
 <script>
   import Menu from "./Menu.svelte";
   import ShoppingCart from "./ShoppingCart.svelte";
-  import Usuario from "./Usuario.svelte";
+  import Usuario from "./User.svelte";
   import SearchBar from "./SearchBar.svelte";
   import Menus from "../stores/menus.js";
   import { onMount } from "svelte";

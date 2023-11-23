@@ -113,7 +113,6 @@
       width: 40%;
       color: rgb(255, 255, 255);
       border-radius: 2rem;
-      border: none;
       margin-top: 10rem;
       float: right;
       margin-right: 2rem;

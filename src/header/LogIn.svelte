@@ -1,5 +1,5 @@
 <script>
-    import User from "./Usuario.svelte";
+    import User from "./User.svelte";
 
     export let visibility;
 </script>
@@ -19,7 +19,7 @@
                 <label>Password</label>
             </div>
             <div class="pass">Forgot Password?</div>
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" on:click|preventDefault>
             <div class="singup_link">
                 Not a member? <a href="#">Sign Up</a>
             </div>
