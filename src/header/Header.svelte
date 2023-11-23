@@ -70,6 +70,9 @@
 
       &__Menu {
         position: fixed;
+        animation: hideicon;
+        animation-duration: 4s;
+        animation-timing-function: ease-in;
       }
     }
     &__right {

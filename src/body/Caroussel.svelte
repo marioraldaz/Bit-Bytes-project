@@ -188,7 +188,7 @@
 
       &__inactive1 {
         &.openAnimation {
-          animation-duration: 5s;
+          animation-duration: 3s;
           animation-name: slidein2;
         }
         pointer-events: none;
@@ -208,7 +208,7 @@
 
       &__active {
         &.openAnimation {
-          animation-duration: 6s;
+          animation-duration: 4s;
           animation-name: slidein3;
         }
         &.moveRight {
@@ -235,7 +235,7 @@
 
       &__inactive2 {
         &.openAnimation {
-          animation-duration: 7s;
+          animation-duration: 5s;
           animation-name: slidein4;
         }
         &.moveRight {

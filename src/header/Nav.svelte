@@ -64,6 +64,7 @@
       rgb(94, 176, 208)
     );
     transition: 0.4s;
+    
   }
 
   .hide {

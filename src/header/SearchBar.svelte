@@ -112,6 +112,9 @@
     top: 27%;
     left: -5%;
     height: auto;
+    animation: hideicon;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
   }
 
   .container {

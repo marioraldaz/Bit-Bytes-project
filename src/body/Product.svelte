@@ -7,7 +7,6 @@
 
   function click() {
     clicked = !clicked;
-    console.log("dasbsk");
   }
 </script>
 
@@ -120,7 +119,7 @@
       margin-right: 2rem;
       cursor: pointer;
       background-color: black;
-      transition: transform 1s;
+      transition: transform 5s;
 
       &:hover {
         transform: translate(0, -1rem);

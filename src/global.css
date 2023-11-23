@@ -31,3 +31,13 @@ html {
   font-family: 'MyWebFont';
   box-sizing: inherit;
 }
+
+@keyframes hideicon {
+  0% {
+      opacity: 0;
+      
+    }
+    100% {
+      opacity: 1;
+    }
+}

@@ -32,6 +32,9 @@
     float: right;
     width: 8rem;
     height: 8rem;
+    animation: hideicon;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
     img {
       position: relative;
       width: 60%;
