@@ -152,7 +152,7 @@
       }
 
       &--back-1 {
-        height: 36.5rem;
+        height: 100%;
         border: 0.2rem solid purple;
         margin-right: 0.2rem;
         background: linear-gradient(135deg, #00ffec, #0081ff);
