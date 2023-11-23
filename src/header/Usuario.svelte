@@ -1,12 +1,35 @@
 <script>
+  import LogIn from "./LogIn.svelte";
+  import { clickOutside } from "../scripts/clickOutside";
+
+  let visibility = false;
 </script>
 
-<div class="header__usuario">
-  <a href="/"><img src="./images/usuario.png" alt="usuario.png" /> </a>
+<div 
+  class="header__user" 
+  use:clickOutside
+  on:clickOutside={() => {
+    visibility = false;
+  }}
+>
+  <label for="user">
+    <img src="./images/usuario.png" alt="usuario.png" /> 
+  </label>
+  <input 
+    type="checkbox" 
+    id="user" name="" 
+    bind:checked={visibility} 
+  />
+
+  {#if visibility}
+    <div class="container" >
+      <LogIn visibility />
+    </div>
+  {/if}
 </div>
 
 <style lang="scss">
-  .header__usuario {
+  .header__user {
     float: right;
     width: 8rem;
     height: 8rem;
@@ -26,6 +49,23 @@
       }
     }
     transition: all .5s ease-out;
+  }
+
+  [type="checkbox"] {
+    display: none;
+  }
+
+  .container {
+    position: absolute;
+    top: 8rem;
+    background: linear-gradient(120deg, rgb(176, 32, 229), rgb(94, 176, 208));
+    border: 2px solid black;
+    transform: translateX(5%);
+    right: 2rem;
+    width: 107%;
+    max-width: 120%;
+    height: 92vh;
+    z-index: 9999;
   }
 
   @media screen and (max-width:600px){
