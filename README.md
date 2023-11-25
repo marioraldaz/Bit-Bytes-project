@@ -1,3 +1,8 @@
+npm install for dependencies.
+
+Currently working on Development branch until first version is completed. Working in gitlab: https://gitlab.com/bitsandbytes4/proyecto.git 
+
+
 # Svelte + Vite
 
 This template should help get you started developing with Svelte in Vite.
